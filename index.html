@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -21,91 +22,91 @@
 html{scroll-behavior:smooth}
 
 body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--off); color:var(--ink);
-  display:grid;
-  grid-template-columns:256px 1fr;
-  grid-template-rows:54px 1fr;
-  grid-template-areas:"tb tb""sb ct";
-  min-height:100vh;
+font-family:‘DM Sans’,sans-serif;
+background:var(–off); color:var(–ink);
+display:grid;
+grid-template-columns:256px 1fr;
+grid-template-rows:54px 1fr;
+grid-template-areas:“tb tb”“sb ct”;
+min-height:100vh;
 }
 
 /* ── TOP BAR ─────────────────────────────── */
 .tb{
-  grid-area:tb;background:var(--navy);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 1.5rem;
-  position:sticky;top:0;z-index:200;
-  border-bottom:2px solid var(--gold);
+grid-area:tb;background:var(–navy);
+display:flex;align-items:center;justify-content:space-between;
+padding:0 1.5rem;
+position:sticky;top:0;z-index:200;
+border-bottom:2px solid var(–gold);
 }
 .brand{
-  display:flex;align-items:center;gap:.65rem;
-  font-family:'Fraunces',serif;font-weight:700;font-size:.95rem;
-  color:var(--white);text-decoration:none;
+display:flex;align-items:center;gap:.65rem;
+font-family:‘Fraunces’,serif;font-weight:700;font-size:.95rem;
+color:var(–white);text-decoration:none;
 }
 .brand-pill{
-  background:var(--gold);color:var(--navy);
-  font-family:'DM Sans',sans-serif;font-size:.62rem;
-  font-weight:700;padding:.16rem .5rem;border-radius:100px;
-  letter-spacing:.06em;
+background:var(–gold);color:var(–navy);
+font-family:‘DM Sans’,sans-serif;font-size:.62rem;
+font-weight:700;padding:.16rem .5rem;border-radius:100px;
+letter-spacing:.06em;
 }
 .tb-right{display:flex;align-items:center;gap:1rem}
 .tb-meta{font-size:.73rem;color:rgba(255,255,255,.45)}
 .tb-prog{
-  font-size:.73rem;font-weight:600;color:var(--gold);
-  background:rgba(240,165,0,.12);border:1px solid rgba(240,165,0,.2);
-  padding:.28rem .75rem;border-radius:100px;
+font-size:.73rem;font-weight:600;color:var(–gold);
+background:rgba(240,165,0,.12);border:1px solid rgba(240,165,0,.2);
+padding:.28rem .75rem;border-radius:100px;
 }
 .pdf-btn{
-  background:var(--gold);color:var(--navy);border:none;
-  border-radius:var(--r8);padding:.32rem .85rem;
-  font-family:'DM Sans',sans-serif;font-size:.76rem;font-weight:700;
-  cursor:pointer;transition:background .15s,transform .15s;
-  display:flex;align-items:center;gap:.35rem;
+background:var(–gold);color:var(–navy);border:none;
+border-radius:var(–r8);padding:.32rem .85rem;
+font-family:‘DM Sans’,sans-serif;font-size:.76rem;font-weight:700;
+cursor:pointer;transition:background .15s,transform .15s;
+display:flex;align-items:center;gap:.35rem;
 }
-.pdf-btn:hover{background:var(--gold2);transform:translateY(-1px)}
+.pdf-btn:hover{background:var(–gold2);transform:translateY(-1px)}
 
 /* ── SIDEBAR ─────────────────────────────── */
 .sb{
-  grid-area:sb;background:var(--navy3);
-  position:sticky;top:54px;height:calc(100vh - 54px);
-  overflow-y:auto;border-right:1px solid rgba(255,255,255,.05);
-  scrollbar-width:thin;scrollbar-color:rgba(240,165,0,.25) transparent;
+grid-area:sb;background:var(–navy3);
+position:sticky;top:54px;height:calc(100vh - 54px);
+overflow-y:auto;border-right:1px solid rgba(255,255,255,.05);
+scrollbar-width:thin;scrollbar-color:rgba(240,165,0,.25) transparent;
 }
 .sb::-webkit-scrollbar{width:3px}
 .sb::-webkit-scrollbar-thumb{background:rgba(240,165,0,.25);border-radius:2px}
 .sb-section{
-  padding:.8rem 1rem .3rem;
-  font-size:.62rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;color:rgba(255,255,255,.25);
+padding:.8rem 1rem .3rem;
+font-size:.62rem;font-weight:600;letter-spacing:.12em;
+text-transform:uppercase;color:rgba(255,255,255,.25);
 }
 .nav-btn{
-  display:flex;align-items:center;gap:.6rem;
-  width:100%;padding:.6rem 1rem;border:none;
-  background:transparent;cursor:pointer;text-align:left;
-  border-left:3px solid transparent;transition:background .12s,border-color .12s;
+display:flex;align-items:center;gap:.6rem;
+width:100%;padding:.6rem 1rem;border:none;
+background:transparent;cursor:pointer;text-align:left;
+border-left:3px solid transparent;transition:background .12s,border-color .12s;
 }
 .nav-btn:hover{background:rgba(255,255,255,.04)}
-.nav-btn.active{background:rgba(240,165,0,.07);border-left-color:var(--gold)}
+.nav-btn.active{background:rgba(240,165,0,.07);border-left-color:var(–gold)}
 .nav-btn.done .n-num{background:rgba(22,101,52,.7);color:#86efac;border-color:rgba(134,239,172,.3)}
 .n-num{
-  width:22px;height:22px;border-radius:50%;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  font-size:.68rem;font-weight:700;font-family:'DM Mono',monospace;
-  background:rgba(255,255,255,.06);color:var(--slate);
-  border:1px solid rgba(255,255,255,.1);transition:all .2s;
+width:22px;height:22px;border-radius:50%;flex-shrink:0;
+display:flex;align-items:center;justify-content:center;
+font-size:.68rem;font-weight:700;font-family:‘DM Mono’,monospace;
+background:rgba(255,255,255,.06);color:var(–slate);
+border:1px solid rgba(255,255,255,.1);transition:all .2s;
 }
-.nav-btn.active .n-num{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.nav-btn.active .n-num{background:var(–gold);color:var(–navy);border-color:var(–gold)}
 .n-text{flex:1;min-width:0}
 .n-title{
-  font-size:.8rem;font-weight:500;color:rgba(255,255,255,.65);
-  display:block;line-height:1.2;white-space:nowrap;
-  overflow:hidden;text-overflow:ellipsis;
+font-size:.8rem;font-weight:500;color:rgba(255,255,255,.65);
+display:block;line-height:1.2;white-space:nowrap;
+overflow:hidden;text-overflow:ellipsis;
 }
-.nav-btn.active .n-title{color:var(--white);font-weight:600}
+.nav-btn.active .n-title{color:var(–white);font-weight:600}
 .n-date{font-size:.65rem;color:rgba(255,255,255,.28);display:block;margin-top:.08rem}
 .n-track{height:2px;background:rgba(255,255,255,.05);margin:.2rem 1rem 0}
-.n-fill{height:100%;background:var(--gold);border-radius:1px;transition:width .4s ease}
+.n-fill{height:100%;background:var(–gold);border-radius:1px;transition:width .4s ease}
 .sb-footer{padding:1.2rem 1rem .8rem;font-size:.68rem;color:rgba(255,255,255,.22);line-height:1.55}
 
 /* ── CONTENT ─────────────────────────────── */
@@ -115,27 +116,27 @@ body{
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
 .s-hero{
-  background:var(--navy);padding:2.2rem 2.4rem 1.8rem;
-  position:relative;overflow:hidden;
+background:var(–navy);padding:2.2rem 2.4rem 1.8rem;
+position:relative;overflow:hidden;
 }
 .s-hero::after{
-  content:'';position:absolute;right:-30px;top:-30px;
-  width:200px;height:200px;border-radius:50%;
-  background:radial-gradient(circle,rgba(240,165,0,.1) 0%,transparent 70%);
-  pointer-events:none;
+content:’’;position:absolute;right:-30px;top:-30px;
+width:200px;height:200px;border-radius:50%;
+background:radial-gradient(circle,rgba(240,165,0,.1) 0%,transparent 70%);
+pointer-events:none;
 }
 .h-eye{font-size:.68rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+text-transform:uppercase;color:var(–gold);margin-bottom:.5rem}
 .h-title{
-  font-family:'Fraunces',serif;font-weight:700;font-size:1.85rem;
-  color:var(--white);line-height:1.15;margin-bottom:.65rem;
+font-family:‘Fraunces’,serif;font-weight:700;font-size:1.85rem;
+color:var(–white);line-height:1.15;margin-bottom:.65rem;
 }
 .h-desc{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.65;max-width:520px}
 .h-prog{display:flex;align-items:center;gap:.7rem;margin-top:1.3rem}
 .h-prog-lbl{font-size:.7rem;color:rgba(255,255,255,.35)}
 .h-prog-track{flex:1;max-width:180px;height:3px;background:rgba(255,255,255,.1);border-radius:2px}
-.h-prog-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .5s ease}
-.h-prog-pct{font-size:.7rem;font-weight:700;color:var(--gold)}
+.h-prog-fill{height:100%;background:var(–gold);border-radius:2px;transition:width .5s ease}
+.h-prog-pct{font-size:.7rem;font-weight:700;color:var(–gold)}
 
 .s-body{padding:1.8rem 2.2rem;max-width:800px}
 
@@ -143,148 +144,148 @@ body{
 .sl{display:flex;align-items:center;gap:.55rem;margin:2rem 0 .9rem}
 .sl:first-child{margin-top:0}
 .sl-badge{
-  font-size:.62rem;font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;padding:.18rem .55rem;border-radius:100px;
+font-size:.62rem;font-weight:700;letter-spacing:.1em;
+text-transform:uppercase;padding:.18rem .55rem;border-radius:100px;
 }
 .sl-badge.th{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
 .sl-badge.ex{background:#FFF7ED;color:#C2410C;border:1px solid #FED7AA}
 .sl-badge.dt{background:#F0FDF4;color:#166534;border:1px solid #BBF7D0}
 .sl-badge.ac{background:#FAF5FF;color:#7E22CE;border:1px solid #E9D5FF}
-.sl-title{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--ink)}
+.sl-title{font-family:‘Fraunces’,serif;font-size:1.05rem;font-weight:600;color:var(–ink)}
 
 /* ── CARDS ───────────────────────────────── */
 .card{
-  background:var(--white);border-radius:var(--r12);
-  border:1px solid var(--smoke);box-shadow:var(--sh);
-  padding:1.3rem 1.5rem;margin-bottom:.9rem;
+background:var(–white);border-radius:var(–r12);
+border:1px solid var(–smoke);box-shadow:var(–sh);
+padding:1.3rem 1.5rem;margin-bottom:.9rem;
 }
-.card-gold{border-left:4px solid var(--gold);background:linear-gradient(135deg,#FFFBF0,var(--white))}
-.card-navy{background:var(--navy);border-color:var(--navy)}
+.card-gold{border-left:4px solid var(–gold);background:linear-gradient(135deg,#FFFBF0,var(–white))}
+.card-navy{background:var(–navy);border-color:var(–navy)}
 .card-navy p{color:rgba(255,255,255,.7)}
-.card-navy strong{color:var(--gold2)}
-.card-red{border-left:4px solid var(--red);background:#FFF5F5}
+.card-navy strong{color:var(–gold2)}
+.card-red{border-left:4px solid var(–red);background:#FFF5F5}
 .card h4{
-  font-family:'Fraunces',serif;font-size:.92rem;font-weight:700;
-  color:var(--ink);margin-bottom:.55rem;
-  display:flex;align-items:center;gap:.4rem;
+font-family:‘Fraunces’,serif;font-size:.92rem;font-weight:700;
+color:var(–ink);margin-bottom:.55rem;
+display:flex;align-items:center;gap:.4rem;
 }
-.card-navy h4{color:var(--gold)}
+.card-navy h4{color:var(–gold)}
 .card p{font-size:.86rem;line-height:1.7;color:#3A4A68;margin-bottom:.45rem}
 .card p:last-child{margin-bottom:0}
 
 /* ── CONCEPT GRID ────────────────────────── */
 .cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.65rem;margin-bottom:.9rem}
 .ci{
-  background:var(--white);border:1px solid var(--smoke);
-  border-radius:var(--r8);padding:.85rem 1rem;
-  border-top:3px solid var(--c,var(--gold));box-shadow:var(--sh);
+background:var(–white);border:1px solid var(–smoke);
+border-radius:var(–r8);padding:.85rem 1rem;
+border-top:3px solid var(–c,var(–gold));box-shadow:var(–sh);
 }
-.ci h5{font-size:.8rem;font-weight:600;color:var(--ink);margin-bottom:.28rem}
-.ci p{font-size:.76rem;color:var(--slate);line-height:1.5;margin:0}
+.ci h5{font-size:.8rem;font-weight:600;color:var(–ink);margin-bottom:.28rem}
+.ci p{font-size:.76rem;color:var(–slate);line-height:1.5;margin:0}
 
 /* ── ACCORDION ───────────────────────────── */
-.acc{border:1px solid var(--smoke);border-radius:var(--r8);overflow:hidden;margin-bottom:.55rem}
+.acc{border:1px solid var(–smoke);border-radius:var(–r8);overflow:hidden;margin-bottom:.55rem}
 .acc-btn{
-  width:100%;padding:.8rem 1rem;background:var(--white);border:none;
-  cursor:pointer;display:flex;align-items:center;justify-content:space-between;
-  font-size:.84rem;font-weight:500;color:var(--ink);text-align:left;
-  transition:background .12s;
+width:100%;padding:.8rem 1rem;background:var(–white);border:none;
+cursor:pointer;display:flex;align-items:center;justify-content:space-between;
+font-size:.84rem;font-weight:500;color:var(–ink);text-align:left;
+transition:background .12s;
 }
-.acc-btn:hover,.acc-btn.open{background:var(--smoke)}
-.acc-ch{font-size:.62rem;color:var(--gold);transition:transform .2s;flex-shrink:0}
+.acc-btn:hover,.acc-btn.open{background:var(–smoke)}
+.acc-ch{font-size:.62rem;color:var(–gold);transition:transform .2s;flex-shrink:0}
 .acc-btn.open .acc-ch{transform:rotate(180deg)}
-.acc-body{max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--off)}
-.acc-body.open{max-height:600px}
+.acc-body{display:none;background:var(–off)}
+.acc-body.open{display:block}
 .acc-in{padding:.9rem 1.1rem}
 .acc-in ul{padding-left:1.1rem}
 .acc-in li{font-size:.83rem;color:#3A4A68;line-height:1.65;margin-bottom:.3rem}
-.acc-in li::marker{color:var(--gold)}
+.acc-in li::marker{color:var(–gold)}
 .acc-in p{font-size:.83rem;color:#3A4A68;line-height:1.65;margin-bottom:.35rem}
 
 /* ── VISUAL ELEMENTS ─────────────────────── */
-.maturity{display:flex;gap:3px;border-radius:var(--r8);overflow:hidden;margin:.65rem 0}
-.ms{flex:1;padding:.5rem .2rem;text-align:center;font-size:.65rem;font-weight:600;color:var(--white);line-height:1.25}
+.maturity{display:flex;gap:3px;border-radius:var(–r8);overflow:hidden;margin:.65rem 0}
+.ms{flex:1;padding:.5rem .2rem;text-align:center;font-size:.65rem;font-weight:600;color:var(–white);line-height:1.25}
 
 .tl{display:flex;flex-direction:column;gap:0}
 .tli{display:flex;gap:.8rem;padding-bottom:.9rem;position:relative}
-.tli::before{content:'';position:absolute;left:13px;top:24px;width:1px;bottom:0;background:var(--steel)}
+.tli::before{content:’’;position:absolute;left:13px;top:24px;width:1px;bottom:0;background:var(–steel)}
 .tli:last-child::before{display:none}
-.tl-dot{width:26px;height:26px;border-radius:50%;flex-shrink:0;background:var(--white);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;color:var(--gold);font-family:'DM Mono',monospace}
-.tl-b h5{font-size:.86rem;font-weight:600;color:var(--ink);margin-bottom:.18rem;display:flex;align-items:center;gap:.4rem}
-.tl-tag{font-size:.65rem;color:var(--gold3);background:#FFF7ED;border:1px solid #FED7AA;padding:.08rem .45rem;border-radius:100px}
-.tl-b p{font-size:.78rem;color:var(--slate);line-height:1.5}
+.tl-dot{width:26px;height:26px;border-radius:50%;flex-shrink:0;background:var(–white);border:2px solid var(–gold);display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;color:var(–gold);font-family:‘DM Mono’,monospace}
+.tl-b h5{font-size:.86rem;font-weight:600;color:var(–ink);margin-bottom:.18rem;display:flex;align-items:center;gap:.4rem}
+.tl-tag{font-size:.65rem;color:var(–gold3);background:#FFF7ED;border:1px solid #FED7AA;padding:.08rem .45rem;border-radius:100px}
+.tl-b p{font-size:.78rem;color:var(–slate);line-height:1.5}
 
-.compare{border-radius:var(--r8);overflow:hidden;border:1px solid var(--smoke);margin:.65rem 0}
-.ct-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--smoke)}
+.compare{border-radius:var(–r8);overflow:hidden;border:1px solid var(–smoke);margin:.65rem 0}
+.ct-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(–smoke)}
 .ct-row:last-child{border-bottom:none}
 .ct-cell{padding:.48rem .75rem;font-size:.81rem;color:#3A4A68;line-height:1.4}
-.ct-hd{background:var(--navy);color:var(--white);font-weight:600;font-size:.76rem}
-.ct-hd2{background:var(--teal);color:var(--white);font-weight:600;font-size:.76rem}
-.ct-row:nth-child(even) .ct-cell:not(.ct-hd):not(.ct-hd2){background:var(--off)}
+.ct-hd{background:var(–navy);color:var(–white);font-weight:600;font-size:.76rem}
+.ct-hd2{background:var(–teal);color:var(–white);font-weight:600;font-size:.76rem}
+.ct-row:nth-child(even) .ct-cell:not(.ct-hd):not(.ct-hd2){background:var(–off)}
 
 /* ── DATA CASE ───────────────────────────── */
 .data-case{
-  background:var(--white);border-radius:var(--r12);
-  border:2px solid var(--gold);box-shadow:var(--sh2);
-  overflow:hidden;margin-bottom:.9rem;
+background:var(–white);border-radius:var(–r12);
+border:2px solid var(–gold);box-shadow:var(–sh2);
+overflow:hidden;margin-bottom:.9rem;
 }
 .dc-header{
-  background:linear-gradient(90deg,var(--navy),var(--navy2));
-  padding:.9rem 1.4rem;
-  display:flex;align-items:center;gap:.75rem;
+background:linear-gradient(90deg,var(–navy),var(–navy2));
+padding:.9rem 1.4rem;
+display:flex;align-items:center;gap:.75rem;
 }
 .dc-badge{
-  background:var(--gold);color:var(--navy);
-  font-size:.62rem;font-weight:800;letter-spacing:.1em;
-  padding:.18rem .55rem;border-radius:var(--r4);
-  font-family:'DM Sans',sans-serif;white-space:nowrap;
+background:var(–gold);color:var(–navy);
+font-size:.62rem;font-weight:800;letter-spacing:.1em;
+padding:.18rem .55rem;border-radius:var(–r4);
+font-family:‘DM Sans’,sans-serif;white-space:nowrap;
 }
-.dc-meta h3{font-family:'Fraunces',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+.dc-meta h3{font-family:‘Fraunces’,serif;font-size:.95rem;font-weight:700;color:var(–white)}
 .dc-meta p{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:.1rem}
 .dc-body{padding:1.3rem 1.4rem}
 .dc-context{
-  font-size:.83rem;color:var(--amber);line-height:1.6;
-  padding:.6rem .85rem;background:#FFFBEB;border-radius:var(--r8);
-  border-left:3px solid var(--gold);margin-bottom:1.1rem;
+font-size:.83rem;color:var(–amber);line-height:1.6;
+padding:.6rem .85rem;background:#FFFBEB;border-radius:var(–r8);
+border-left:3px solid var(–gold);margin-bottom:1.1rem;
 }
 
 /* Data table */
-.dt-wrap{overflow-x:auto;border-radius:var(--r8);border:1px solid var(--smoke);margin-bottom:1rem}
+.dt-wrap{overflow-x:auto;border-radius:var(–r8);border:1px solid var(–smoke);margin-bottom:1rem}
 .dt-table{width:100%;border-collapse:collapse;font-size:.8rem}
 .dt-table th{
-  background:var(--navy);color:var(--white);
-  padding:.48rem .7rem;text-align:left;font-weight:600;
-  font-size:.72rem;letter-spacing:.04em;white-space:nowrap;
+background:var(–navy);color:var(–white);
+padding:.48rem .7rem;text-align:left;font-weight:600;
+font-size:.72rem;letter-spacing:.04em;white-space:nowrap;
 }
 .dt-table td{
-  padding:.42rem .7rem;border-bottom:1px solid var(--smoke);
-  color:var(--ink);white-space:nowrap;
+padding:.42rem .7rem;border-bottom:1px solid var(–smoke);
+color:var(–ink);white-space:nowrap;
 }
 .dt-table tr:last-child td{border-bottom:none}
-.dt-table tr:nth-child(even) td{background:var(--off)}
+.dt-table tr:nth-child(even) td{background:var(–off)}
 .dt-table tr:hover td{background:#EEF6FF}
-.dt-table td.num{font-family:'DM Mono',monospace;text-align:right}
-.dt-table td.pos{color:var(--green);font-weight:600}
-.dt-table td.neg{color:var(--red);font-weight:600}
+.dt-table td.num{font-family:‘DM Mono’,monospace;text-align:right}
+.dt-table td.pos{color:var(–green);font-weight:600}
+.dt-table td.neg{color:var(–red);font-weight:600}
 .dt-table td.hi{background:#FFF7ED !important;font-weight:600}
 
 /* Chart canvas */
 .chart-wrap{
-  background:var(--off);border-radius:var(--r8);
-  border:1px solid var(--smoke);padding:.75rem;
-  margin-bottom:1rem;position:relative;
+background:var(–off);border-radius:var(–r8);
+border:1px solid var(–smoke);padding:.75rem;
+margin-bottom:1rem;position:relative;
 }
 .chart-title{
-  font-size:.75rem;font-weight:600;color:var(--slate);
-  margin-bottom:.65rem;letter-spacing:.04em;
+font-size:.75rem;font-weight:600;color:var(–slate);
+margin-bottom:.65rem;letter-spacing:.04em;
 }
 .bar-chart{display:flex;flex-direction:column;gap:.35rem}
 .bc-row{display:flex;align-items:center;gap:.6rem}
-.bc-label{font-size:.72rem;color:var(--slate);width:90px;text-align:right;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bc-track{flex:1;background:var(--smoke);border-radius:2px;height:18px;position:relative}
+.bc-label{font-size:.72rem;color:var(–slate);width:90px;text-align:right;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bc-track{flex:1;background:var(–smoke);border-radius:2px;height:18px;position:relative}
 .bc-bar{height:100%;border-radius:2px;transition:width .8s ease;display:flex;align-items:center;padding-left:.4rem}
-.bc-val{font-size:.68rem;font-weight:600;color:var(--white);font-family:'DM Mono',monospace;white-space:nowrap}
-.bc-val.dark{color:var(--ink)}
+.bc-val{font-size:.68rem;font-weight:600;color:var(–white);font-family:‘DM Mono’,monospace;white-space:nowrap}
+.bc-val.dark{color:var(–ink)}
 
 .line-chart-svg{width:100%;height:140px}
 
@@ -294,29 +295,29 @@ body{
 
 /* ── CHALLENGE BOX ───────────────────────── */
 .challenge{
-  background:var(--navy3);border-radius:var(--r8);
-  border:1px solid rgba(240,165,0,.2);padding:1rem 1.2rem;
-  margin-top:.8rem;
+background:var(–navy3);border-radius:var(–r8);
+border:1px solid rgba(240,165,0,.2);padding:1rem 1.2rem;
+margin-top:.8rem;
 }
 .ch-label{
-  font-size:.65rem;font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;
-  display:flex;align-items:center;gap:.4rem;
+font-size:.65rem;font-weight:700;letter-spacing:.1em;
+text-transform:uppercase;color:var(–gold);margin-bottom:.5rem;
+display:flex;align-items:center;gap:.4rem;
 }
 .ch-q{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:.75rem}
 .ch-opts{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.8rem}
 .ch-opt{
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
-  border-radius:var(--r8);padding:.55rem .85rem;cursor:pointer;
-  font-size:.84rem;color:rgba(255,255,255,.7);transition:all .15s;
-  text-align:left;width:100%;
+background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+border-radius:var(–r8);padding:.55rem .85rem;cursor:pointer;
+font-size:.84rem;color:rgba(255,255,255,.7);transition:all .15s;
+text-align:left;width:100%;
 }
-.ch-opt:hover{background:rgba(240,165,0,.08);border-color:rgba(240,165,0,.3);color:var(--white)}
+.ch-opt:hover{background:rgba(240,165,0,.08);border-color:rgba(240,165,0,.3);color:var(–white)}
 .ch-opt.correct{background:rgba(22,101,52,.3);border-color:#86efac;color:#86efac;pointer-events:none}
 .ch-opt.wrong{background:rgba(185,28,28,.2);border-color:#fca5a5;color:#fca5a5;pointer-events:none}
 .ch-feedback{
-  display:none;padding:.7rem .9rem;border-radius:var(--r8);
-  font-size:.83rem;line-height:1.6;margin-top:.5rem;
+display:none;padding:.7rem .9rem;border-radius:var(–r8);
+font-size:.83rem;line-height:1.6;margin-top:.5rem;
 }
 .ch-feedback.show{display:block}
 .ch-feedback.ok{background:rgba(22,101,52,.2);border:1px solid rgba(134,239,172,.3);color:#86efac}
@@ -324,204 +325,321 @@ body{
 
 /* ── CALCULATOR ──────────────────────────── */
 .calc-box{
-  background:var(--off);border-radius:var(--r8);
-  border:1px solid var(--steel);padding:1rem 1.2rem;margin-bottom:.8rem;
+background:var(–off);border-radius:var(–r8);
+border:1px solid var(–steel);padding:1rem 1.2rem;margin-bottom:.8rem;
 }
 .calc-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.5rem;flex-wrap:wrap}
-.calc-lbl{font-size:.78rem;color:var(--slate);white-space:nowrap}
+.calc-lbl{font-size:.78rem;color:var(–slate);white-space:nowrap}
 .calc-input{
-  width:80px;background:var(--white);border:1.5px solid var(--steel);
-  border-radius:var(--r4);padding:.3rem .5rem;
-  font-family:'DM Mono',monospace;font-size:.82rem;color:var(--ink);
-  text-align:right;outline:none;transition:border-color .15s;
+width:80px;background:var(–white);border:1.5px solid var(–steel);
+border-radius:var(–r4);padding:.3rem .5rem;
+font-family:‘DM Mono’,monospace;font-size:.82rem;color:var(–ink);
+text-align:right;outline:none;transition:border-color .15s;
 }
-.calc-input:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(240,165,0,.1)}
+.calc-input:focus{border-color:var(–gold);box-shadow:0 0 0 2px rgba(240,165,0,.1)}
 .calc-result{
-  background:var(--navy);border-radius:var(--r8);
-  padding:.65rem 1rem;display:flex;align-items:center;
-  justify-content:space-between;margin-top:.5rem;
+background:var(–navy);border-radius:var(–r8);
+padding:.65rem 1rem;display:flex;align-items:center;
+justify-content:space-between;margin-top:.5rem;
 }
 .cr-label{font-size:.75rem;color:rgba(255,255,255,.5)}
-.cr-value{font-family:'DM Mono',monospace;font-size:1.1rem;font-weight:700;color:var(--gold)}
+.cr-value{font-family:‘DM Mono’,monospace;font-size:1.1rem;font-weight:700;color:var(–gold)}
 
 /* ── ACTIVITY ────────────────────────────── */
 .activity{
-  background:var(--white);border-radius:var(--r12);
-  border:1px solid var(--smoke);box-shadow:var(--sh);
-  overflow:hidden;margin-bottom:.9rem;
+background:var(–white);border-radius:var(–r12);
+border:1px solid var(–smoke);box-shadow:var(–sh);
+overflow:hidden;margin-bottom:.9rem;
 }
 .act-hd{
-  background:var(--navy);padding:.9rem 1.4rem;
-  display:flex;align-items:flex-start;gap:.7rem;
+background:var(–navy);padding:.9rem 1.4rem;
+display:flex;align-items:flex-start;gap:.7rem;
 }
 .act-badge{
-  background:var(--gold);color:var(--navy);
-  font-size:.62rem;font-weight:800;letter-spacing:.08em;
-  padding:.18rem .52rem;border-radius:var(--r4);
-  font-family:'DM Sans',sans-serif;flex-shrink:0;margin-top:2px;
+background:var(–gold);color:var(–navy);
+font-size:.62rem;font-weight:800;letter-spacing:.08em;
+padding:.18rem .52rem;border-radius:var(–r4);
+font-family:‘DM Sans’,sans-serif;flex-shrink:0;margin-top:2px;
 }
-.act-meta h3{font-family:'Fraunces',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+.act-meta h3{font-family:‘Fraunces’,serif;font-size:.95rem;font-weight:700;color:var(–white)}
 .act-meta p{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:.12rem}
 .act-body{padding:1.3rem 1.4rem}
 .objective{
-  font-size:.81rem;color:var(--amber);line-height:1.6;
-  padding:.6rem .85rem;background:#FFFBEB;border-radius:var(--r8);
-  border-left:3px solid var(--gold);margin-bottom:1rem;
-  font-style:italic;
+font-size:.81rem;color:var(–amber);line-height:1.6;
+padding:.6rem .85rem;background:#FFFBEB;border-radius:var(–r8);
+border-left:3px solid var(–gold);margin-bottom:1rem;
+font-style:italic;
 }
 
 /* ── FORM ────────────────────────────────── */
 .fg{margin-bottom:.8rem}
-.fl{display:block;font-size:.7rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--slate);margin-bottom:.35rem}
+.fl{display:block;font-size:.7rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(–slate);margin-bottom:.35rem}
 .fi,.fta,.fse{
-  width:100%;background:var(--off);border:1.5px solid var(--steel);
-  border-radius:var(--r8);color:var(--ink);
-  font-family:'DM Sans',sans-serif;font-size:.86rem;
-  padding:.55rem .8rem;transition:border-color .15s,box-shadow .15s;outline:none;
+width:100%;background:var(–off);border:1.5px solid var(–steel);
+border-radius:var(–r8);color:var(–ink);
+font-family:‘DM Sans’,sans-serif;font-size:.86rem;
+padding:.55rem .8rem;transition:border-color .15s,box-shadow .15s;outline:none;
 }
-.fi:focus,.fta:focus,.fse:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(240,165,0,.1)}
+.fi:focus,.fta:focus,.fse:focus{border-color:var(–gold);box-shadow:0 0 0 3px rgba(240,165,0,.1)}
 .fta{resize:vertical;min-height:72px;line-height:1.55}
-.fse option{background:var(--white)}
+.fse option{background:var(–white)}
 
 /* ── PROMPT COPY BLOCK ───────────────────── */
 .prompt-block{
-  margin-top:1rem;border-radius:var(--r8);
-  background:var(--navy3);border:1px solid rgba(255,255,255,.08);
-  overflow:hidden;
+margin-top:1rem;border-radius:var(–r8);
+background:var(–navy3);border:1px solid rgba(255,255,255,.08);
+overflow:hidden;
 }
 .pb-header{
-  padding:.55rem .9rem;background:rgba(240,165,0,.1);
-  border-bottom:1px solid rgba(240,165,0,.15);
-  display:flex;align-items:center;justify-content:space-between;
+padding:.55rem .9rem;background:rgba(240,165,0,.1);
+border-bottom:1px solid rgba(240,165,0,.15);
+display:flex;align-items:center;justify-content:space-between;
 }
-.pb-label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.pb-label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(–gold)}
 .pb-copy{
-  background:var(--gold);color:var(--navy);border:none;
-  padding:.28rem .75rem;border-radius:var(--r4);
-  font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;
-  cursor:pointer;transition:background .15s;
-  display:flex;align-items:center;gap:.3rem;
+background:var(–gold);color:var(–navy);border:none;
+padding:.28rem .75rem;border-radius:var(–r4);
+font-family:‘DM Sans’,sans-serif;font-size:.72rem;font-weight:700;
+cursor:pointer;transition:background .15s;
+display:flex;align-items:center;gap:.3rem;
 }
-.pb-copy:hover{background:var(--gold2)}
-.pb-copy.copied{background:var(--green);color:var(--white)}
+.pb-copy:hover{background:var(–gold2)}
+.pb-copy.copied{background:var(–green);color:var(–white)}
 .pb-text{
-  padding:.85rem 1rem;font-family:'DM Mono',monospace;
-  font-size:.75rem;line-height:1.65;color:rgba(200,220,255,.8);
-  white-space:pre-wrap;max-height:200px;overflow-y:auto;
+padding:.85rem 1rem;font-family:‘DM Mono’,monospace;
+font-size:.75rem;line-height:1.65;color:rgba(200,220,255,.8);
+white-space:pre-wrap;max-height:200px;overflow-y:auto;
 }
 .pb-cta{
-  padding:.65rem 1rem;background:rgba(255,255,255,.04);
-  border-top:1px solid rgba(255,255,255,.06);
-  display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;
+padding:.65rem 1rem;background:rgba(255,255,255,.04);
+border-top:1px solid rgba(255,255,255,.06);
+display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;
 }
 .pb-cta-lbl{font-size:.73rem;color:rgba(255,255,255,.35)}
 .pb-link{
-  display:inline-flex;align-items:center;gap:.3rem;
-  font-size:.73rem;font-weight:600;color:var(--gold);
-  text-decoration:none;border:1px solid rgba(240,165,0,.3);
-  padding:.22rem .65rem;border-radius:100px;
-  transition:background .15s;
+display:inline-flex;align-items:center;gap:.3rem;
+font-size:.73rem;font-weight:600;color:var(–gold);
+text-decoration:none;border:1px solid rgba(240,165,0,.3);
+padding:.22rem .65rem;border-radius:100px;
+transition:background .15s;
 }
 .pb-link:hover{background:rgba(240,165,0,.1)}
 
 /* ── CANVAS ──────────────────────────────── */
 .canvas{
-  margin-top:.9rem;border:1.5px dashed var(--steel);
-  border-radius:var(--r8);padding:.9rem 1rem;
-  background:linear-gradient(135deg,var(--smoke),var(--white));
+margin-top:.9rem;border:1.5px dashed var(–steel);
+border-radius:var(–r8);padding:.9rem 1rem;
+background:linear-gradient(135deg,var(–smoke),var(–white));
 }
 .canvas-lbl{
-  font-size:.68rem;font-weight:700;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--gold3);margin-bottom:.55rem;
-  display:flex;align-items:center;gap:.35rem;
+font-size:.68rem;font-weight:700;letter-spacing:.08em;
+text-transform:uppercase;color:var(–gold3);margin-bottom:.55rem;
+display:flex;align-items:center;gap:.35rem;
 }
 
 /* ── BUTTONS ─────────────────────────────── */
 .btn-row{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.9rem;align-items:center}
 .btn{
-  display:inline-flex;align-items:center;gap:.38rem;
-  font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;
-  padding:.5rem 1rem;border-radius:var(--r8);border:none;
-  cursor:pointer;transition:all .16s;
+display:inline-flex;align-items:center;gap:.38rem;
+font-family:‘DM Sans’,sans-serif;font-size:.8rem;font-weight:600;
+padding:.5rem 1rem;border-radius:var(–r8);border:none;
+cursor:pointer;transition:all .16s;
 }
-.btn-navy{background:var(--navy);color:var(--white)}
-.btn-navy:hover{background:var(--navy2);transform:translateY(-1px)}
-.btn-ghost{background:transparent;color:var(--navy);border:1.5px solid var(--steel)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-navy{background:var(–navy);color:var(–white)}
+.btn-navy:hover{background:var(–navy2);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(–navy);border:1.5px solid var(–steel)}
+.btn-ghost:hover{border-color:var(–gold);color:var(–gold)}
 .btn-complete{
-  width:100%;padding:.75rem;margin-top:1.5rem;
-  background:var(--navy);color:var(--white);border:none;
-  border-radius:var(--r8);font-family:'DM Sans',sans-serif;
-  font-size:.88rem;font-weight:600;cursor:pointer;transition:all .2s;
-  display:flex;align-items:center;justify-content:center;gap:.5rem;
+width:100%;padding:.75rem;margin-top:1.5rem;
+background:var(–navy);color:var(–white);border:none;
+border-radius:var(–r8);font-family:‘DM Sans’,sans-serif;
+font-size:.88rem;font-weight:600;cursor:pointer;transition:all .2s;
+display:flex;align-items:center;justify-content:center;gap:.5rem;
 }
-.btn-complete:hover{background:var(--navy2)}
+.btn-complete:hover{background:var(–navy2)}
 .btn-complete.done{background:#166534;cursor:default}
-.sep{margin-top:1.5rem;padding-top:1.4rem;border-top:1px solid var(--smoke)}
+.sep{margin-top:1.5rem;padding-top:1.4rem;border-top:1px solid var(–smoke)}
 
 /* ── SAVED TICK ──────────────────────────── */
-.stk{font-size:.72rem;color:var(--green);display:none;align-items:center;gap:.25rem}
+.stk{font-size:.72rem;color:var(–green);display:none;align-items:center;gap:.25rem}
 .stk.show{display:flex}
 
 /* ── RESPONSIVE ──────────────────────────── */
-@media(max-width:720px){
-  body{grid-template-columns:1fr;grid-template-areas:"tb""ct"}
-  .sb{display:none}.s-body{padding:1.2rem 1rem}.s-hero{padding:1.5rem 1rem}
-  .h-title{font-size:1.4rem}.bgrid{grid-template-columns:repeat(2,1fr)}
-  .cgrid{grid-template-columns:1fr}
+@media(max-width:768px){
+/* Grid — sidebar some, conteúdo ocupa tudo */
+body{
+grid-template-columns:1fr;
+grid-template-rows:54px auto;
+grid-template-areas:“tb”“ct”;
+}
+.sb{display:none}
+.ct{height:auto;overflow-y:visible}
+
+/* Top bar mobile */
+.tb{padding:0 1rem}
+.brand{font-size:.85rem}
+.tb-meta{display:none}
+.tb-prog{font-size:.7rem;padding:.22rem .55rem}
+.pdf-btn{font-size:.7rem;padding:.28rem .65rem}
+
+/* Hero */
+.s-hero{padding:1.4rem 1rem 1.2rem}
+.h-title{font-size:1.35rem}
+.h-desc{font-size:.84rem}
+.h-jump{gap:.5rem}
+.h-jump-link{font-size:.68rem;padding:.18rem .55rem}
+
+/* Body */
+.s-body{padding:1.1rem 1rem 3rem}
+
+/* Grids — single column on mobile */
+.cgrid{grid-template-columns:1fr}
+.bgrid{grid-template-columns:repeat(2,1fr)}
+
+/* Compare table — stack on very small */
+.ct-row{grid-template-columns:1fr}
+.ct-cell{border-bottom:1px solid var(–smoke)}
+.ct-cell.ct-hd,.ct-cell.ct-hd2{border-bottom:none}
+
+/* Data tables — horizontal scroll */
+.dt-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.dt-table{min-width:480px}
+
+/* Cards */
+.card{padding:1rem 1.1rem}
+
+/* Activity */
+.act-hd{flex-direction:column;gap:.5rem;padding:.85rem 1rem}
+.act-body{padding:1rem}
+
+/* Data case */
+.dc-header{flex-direction:column;gap:.5rem;padding:.85rem 1rem}
+
+/* Calc box */
+.calc-row{flex-direction:column;gap:.4rem}
+.calc-input{width:100%;text-align:left}
+
+/* Maturity bar — smaller text */
+.ms{font-size:.58rem}
+
+/* Timeline */
+.tl-b h5{font-size:.82rem;flex-wrap:wrap}
+
+/* Prompt block */
+.pb-cta{flex-direction:column;gap:.4rem}
+
+/* Bar chart labels */
+.bc-label{width:75px;font-size:.65rem}
+.bc-val{font-size:.62rem}
+
+/* Challenge options */
+.ch-opt{font-size:.8rem;padding:.5rem .75rem}
+
+/* Buttons */
+.btn-row{flex-direction:column}
+.btn{width:100%;justify-content:center}
+.btn-complete{font-size:.84rem;padding:.7rem}
+
+/* Canvas */
+.canvas{padding:.75rem}
+
+/* Section labels */
+.sl-title{font-size:.95rem}
+}
+
+/* Extra small phones */
+@media(max-width:380px){
+.h-title{font-size:1.2rem}
+.bgrid{grid-template-columns:1fr}
+.tb-prog{display:none}
+}
+
+/* ── MOBILE BOTTOM NAV ───────────────────── */
+.mob-nav{
+display:none;
+position:fixed;bottom:0;left:0;right:0;z-index:300;
+background:var(–navy3);
+border-top:2px solid var(–gold);
+padding:.4rem .5rem;
+overflow-x:auto;
+scrollbar-width:none;
+-webkit-overflow-scrolling:touch;
+}
+.mob-nav::-webkit-scrollbar{display:none}
+.mob-nav-inner{
+display:flex;gap:.3rem;min-width:max-content;
+align-items:center;padding:0 .25rem;
+}
+.mob-tab{
+display:flex;flex-direction:column;align-items:center;
+padding:.35rem .65rem;border:none;background:rgba(255,255,255,.06);
+border-radius:var(–r8);cursor:pointer;color:rgba(255,255,255,.5);
+font-family:‘DM Sans’,sans-serif;font-size:.62rem;font-weight:600;
+transition:all .15s;white-space:nowrap;
+border:1px solid rgba(255,255,255,.08);
+}
+.mob-tab.active{background:rgba(240,165,0,.15);color:var(–gold);border-color:rgba(240,165,0,.35)}
+.mob-tab.done{background:rgba(22,101,52,.2);color:#86efac;border-color:rgba(134,239,172,.2)}
+.mob-tab-num{font-size:.75rem;font-weight:800;font-family:‘DM Mono’,monospace;margin-bottom:.1rem}
+@media(max-width:768px){
+.mob-nav{display:block}
+.s-body{padding-bottom:5rem !important}
+.session-hero ~ .s-body{padding-bottom:5rem !important}
 }
 
 /* ═══════════════ PRINT ═══════════════════ */
 @media print{
-  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
-  body{display:block;background:var(--white) !important;font-size:9.5pt}
-  .tb,.sb,.btn-row,.pb-copy,.pb-cta,.btn-complete,.sep{display:none !important}
-  .ct{height:auto;overflow:visible}
-  .session{display:none !important}.session.print-on{display:block !important}
-  .print-cover{page-break-after:always;background:var(--navy) !important;
-    color:var(--white) !important;padding:2.5cm 2cm;min-height:100vh;
-    display:flex !important;flex-direction:column;justify-content:flex-end}
-  .pc-eye{color:var(--gold) !important;font-size:8pt;letter-spacing:.15em;margin-bottom:.6cm}
-  .pc-title{font-family:'Fraunces',serif;font-size:24pt;color:var(--white) !important;line-height:1.2;margin-bottom:.4cm}
-  .pc-sub{font-size:10pt;color:rgba(255,255,255,.6) !important;margin-bottom:1.5cm}
-  .pc-meta{font-size:8.5pt;color:rgba(255,255,255,.4) !important;border-top:1px solid rgba(255,255,255,.15);padding-top:.5cm}
-  .s-hero{background:var(--navy) !important;padding:.9cm .7cm .6cm;page-break-before:always}
-  .h-title{font-size:16pt !important;color:var(--white) !important}
-  .h-eye,.h-prog-pct{color:var(--gold) !important}
-  .h-desc{color:rgba(255,255,255,.65) !important;font-size:9pt}
-  .h-prog{display:none !important}
-  .s-body{padding:.6cm}
-  .card{box-shadow:none !important;border:1px solid #ddd !important;page-break-inside:avoid}
-  .card-gold{border-left:4px solid var(--gold) !important}
-  .card-navy{background:var(--navy) !important}
-  .activity,.data-case{border:1.5px solid var(--gold) !important;page-break-inside:avoid}
-  .act-hd,.dc-header{background:var(--navy) !important}
-  .fi,.fta,.fse{background:#FAFAFA !important;border:1px solid #ccc !important;color:#000 !important}
-  .prompt-block{background:#F8FAFC !important;border:1px solid #ddd !important}
-  .pb-text{color:#2D4A72 !important}
-  .pb-header{background:#EEF6FF !important}
-  .pb-label{color:#1D4ED8 !important}
-  .challenge{background:#F5F7FA !important;border:1px solid #ddd !important;page-break-inside:avoid}
-  .ch-q{color:#1A2540 !important}.ch-opts{display:none !important}
-  .calc-box{background:#F8FAFC !important;border:1px solid #ddd !important}
-  .calc-result{background:var(--navy) !important}
-  .acc-body{max-height:none !important;display:block !important}
-  .canvas{background:#FFFBF0 !important;border-color:var(--gold) !important}
-  .bar-chart,.line-chart-svg,.scatter-svg{display:block !important}
+*{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
+body{display:block;background:var(–white) !important;font-size:9.5pt}
+.tb,.sb,.btn-row,.pb-copy,.pb-cta,.btn-complete,.sep{display:none !important}
+.ct{height:auto;overflow:visible}
+.session{display:none !important}.session.print-on{display:block !important}
+.print-cover{page-break-after:always;background:var(–navy) !important;
+color:var(–white) !important;padding:2.5cm 2cm;min-height:100vh;
+display:flex !important;flex-direction:column;justify-content:flex-end}
+.pc-eye{color:var(–gold) !important;font-size:8pt;letter-spacing:.15em;margin-bottom:.6cm}
+.pc-title{font-family:‘Fraunces’,serif;font-size:24pt;color:var(–white) !important;line-height:1.2;margin-bottom:.4cm}
+.pc-sub{font-size:10pt;color:rgba(255,255,255,.6) !important;margin-bottom:1.5cm}
+.pc-meta{font-size:8.5pt;color:rgba(255,255,255,.4) !important;border-top:1px solid rgba(255,255,255,.15);padding-top:.5cm}
+.s-hero{background:var(–navy) !important;padding:.9cm .7cm .6cm;page-break-before:always}
+.h-title{font-size:16pt !important;color:var(–white) !important}
+.h-eye,.h-prog-pct{color:var(–gold) !important}
+.h-desc{color:rgba(255,255,255,.65) !important;font-size:9pt}
+.h-prog{display:none !important}
+.s-body{padding:.6cm}
+.card{box-shadow:none !important;border:1px solid #ddd !important;page-break-inside:avoid}
+.card-gold{border-left:4px solid var(–gold) !important}
+.card-navy{background:var(–navy) !important}
+.activity,.data-case{border:1.5px solid var(–gold) !important;page-break-inside:avoid}
+.act-hd,.dc-header{background:var(–navy) !important}
+.fi,.fta,.fse{background:#FAFAFA !important;border:1px solid #ccc !important;color:#000 !important}
+.prompt-block{background:#F8FAFC !important;border:1px solid #ddd !important}
+.pb-text{color:#2D4A72 !important}
+.pb-header{background:#EEF6FF !important}
+.pb-label{color:#1D4ED8 !important}
+.challenge{background:#F5F7FA !important;border:1px solid #ddd !important;page-break-inside:avoid}
+.ch-q{color:#1A2540 !important}.ch-opts{display:none !important}
+.calc-box{background:#F8FAFC !important;border:1px solid #ddd !important}
+.calc-result{background:var(–navy) !important}
+.acc-body{display:block !important}
+.canvas{background:#FFFBF0 !important;border-color:var(–gold) !important}
+.bar-chart,.line-chart-svg,.scatter-svg{display:block !important}
 }
 
 .h-jump{display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap}
 .h-jump-link{
-  font-size:.72rem;font-weight:600;color:rgba(240,165,0,.8);
-  border:1px solid rgba(240,165,0,.3);padding:.22rem .7rem;
-  border-radius:100px;text-decoration:none;transition:all .15s;
+font-size:.72rem;font-weight:600;color:rgba(240,165,0,.8);
+border:1px solid rgba(240,165,0,.3);padding:.22rem .7rem;
+border-radius:100px;text-decoration:none;transition:all .15s;
 }
-.h-jump-link:hover{background:rgba(240,165,0,.12);color:var(--gold)}
+.h-jump-link:hover{background:rgba(240,165,0,.12);color:var(–gold)}
 </style>
+
 </head>
 <body>
 
 <!-- TOP BAR -->
+
 <header class="tb">
   <div class="brand"><span class="brand-pill">MBA LIVE</span>Data Driven Business</div>
   <div class="tb-right">
@@ -532,6 +650,7 @@ body{
 </header>
 
 <!-- SIDEBAR -->
+
 <nav class="sb">
   <div class="sb-section">Encontros</div>
   <button class="nav-btn active" id="nav0" onclick="go(0)">
@@ -564,180 +683,192 @@ body{
     <div class="n-text"><span class="n-title">Modelagem Preditiva + Síntese</span><span class="n-date">05/05/2026</span></div>
   </button>
   <div class="n-track"><div class="n-fill" id="nf5" style="width:0%"></div></div>
-  <div class="sb-footer">Prof. Dr. Thiago Lima<br>COPPEAD/UFRJ · IPETEC/UCP · Escola Naval<br><br>Respostas salvas automaticamente.<br>Use "PDF do Encontro" para exportar.</div>
+  <div class="sb-footer">Respostas salvas automaticamente.<br>Use "PDF do Encontro" para exportar.</div>
 </nav>
 
 <!-- ════════════════════════════════════
      CONTENT AREA
 ════════════════════════════════════ -->
+
 <main class="ct">
 
 <!-- ██ SESSÃO 1 ██ -->
+
 <section class="session active" id="s0">
   <div class="s-hero">
     <div class="h-eye">Encontro 1 · 14/04/2026</div>
     <h1 class="h-title">Estratégia de Dados + Ética</h1>
     <p class="h-desc">Por que dados são ativos estratégicos, como construir uma estratégia em 6 pilares e os limites éticos que toda organização precisa respeitar.</p>
     <div class="h-jump">
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('caso-0')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: NeoBank</a>
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('ativ-0')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('caso-0')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: NeoBank</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('ativ-0')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
     </div>
 
-    <div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp0"></div></div><span class="h-prog-pct" id="hpv0">0%</span></div>
+```
+<div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp0"></div></div><span class="h-prog-pct" id="hpv0">0%</span></div>
+```
+
   </div>
   <div class="s-body">
 
-    <div class="sl"><span class="sl-badge th">Teoria</span><span class="sl-title">VUCA/BANI e os 6 Pilares</span></div>
-    <div class="card card-gold">
-      <h4>🌀 O Mundo Ficou Difícil de Gerenciar</h4>
-      <p>VUCA (Volatilidade, Incerteza, Complexidade, Ambiguidade) e BANI (Frágil, Ansioso, Não-linear, Incompreensível) descrevem dois olhares sobre a turbulência contemporânea. Em ambos, a vantagem migra para quem <em>decide melhor com dados</em>.</p>
-      <p><strong>Antifragilidade (Taleb):</strong> organizações que se fortalecem com a volatilidade usam dados para ver oportunidades nas crises — Amazon, Netflix e Mercado Livre em 2020.</p>
-    </div>
-    <div class="acc"><button class="acc-btn" onclick="acc(this)">Os 6 Pilares da Estratégia de Dados <span class="acc-ch">▼</span></button><div class="acc-body"><div class="acc-in"><ul>
-      <li><strong>1. Alinhamento Estratégico</strong> — Que decisões precisamos tomar melhor? (BSC, OKRs)</li>
-      <li><strong>2. Arquitetura de Dados</strong> — Mapear fontes, qualidade, lacunas — Data Inventory</li>
-      <li><strong>3. Infraestrutura</strong> — Cloud vs. On-Premise; Data Warehouse vs. Data Lake</li>
-      <li><strong>4. Capital Humano</strong> — Equipe certa + modelo organizacional (CoE / Federado)</li>
-      <li><strong>5. Integração Decisória</strong> — Dados influenciando decisões reais — o pilar mais raro</li>
-      <li><strong>6. Monitoramento</strong> — Estratégia de dados como sistema vivo de aprendizagem</li>
-    </ul></div></div></div>
-    <div class="acc"><button class="acc-btn" onclick="acc(this)">Os 5 Estágios de Maturidade Analítica <span class="acc-ch">▼</span></button><div class="acc-body"><div class="acc-in">
-      <div class="maturity"><div class="ms" style="background:#4A78B8">1<br>Descritivo</div><div class="ms" style="background:#2E6DA4">2<br>Diagnóstico</div><div class="ms" style="background:#1A5490">3<br>Preditivo</div><div class="ms" style="background:#0A4480">4<br>Prescritivo</div><div class="ms" style="background:#032C5C">5<br>Autônomo</div></div>
-      <p>A maioria das empresas brasileiras opera entre 1 e 2. O salto para o preditivo exige qualidade de dados, talento e — sobretudo — cultura.</p>
-    </div></div></div>
-    <div class="acc"><button class="acc-btn" onclick="acc(this)">LGPD — 5 Pontos Essenciais <span class="acc-ch">▼</span></button><div class="acc-body"><div class="acc-in"><ul>
-      <li><strong>Bases Legais:</strong> 10 bases — consentimento, contrato e legítimo interesse são as mais comuns</li>
-      <li><strong>Direitos do Titular:</strong> Acesso, correção, portabilidade, eliminação e oposição</li>
-      <li><strong>ANPD:</strong> Multas até 2% do faturamento, limitadas a R$ 50M por infração</li>
-      <li><strong>DPO:</strong> Encarregado de proteção de dados — obrigatório em muitos casos</li>
-      <li><strong>Além do compliance:</strong> Legal ≠ ético. A pergunta certa: "Devemos fazer isso?"</li>
-    </ul></div></div></div>
+```
+<div class="sl"><span class="sl-badge th">Teoria</span><span class="sl-title">VUCA/BANI e os 6 Pilares</span></div>
+<div class="card card-gold">
+  <h4>🌀 O Mundo Ficou Difícil de Gerenciar</h4>
+  <p>VUCA (Volatilidade, Incerteza, Complexidade, Ambiguidade) e BANI (Frágil, Ansioso, Não-linear, Incompreensível) descrevem dois olhares sobre a turbulência contemporânea. Em ambos, a vantagem migra para quem <em>decide melhor com dados</em>.</p>
+  <p><strong>Antifragilidade (Taleb):</strong> organizações que se fortalecem com a volatilidade usam dados para ver oportunidades nas crises — Amazon, Netflix e Mercado Livre em 2020.</p>
+</div>
+<div class="acc"><button class="acc-btn" onclick="acc(this)">Os 6 Pilares da Estratégia de Dados <span class="acc-ch">▼</span></button><div class="acc-body"><div class="acc-in"><ul>
+  <li><strong>1. Alinhamento Estratégico</strong> — Que decisões precisamos tomar melhor? (BSC, OKRs)</li>
+  <li><strong>2. Arquitetura de Dados</strong> — Mapear fontes, qualidade, lacunas — Data Inventory</li>
+  <li><strong>3. Infraestrutura</strong> — Cloud vs. On-Premise; Data Warehouse vs. Data Lake</li>
+  <li><strong>4. Capital Humano</strong> — Equipe certa + modelo organizacional (CoE / Federado)</li>
+  <li><strong>5. Integração Decisória</strong> — Dados influenciando decisões reais — o pilar mais raro</li>
+  <li><strong>6. Monitoramento</strong> — Estratégia de dados como sistema vivo de aprendizagem</li>
+</ul></div></div></div>
+<div class="acc"><button class="acc-btn" onclick="acc(this)">Os 5 Estágios de Maturidade Analítica <span class="acc-ch">▼</span></button><div class="acc-body"><div class="acc-in">
+  <div class="maturity"><div class="ms" style="background:#4A78B8">1<br>Descritivo</div><div class="ms" style="background:#2E6DA4">2<br>Diagnóstico</div><div class="ms" style="background:#1A5490">3<br>Preditivo</div><div class="ms" style="background:#0A4480">4<br>Prescritivo</div><div class="ms" style="background:#032C5C">5<br>Autônomo</div></div>
+  <p>A maioria das empresas brasileiras opera entre 1 e 2. O salto para o preditivo exige qualidade de dados, talento e — sobretudo — cultura.</p>
+</div></div></div>
+<div class="acc"><button class="acc-btn" onclick="acc(this)">LGPD — 5 Pontos Essenciais <span class="acc-ch">▼</span></button><div class="acc-body"><div class="acc-in"><ul>
+  <li><strong>Bases Legais:</strong> 10 bases — consentimento, contrato e legítimo interesse são as mais comuns</li>
+  <li><strong>Direitos do Titular:</strong> Acesso, correção, portabilidade, eliminação e oposição</li>
+  <li><strong>ANPD:</strong> Multas até 2% do faturamento, limitadas a R$ 50M por infração</li>
+  <li><strong>DPO:</strong> Encarregado de proteção de dados — obrigatório em muitos casos</li>
+  <li><strong>Além do compliance:</strong> Legal ≠ ético. A pergunta certa: "Devemos fazer isso?"</li>
+</ul></div></div></div>
 
-    <!-- CASO PRÁTICO 1 -->
-    <div id="caso-0" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">NeoBank Brasil — Diagnóstico de Maturidade</span></div>
-    <div class="data-case">
-      <div class="dc-header">
-        <span class="dc-badge">DADOS REAIS</span>
-        <div class="dc-meta"><h3>NeoBank Brasil · Autodiagnóstico de Maturidade Analítica</h3><p>Avaliação dos 6 Pilares em 8 áreas de negócio · Escala 0–5</p></div>
+<!-- CASO PRÁTICO 1 -->
+<div id="caso-0" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">NeoBank Brasil — Diagnóstico de Maturidade</span></div>
+<div class="data-case">
+  <div class="dc-header">
+    <span class="dc-badge">DADOS REAIS</span>
+    <div class="dc-meta"><h3>NeoBank Brasil · Autodiagnóstico de Maturidade Analítica</h3><p>Avaliação dos 6 Pilares em 8 áreas de negócio · Escala 0–5</p></div>
+  </div>
+  <div class="dc-body">
+    <div class="dc-context">📋 <strong>Contexto:</strong> O NeoBank realizou um workshop interno de diagnóstico. Cada área de negócio avaliou sua maturidade em cada um dos 6 Pilares. A nota média por pilar está na tabela abaixo.</div>
+    <div class="dt-wrap">
+      <table class="dt-table" id="t1">
+        <thead><tr><th>Pilar</th><th>Financeiro</th><th>Marketing</th><th>Risco</th><th>Ops</th><th>RH</th><th>TI</th><th>Produto</th><th>Legal</th><th class="num">Média</th></tr></thead>
+        <tbody>
+          <tr><td>1. Alinhamento</td><td class="num">4</td><td class="num">3</td><td class="num">4</td><td class="num">2</td><td class="num hi">1</td><td class="num">3</td><td class="num">4</td><td class="num hi">1</td><td class="num pos" id="m1"></td></tr>
+          <tr><td>2. Arquitetura</td><td class="num">3</td><td class="num hi">1</td><td class="num">4</td><td class="num hi">1</td><td class="num hi">1</td><td class="num">5</td><td class="num">3</td><td class="num hi">1</td><td class="num neg" id="m2"></td></tr>
+          <tr><td>3. Infraestrutura</td><td class="num">4</td><td class="num">2</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num">5</td><td class="num">4</td><td class="num">2</td><td class="num pos" id="m3"></td></tr>
+          <tr><td>4. Capital Humano</td><td class="num">3</td><td class="num">2</td><td class="num">4</td><td class="num hi">1</td><td class="num hi">1</td><td class="num">4</td><td class="num">3</td><td class="num hi">1</td><td class="num neg" id="m4"></td></tr>
+          <tr><td>5. Integração Dec.</td><td class="num">2</td><td class="num hi">1</td><td class="num">3</td><td class="num hi">1</td><td class="num hi">1</td><td class="num">2</td><td class="num">2</td><td class="num hi">1</td><td class="num neg" id="m5"></td></tr>
+          <tr><td>6. Monitoramento</td><td class="num">2</td><td class="num hi">1</td><td class="num">4</td><td class="num">2</td><td class="num hi">1</td><td class="num">3</td><td class="num">2</td><td class="num hi">1</td><td class="num neg" id="m6"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-title">Média por Pilar — onde o NeoBank é mais fraco?</div>
+      <div class="bar-chart">
+<div class="bc-row">
+  <span class="bc-label" title="Alinhamento">Alinhamento</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:81%;background:#1A7A44">
+      <span class="bc-val">2.75</span>
+    </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Arquitetura">Arquitetura</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:70%;background:#B91C1C">
+      <span class="bc-val">2.38</span>
+    </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Infraestrutura">Infraestrutura</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:100%;background:#F0A500">
+      <span class="bc-val">3.38</span>
+    </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Cap. Humano">Cap. Humano</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:70%;background:#B91C1C">
+      <span class="bc-val">2.38</span>
+    </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Integr. Decisória">Integr. Decisória</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:48%;background:#B91C1C">
+      <span class="bc-val">1.63</span>
+    </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Monitoramento">Monitoramento</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:59%;background:#B91C1C">
+      <span class="bc-val">2.0</span>
+    </div>
+  </div>
+</div></div>
+    </div>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio</div>
+      <div class="ch-q">Com base nos dados, qual pilar o NeoBank deveria priorizar para obter o maior salto de maturidade com menor esforço?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e1')">3 · Infraestrutura — já tem nota razoável, só falta investir mais</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e1')">5 · Integração Decisória — nota mais baixa E impacto direto nas decisões</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e1')">1 · Alinhamento — porque sem estratégia nada funciona</button>
       </div>
-      <div class="dc-body">
-        <div class="dc-context">📋 <strong>Contexto:</strong> O NeoBank realizou um workshop interno de diagnóstico. Cada área de negócio avaliou sua maturidade em cada um dos 6 Pilares. A nota média por pilar está na tabela abaixo.</div>
-        <div class="dt-wrap">
-          <table class="dt-table" id="t1">
-            <thead><tr><th>Pilar</th><th>Financeiro</th><th>Marketing</th><th>Risco</th><th>Ops</th><th>RH</th><th>TI</th><th>Produto</th><th>Legal</th><th class="num">Média</th></tr></thead>
-            <tbody>
-              <tr><td>1. Alinhamento</td><td class="num">4</td><td class="num">3</td><td class="num">4</td><td class="num">2</td><td class="num hi">1</td><td class="num">3</td><td class="num">4</td><td class="num hi">1</td><td class="num pos" id="m1"></td></tr>
-              <tr><td>2. Arquitetura</td><td class="num">3</td><td class="num hi">1</td><td class="num">4</td><td class="num hi">1</td><td class="num hi">1</td><td class="num">5</td><td class="num">3</td><td class="num hi">1</td><td class="num neg" id="m2"></td></tr>
-              <tr><td>3. Infraestrutura</td><td class="num">4</td><td class="num">2</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num">5</td><td class="num">4</td><td class="num">2</td><td class="num pos" id="m3"></td></tr>
-              <tr><td>4. Capital Humano</td><td class="num">3</td><td class="num">2</td><td class="num">4</td><td class="num hi">1</td><td class="num hi">1</td><td class="num">4</td><td class="num">3</td><td class="num hi">1</td><td class="num neg" id="m4"></td></tr>
-              <tr><td>5. Integração Dec.</td><td class="num">2</td><td class="num hi">1</td><td class="num">3</td><td class="num hi">1</td><td class="num hi">1</td><td class="num">2</td><td class="num">2</td><td class="num hi">1</td><td class="num neg" id="m5"></td></tr>
-              <tr><td>6. Monitoramento</td><td class="num">2</td><td class="num hi">1</td><td class="num">4</td><td class="num">2</td><td class="num hi">1</td><td class="num">3</td><td class="num">2</td><td class="num hi">1</td><td class="num neg" id="m6"></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="chart-wrap">
-          <div class="chart-title">Média por Pilar — onde o NeoBank é mais fraco?</div>
-          <div class="bar-chart">
-    <div class="bc-row">
-      <span class="bc-label" title="Alinhamento">Alinhamento</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:81%;background:#1A7A44">
-          <span class="bc-val">2.75</span>
-        </div>
+      <div class="ch-feedback" id="fb-e1">
+        <strong>Correto!</strong> O Pilar 5 (Integração Decisória) tem a menor média (1,6) e é o mais diretamente ligado ao valor percebido pela liderança. Melhorar esse pilar cria visibilidade política para investir nos demais. É o típico <em>Quick Win de alto impacto</em>.
       </div>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Arquitetura">Arquitetura</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:70%;background:#B91C1C">
-          <span class="bc-val">2.38</span>
-        </div>
-      </div>
-    </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Infraestrutura">Infraestrutura</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:100%;background:#F0A500">
-          <span class="bc-val">3.38</span>
-        </div>
-      </div>
-    </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Cap. Humano">Cap. Humano</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:70%;background:#B91C1C">
-          <span class="bc-val">2.38</span>
-        </div>
-      </div>
-    </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Integr. Decisória">Integr. Decisória</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:48%;background:#B91C1C">
-          <span class="bc-val">1.63</span>
-        </div>
-      </div>
-    </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Monitoramento">Monitoramento</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:59%;background:#B91C1C">
-          <span class="bc-val">2.0</span>
-        </div>
-      </div>
-    </div></div>
-        </div>
-        <div class="challenge">
-          <div class="ch-label">🎯 Mini-Desafio</div>
-          <div class="ch-q">Com base nos dados, qual pilar o NeoBank deveria priorizar para obter o maior salto de maturidade com menor esforço?</div>
-          <div class="ch-opts">
-            <button class="ch-opt" onclick="chk(this,'wrong','e1')">3 · Infraestrutura — já tem nota razoável, só falta investir mais</button>
-            <button class="ch-opt" onclick="chk(this,'correct','e1')">5 · Integração Decisória — nota mais baixa E impacto direto nas decisões</button>
-            <button class="ch-opt" onclick="chk(this,'wrong','e1')">1 · Alinhamento — porque sem estratégia nada funciona</button>
-          </div>
-          <div class="ch-feedback" id="fb-e1">
-            <strong>Correto!</strong> O Pilar 5 (Integração Decisória) tem a menor média (1,6) e é o mais diretamente ligado ao valor percebido pela liderança. Melhorar esse pilar cria visibilidade política para investir nos demais. É o típico <em>Quick Win de alto impacto</em>.
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
 
-    <!-- ATIVIDADE 1 -->
-    <div id="ativ-0" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 1</span><span class="sl-title">Diagnóstico da Sua Empresa</span></div>
-    <div class="activity">
-      <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Diagnóstico Relâmpago</h3><p>Aplique os 6 Pilares à sua empresa e leve o prompt para a IA analisar</p></div></div>
-      <div class="act-body">
-        <div class="objective">🎯 Identificar estágio de maturidade, pilar mais fraco e Quick Win de 90 dias para a sua organização.</div>
-        <div class="fg"><label class="fl">Sua empresa — setor, porte e modelo de negócio</label><input class="fi" id="a1-emp" placeholder="Ex.: rede de academias, 30 unidades, B2C, foco em retenção" oninput="sv('a1-emp',0)"></div>
-        <div class="fg"><label class="fl">Como as decisões importantes são tomadas hoje?</label><textarea class="fta" id="a1-dec" placeholder="Ex.: principalmente pela intuição do CEO e relatórios mensais em Excel" oninput="sv('a1-dec',0)"></textarea></div>
-        <div class="fg"><label class="fl">Qual pilar acredita ser o mais fraco?</label>
-          <select class="fse" id="a1-pil" onchange="sv('a1-pil',0)"><option value="">Selecione...</option><option>1 · Alinhamento Estratégico</option><option>2 · Arquitetura de Dados</option><option>3 · Infraestrutura</option><option>4 · Capital Humano</option><option>5 · Integração Decisória</option><option>6 · Monitoramento</option></select></div>
-        <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p1')">Gerar Prompt para IA ↗</button><span class="stk" id="stk-a1">✓ Salvo</span></div>
-        <div class="prompt-block" id="p1" style="display:none">
-          <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole no Claude.ai ou ChatGPT</span><button class="pb-copy" id="cp-p1" onclick="copyPrompt('p1','cp-p1')">📋 Copiar</button></div>
-          <div class="pb-text" id="pt1"></div>
-          <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a><a href="https://gemini.google.com" target="_blank" class="pb-link">Gemini ↗</a></div>
-        </div>
-        <div class="canvas"><div class="canvas-lbl">📝 Meu Quick Win — anote após usar a IA</div><textarea class="fta" id="a1-qw" style="min-height:52px" placeholder="Qual ação concreta você faria nos próximos 30 dias?" oninput="sv('a1-qw',0)"></textarea></div>
-      </div>
+<!-- ATIVIDADE 1 -->
+<div id="ativ-0" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 1</span><span class="sl-title">Diagnóstico da Sua Empresa</span></div>
+<div class="activity">
+  <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Diagnóstico Relâmpago</h3><p>Aplique os 6 Pilares à sua empresa e leve o prompt para a IA analisar</p></div></div>
+  <div class="act-body">
+    <div class="objective">🎯 Identificar estágio de maturidade, pilar mais fraco e Quick Win de 90 dias para a sua organização.</div>
+    <div class="fg"><label class="fl">Sua empresa — setor, porte e modelo de negócio</label><input class="fi" id="a1-emp" placeholder="Ex.: rede de academias, 30 unidades, B2C, foco em retenção" oninput="sv('a1-emp',0)"></div>
+    <div class="fg"><label class="fl">Como as decisões importantes são tomadas hoje?</label><textarea class="fta" id="a1-dec" placeholder="Ex.: principalmente pela intuição do CEO e relatórios mensais em Excel" oninput="sv('a1-dec',0)"></textarea></div>
+    <div class="fg"><label class="fl">Qual pilar acredita ser o mais fraco?</label>
+      <select class="fse" id="a1-pil" onchange="sv('a1-pil',0)"><option value="">Selecione...</option><option>1 · Alinhamento Estratégico</option><option>2 · Arquitetura de Dados</option><option>3 · Infraestrutura</option><option>4 · Capital Humano</option><option>5 · Integração Decisória</option><option>6 · Monitoramento</option></select></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p1')">Gerar Prompt para IA ↗</button><span class="stk" id="stk-a1">✓ Salvo</span></div>
+    <div class="prompt-block" id="p1" style="display:none">
+      <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole no Claude.ai ou ChatGPT</span><button class="pb-copy" id="cp-p1" onclick="copyPrompt('p1','cp-p1')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt1"></div>
+      <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a><a href="https://gemini.google.com" target="_blank" class="pb-link">Gemini ↗</a></div>
     </div>
+    <div class="canvas"><div class="canvas-lbl">📝 Meu Quick Win — anote após usar a IA</div><textarea class="fta" id="a1-qw" style="min-height:52px" placeholder="Qual ação concreta você faria nos próximos 30 dias?" oninput="sv('a1-qw',0)"></textarea></div>
+  </div>
+</div>
 
-    <div class="sep"><button class="btn-complete" id="c0" onclick="done(0)">Marcar Encontro 1 como Concluído ✓</button></div>
+<div class="sep"><button class="btn-complete" id="c0" onclick="done(0)">✓ Marcar como Concluído (opcional)</button></div>
+```
+
   </div>
 </section>
 
 <!-- ██ SESSÃO 2 ██ -->
+
 <section class="session" id="s1">
   <div class="s-hero">
     <div class="h-eye">Encontro 2 · 16/04/2026</div>
     <h1 class="h-title">Ciência de Dados + Roadmap</h1>
     <p class="h-desc">Ecossistema, papéis, projetos vs. produtos de dados e as 4 fases do roadmap de implantação.</p>
     <div class="h-jump">
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('caso-1')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: LogBR</a>
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('ativ-1')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('caso-1')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: LogBR</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('ativ-1')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
     </div>
 
-    <div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp1"></div></div><span class="h-prog-pct" id="hpv1">0%</span></div>
+```
+<div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp1"></div></div><span class="h-prog-pct" id="hpv1">0%</span></div>
+```
+
   </div>
   <div class="s-body">
     <div class="sl"><span class="sl-badge th">Teoria</span><span class="sl-title">Papéis e Roadmap de 4 Fases</span></div>
@@ -757,174 +888,181 @@ body{
       </div>
     </div>
 
-    <!-- CASO PRÁTICO 2 -->
-    <div id="caso-1" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">LogBR Distribuidora — Portfólio de Projetos de Dados</span></div>
-    <div class="data-case">
-      <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>LogBR Distribuidora · Portfólio de Projetos de Dados 2024</h3><p>12 projetos · custo, fase, status e ROI estimado</p></div></div>
-      <div class="dc-body">
-        <div class="dc-context">📋 A LogBR iniciou 12 projetos de dados em 2024. Veja o portfólio e identifique qual projeto deveria ter sido priorizado com base no ROI × esforço.</div>
-        <div class="dt-wrap"><table class="dt-table">
-          <thead><tr><th>#</th><th>Projeto</th><th>Fase</th><th>Custo (R$k)</th><th>Status</th><th class="num">ROI Est.</th></tr></thead>
-          <tbody>
-            <tr><td>1</td><td>Dashboard de Vendas</td><td>Fase 3</td><td class="num">45</td><td>✅ Entregue</td><td class="num pos">3.2×</td></tr>
-            <tr><td>2</td><td>Previsão de Demanda</td><td>Fase 3</td><td class="num">180</td><td>🔄 Em andamento</td><td class="num pos">7.8×</td></tr>
-            <tr><td>3</td><td>Data Lake AWS</td><td>Fase 2</td><td class="num">320</td><td>🔄 Em andamento</td><td class="num">1.4×</td></tr>
-            <tr><td>4</td><td>Otimização de Rotas</td><td>Fase 1</td><td class="num">95</td><td>⏸ Pausado</td><td class="num pos">5.1×</td></tr>
-            <tr><td>5</td><td>Detecção de Fraude</td><td>Fase 2</td><td class="num">140</td><td>✅ Entregue</td><td class="num pos">4.3×</td></tr>
-            <tr><td>6</td><td>Churn de Clientes</td><td>Fase 1</td><td class="num">75</td><td>⏸ Pausado</td><td class="num pos">6.2×</td></tr>
-            <tr><td>7</td><td>Relatórios Fiscais BI</td><td>Fase 3</td><td class="num">55</td><td>✅ Entregue</td><td class="num">1.1×</td></tr>
-            <tr><td>8</td><td>ML de Precificação</td><td>Fase 1</td><td class="num">210</td><td>⏸ Pausado</td><td class="num pos">9.4×</td></tr>
-            <tr><td>9</td><td>Segmentação de Clientes</td><td>Fase 2</td><td class="num">88</td><td>🔄 Em andamento</td><td class="num pos">3.8×</td></tr>
-            <tr><td>10</td><td>App de Motoristas</td><td>Fase 3</td><td class="num">165</td><td>✅ Entregue</td><td class="num">2.2×</td></tr>
-            <tr><td>11</td><td>Gov. de Dados (LGPD)</td><td>Fase 2</td><td class="num">90</td><td>🔄 Em andamento</td><td class="num">0.8×</td></tr>
-            <tr><td>12</td><td>Alerta de Estoque</td><td>Fase 1</td><td class="num">42</td><td>⏸ Pausado</td><td class="num pos">4.7×</td></tr>
-          </tbody>
-        </table></div>
-        <div class="chart-wrap">
-          <div class="chart-title">ROI estimado por projeto — projetos pausados em laranja</div>
-          <div class="bar-chart">
-    <div class="bc-row">
-      <span class="bc-label" title="Dashboard Vendas">Dashboard Vendas</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:34%;background:#166534">
-          <span class="bc-val">3.2×</span>
-        </div>
-      </div>
+```
+<!-- CASO PRÁTICO 2 -->
+<div id="caso-1" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">LogBR Distribuidora — Portfólio de Projetos de Dados</span></div>
+<div class="data-case">
+  <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>LogBR Distribuidora · Portfólio de Projetos de Dados 2024</h3><p>12 projetos · custo, fase, status e ROI estimado</p></div></div>
+  <div class="dc-body">
+    <div class="dc-context">📋 A LogBR iniciou 12 projetos de dados em 2024. Veja o portfólio e identifique qual projeto deveria ter sido priorizado com base no ROI × esforço.</div>
+    <div class="dt-wrap"><table class="dt-table">
+      <thead><tr><th>#</th><th>Projeto</th><th>Fase</th><th>Custo (R$k)</th><th>Status</th><th class="num">ROI Est.</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Dashboard de Vendas</td><td>Fase 3</td><td class="num">45</td><td>✅ Entregue</td><td class="num pos">3.2×</td></tr>
+        <tr><td>2</td><td>Previsão de Demanda</td><td>Fase 3</td><td class="num">180</td><td>🔄 Em andamento</td><td class="num pos">7.8×</td></tr>
+        <tr><td>3</td><td>Data Lake AWS</td><td>Fase 2</td><td class="num">320</td><td>🔄 Em andamento</td><td class="num">1.4×</td></tr>
+        <tr><td>4</td><td>Otimização de Rotas</td><td>Fase 1</td><td class="num">95</td><td>⏸ Pausado</td><td class="num pos">5.1×</td></tr>
+        <tr><td>5</td><td>Detecção de Fraude</td><td>Fase 2</td><td class="num">140</td><td>✅ Entregue</td><td class="num pos">4.3×</td></tr>
+        <tr><td>6</td><td>Churn de Clientes</td><td>Fase 1</td><td class="num">75</td><td>⏸ Pausado</td><td class="num pos">6.2×</td></tr>
+        <tr><td>7</td><td>Relatórios Fiscais BI</td><td>Fase 3</td><td class="num">55</td><td>✅ Entregue</td><td class="num">1.1×</td></tr>
+        <tr><td>8</td><td>ML de Precificação</td><td>Fase 1</td><td class="num">210</td><td>⏸ Pausado</td><td class="num pos">9.4×</td></tr>
+        <tr><td>9</td><td>Segmentação de Clientes</td><td>Fase 2</td><td class="num">88</td><td>🔄 Em andamento</td><td class="num pos">3.8×</td></tr>
+        <tr><td>10</td><td>App de Motoristas</td><td>Fase 3</td><td class="num">165</td><td>✅ Entregue</td><td class="num">2.2×</td></tr>
+        <tr><td>11</td><td>Gov. de Dados (LGPD)</td><td>Fase 2</td><td class="num">90</td><td>🔄 Em andamento</td><td class="num">0.8×</td></tr>
+        <tr><td>12</td><td>Alerta de Estoque</td><td>Fase 1</td><td class="num">42</td><td>⏸ Pausado</td><td class="num pos">4.7×</td></tr>
+      </tbody>
+    </table></div>
+    <div class="chart-wrap">
+      <div class="chart-title">ROI estimado por projeto — projetos pausados em laranja</div>
+      <div class="bar-chart">
+<div class="bc-row">
+  <span class="bc-label" title="Dashboard Vendas">Dashboard Vendas</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:34%;background:#166534">
+      <span class="bc-val">3.2×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Prev. Demanda">Prev. Demanda</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:83%;background:#1A375E">
-          <span class="bc-val">7.8×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Prev. Demanda">Prev. Demanda</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:83%;background:#1A375E">
+      <span class="bc-val">7.8×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Data Lake">Data Lake</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:15%;background:#1A375E">
-          <span class="bc-val">1.4×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Data Lake">Data Lake</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:15%;background:#1A375E">
+      <span class="bc-val">1.4×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Ot. Rotas">Ot. Rotas</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:54%;background:#D97706">
-          <span class="bc-val">5.1×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Ot. Rotas">Ot. Rotas</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:54%;background:#D97706">
+      <span class="bc-val">5.1×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Det. Fraude">Det. Fraude</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:46%;background:#166534">
-          <span class="bc-val">4.3×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Det. Fraude">Det. Fraude</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:46%;background:#166534">
+      <span class="bc-val">4.3×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Churn Clientes">Churn Clientes</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:66%;background:#D97706">
-          <span class="bc-val">6.2×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Churn Clientes">Churn Clientes</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:66%;background:#D97706">
+      <span class="bc-val">6.2×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Rel. BI">Rel. BI</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:12%;background:#166534">
-          <span class="bc-val">1.1×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Rel. BI">Rel. BI</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:12%;background:#166534">
+      <span class="bc-val">1.1×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="ML Precific.">ML Precific.</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:100%;background:#D97706">
-          <span class="bc-val">9.4×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="ML Precific.">ML Precific.</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:100%;background:#D97706">
+      <span class="bc-val">9.4×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Segmentação">Segmentação</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:40%;background:#1A375E">
-          <span class="bc-val">3.8×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Segmentação">Segmentação</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:40%;background:#1A375E">
+      <span class="bc-val">3.8×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="App Motoristas">App Motoristas</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:23%;background:#166534">
-          <span class="bc-val">2.2×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="App Motoristas">App Motoristas</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:23%;background:#166534">
+      <span class="bc-val">2.2×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Gov. Dados">Gov. Dados</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:9%;background:#1A375E">
-          <span class="bc-val">0.8×</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Gov. Dados">Gov. Dados</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:9%;background:#1A375E">
+      <span class="bc-val">0.8×</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Alerta Estoque">Alerta Estoque</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:50%;background:#D97706">
-          <span class="bc-val">4.7×</span>
-        </div>
-      </div>
-    </div></div>
-        </div>
-        <div class="challenge">
-          <div class="ch-label">🎯 Mini-Desafio</div>
-          <div class="ch-q">Dois projetos de alto ROI estão pausados. Qual deveria ser reativado PRIMEIRO considerando ROI e menor custo?</div>
-          <div class="ch-opts">
-            <button class="ch-opt" onclick="chk(this,'wrong','e2')">ML de Precificação (ROI 9,4× · R$210k) — maior ROI do portfólio</button>
-            <button class="ch-opt" onclick="chk(this,'correct','e2')">Alerta de Estoque (ROI 4,7× · R$42k) — melhor razão ROI/custo</button>
-            <button class="ch-opt" onclick="chk(this,'wrong','e2')">Otimização de Rotas (ROI 5,1× · R$95k) — ROI alto com custo médio</button>
-          </div>
-          <div class="ch-feedback" id="fb-e2"><strong>Correto!</strong> O Alerta de Estoque tem ROI 4,7× com apenas R$42k de custo — o melhor custo-benefício do portfólio. Em Fase 1, provavelmente tem escopo pequeno e pode gerar resultado rápido. O ML de Precificação tem ROI maior, mas R$210k e Fase 1 sugerem que ainda levará muito tempo para entregar valor.</div>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Alerta Estoque">Alerta Estoque</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:50%;background:#D97706">
+      <span class="bc-val">4.7×</span>
     </div>
+  </div>
+</div></div>
+    </div>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio</div>
+      <div class="ch-q">Dois projetos de alto ROI estão pausados. Qual deveria ser reativado PRIMEIRO considerando ROI e menor custo?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e2')">ML de Precificação (ROI 9,4× · R$210k) — maior ROI do portfólio</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e2')">Alerta de Estoque (ROI 4,7× · R$42k) — melhor razão ROI/custo</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e2')">Otimização de Rotas (ROI 5,1× · R$95k) — ROI alto com custo médio</button>
+      </div>
+      <div class="ch-feedback" id="fb-e2"><strong>Correto!</strong> O Alerta de Estoque tem ROI 4,7× com apenas R$42k de custo — o melhor custo-benefício do portfólio. Em Fase 1, provavelmente tem escopo pequeno e pode gerar resultado rápido. O ML de Precificação tem ROI maior, mas R$210k e Fase 1 sugerem que ainda levará muito tempo para entregar valor.</div>
+    </div>
+  </div>
+</div>
 
-    <div id="ativ-1" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 2</span><span class="sl-title">Construir o Roadmap da Sua Empresa</span></div>
-    <div class="activity">
-      <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Arquiteto de Dados</h3><p>Esboce o Roadmap de 4 fases — base do Instrumento Avaliativo 2</p></div></div>
-      <div class="act-body">
-        <div class="objective">🎯 Construir um roadmap conectado à realidade da sua empresa para usar como referência no trabalho em grupo.</div>
-        <div class="fg"><label class="fl">Empresa, porte e situação atual com dados</label><textarea class="fta" id="a2-emp" placeholder="Ex.: distribuidora de alimentos, 800 funcionários, usa Excel, TI terceirizada" oninput="sv('a2-emp',1)"></textarea></div>
-        <div class="fg"><label class="fl">Objetivo estratégico que dados podem apoiar</label><input class="fi" id="a2-obj" placeholder="Ex.: reduzir ruptura de estoque e aumentar margem em 15%" oninput="sv('a2-obj',1)"></div>
-        <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p2')">Gerar Prompt para IA ↗</button></div>
-        <div class="prompt-block" id="p2" style="display:none">
-          <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p2" onclick="copyPrompt('p2','cp-p2')">📋 Copiar</button></div>
-          <div class="pb-text" id="pt2"></div>
-          <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
-        </div>
-        <div class="canvas"><div class="canvas-lbl">📝 Notas do Roadmap</div><textarea class="fta" id="a2-notas" style="min-height:72px" placeholder="O que o roadmap gerado acertou? O que mudaria para a sua realidade?" oninput="sv('a2-notas',1)"></textarea></div>
-      </div>
+<div id="ativ-1" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 2</span><span class="sl-title">Construir o Roadmap da Sua Empresa</span></div>
+<div class="activity">
+  <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Arquiteto de Dados</h3><p>Esboce o Roadmap de 4 fases — base do Instrumento Avaliativo 2</p></div></div>
+  <div class="act-body">
+    <div class="objective">🎯 Construir um roadmap conectado à realidade da sua empresa para usar como referência no trabalho em grupo.</div>
+    <div class="fg"><label class="fl">Empresa, porte e situação atual com dados</label><textarea class="fta" id="a2-emp" placeholder="Ex.: distribuidora de alimentos, 800 funcionários, usa Excel, TI terceirizada" oninput="sv('a2-emp',1)"></textarea></div>
+    <div class="fg"><label class="fl">Objetivo estratégico que dados podem apoiar</label><input class="fi" id="a2-obj" placeholder="Ex.: reduzir ruptura de estoque e aumentar margem em 15%" oninput="sv('a2-obj',1)"></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p2')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p2" style="display:none">
+      <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p2" onclick="copyPrompt('p2','cp-p2')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt2"></div>
+      <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
     </div>
-    <div class="sep"><button class="btn-complete" id="c1" onclick="done(1)">Marcar Encontro 2 como Concluído ✓</button></div>
+    <div class="canvas"><div class="canvas-lbl">📝 Notas do Roadmap</div><textarea class="fta" id="a2-notas" style="min-height:72px" placeholder="O que o roadmap gerado acertou? O que mudaria para a sua realidade?" oninput="sv('a2-notas',1)"></textarea></div>
+  </div>
+</div>
+<div class="sep"><button class="btn-complete" id="c1" onclick="done(1)">✓ Marcar como Concluído (opcional)</button></div>
+```
+
   </div>
 </section>
 
 <!-- ██ SESSÃO 3 ██ -->
+
 <section class="session" id="s2">
   <div class="s-hero">
     <div class="h-eye">Encontro 3 · 23/04/2026</div>
     <h1 class="h-title">Pensamento Crítico-Analítico</h1>
     <p class="h-desc">Vieses cognitivos, o Caso Wald, o Ciclo D3 e por que correlação não é causalidade — com um dataset real para explorar.</p>
     <div class="h-jump">
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('caso-2')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: VarFácil</a>
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('ativ-2')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('caso-2')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: VarFácil</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('ativ-2')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
     </div>
 
-    <div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp2"></div></div><span class="h-prog-pct" id="hpv2">0%</span></div>
+```
+<div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp2"></div></div><span class="h-prog-pct" id="hpv2">0%</span></div>
+```
+
   </div>
   <div class="s-body">
     <div class="sl"><span class="sl-badge th">Teoria</span><span class="sl-title">Vieses e o Ciclo D3</span></div>
@@ -944,96 +1082,106 @@ body{
       <li><strong>HiPPO Effect:</strong> maior salário prevalece sobre dados → pré-mortem e experimentos A/B</li>
     </ul></div></div></div>
 
-    <!-- CASO PRÁTICO 3 -->
-    <div id="caso-2" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">VarFácil — Correlação Espúria + Dataset de Decisões</span></div>
-    <div class="data-case">
-      <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>VarFácil Supermercados · Correlação: Sorvete × Afogamentos</h3><p>Dataset público brasileiro adaptado · correlação espúria clássica</p></div></div>
-      <div class="dc-body">
-        <div class="dc-context">📋 O gerente de marketing da VarFácil encontrou uma correlação de <strong>r = 0,91</strong> entre as vendas de sorvete e o número de afogamentos nas praias paulistas — e quer lançar uma campanha de sorvete nas praias no verão. Analise os dados abaixo.</div>
-        <div class="dt-wrap"><table class="dt-table">
-          <thead><tr><th>Mês</th><th>Temp. Média (°C)</th><th>Vendas Sorvete (ton)</th><th>Afogamentos (RJ+SP)</th></tr></thead>
-          <tbody>
-            <tr><td>Jan</td><td class="num">32</td><td class="num pos">148</td><td class="num neg">42</td></tr>
-            <tr><td>Fev</td><td class="num">31</td><td class="num pos">141</td><td class="num neg">38</td></tr>
-            <tr><td>Mar</td><td class="num">29</td><td class="num">118</td><td class="num">31</td></tr>
-            <tr><td>Abr</td><td class="num">25</td><td class="num">82</td><td class="num">18</td></tr>
-            <tr><td>Mai</td><td class="num">21</td><td class="num">55</td><td class="num">11</td></tr>
-            <tr><td>Jun</td><td class="num">18</td><td class="num neg">38</td><td class="num neg">7</td></tr>
-            <tr><td>Jul</td><td class="num">17</td><td class="num neg">34</td><td class="num neg">6</td></tr>
-            <tr><td>Ago</td><td class="num">19</td><td class="num">42</td><td class="num">9</td></tr>
-            <tr><td>Set</td><td class="num">23</td><td class="num">68</td><td class="num">14</td></tr>
-            <tr><td>Out</td><td class="num">27</td><td class="num">95</td><td class="num">22</td></tr>
-            <tr><td>Nov</td><td class="num">30</td><td class="num pos">128</td><td class="num neg">35</td></tr>
-            <tr><td>Dez</td><td class="num hi">33</td><td class="num pos hi">158</td><td class="num neg hi">48</td></tr>
-          </tbody>
-        </table></div>
-        <div class="chart-wrap">
-          <div class="chart-title">Sorvete × Afogamentos — as séries se movem juntas, mas por quê?</div>
-          <svg class="line-chart-svg" viewBox="0 0 600 130" preserveAspectRatio="none">
-  <text x="40" y="18" fill="#F0A500" font-size="9" font-weight="600">— Sorvete (ton)</text><text x="160" y="18" fill="#B91C1C" font-size="9" font-weight="600">— Afogamentos (×3.5)</text>
-  <polyline points="35.0,22.3 85.5,27.4 135.9,44.1 186.4,70.3 236.8,89.9 287.3,102.2 337.7,105.1 388.2,99.3 438.6,80.4 489.1,60.8 539.5,36.9 590.0,15.1" fill="none" stroke="#F0A500" stroke-width="2.5" stroke-linejoin="round"/>
-  <polyline points="35.0,23.1 85.5,33.2 135.9,51.0 186.4,84.0 236.8,101.8 287.3,112.0 337.7,114.5 388.2,106.9 438.6,94.2 489.1,73.9 539.5,40.9 590.0,7.8" fill="none" stroke="#B91C1C" stroke-width="2.5" stroke-linejoin="round"/>
-  <text x="35.0" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="85.5" y="126" text-anchor="middle" fill="#8899BB" font-size="9">F</text><text x="135.9" y="126" text-anchor="middle" fill="#8899BB" font-size="9">M</text><text x="186.4" y="126" text-anchor="middle" fill="#8899BB" font-size="9">A</text><text x="236.8" y="126" text-anchor="middle" fill="#8899BB" font-size="9">M</text><text x="287.3" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="337.7" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="388.2" y="126" text-anchor="middle" fill="#8899BB" font-size="9">A</text><text x="438.6" y="126" text-anchor="middle" fill="#8899BB" font-size="9">S</text><text x="489.1" y="126" text-anchor="middle" fill="#8899BB" font-size="9">O</text><text x="539.5" y="126" text-anchor="middle" fill="#8899BB" font-size="9">N</text><text x="590.0" y="126" text-anchor="middle" fill="#8899BB" font-size="9">D</text>
-</svg>
-        </div>
-        <div class="calc-box">
-          <div style="font-size:.8rem;font-weight:600;color:var(--slate);margin-bottom:.6rem">Calcule o coeficiente de correlação aproximado</div>
-          <div class="calc-row">
-            <span class="calc-lbl">Covariância estimada:</span>
-            <input class="calc-input" id="ci-cov" type="number" placeholder="ex: 524" oninput="calcCorr()">
-            <span class="calc-lbl">DP Sorvete:</span>
-            <input class="calc-input" id="ci-dp1" type="number" placeholder="ex: 44" oninput="calcCorr()">
-            <span class="calc-lbl">DP Afog.:</span>
-            <input class="calc-input" id="ci-dp2" type="number" placeholder="ex: 14" oninput="calcCorr()">
-          </div>
-          <div class="calc-result"><span class="cr-label">r = cov / (dp₁ × dp₂)</span><span class="cr-value" id="cr-val">—</span></div>
-          <p style="font-size:.75rem;color:var(--slate);margin-top:.5rem">Dica: use cov=524, DP sorvete=44, DP afogamentos=13 para obter o r real do dataset</p>
-        </div>
-        <div class="challenge">
-          <div class="ch-label">🎯 Mini-Desafio</div>
-          <div class="ch-q">A correlação de 0,91 justifica a campanha "sorvete salva vidas na praia"?</div>
-          <div class="ch-opts">
-            <button class="ch-opt" onclick="chk(this,'wrong','e3')">Sim — correlação acima de 0,9 é fortíssima e justifica ação imediata</button>
-            <button class="ch-opt" onclick="chk(this,'correct','e3')">Não — a variável C (temperatura) causa ambos; sorvete e afogamentos são efeitos independentes</button>
-            <button class="ch-opt" onclick="chk(this,'wrong','e3')">Talvez — precisa de mais dados antes de qualquer conclusão</button>
-          </div>
-          <div class="ch-feedback" id="fb-e3"><strong>Correto!</strong> Clássica correlação espúria — a temperatura alta é a variável de confusão (C) que causa tanto o aumento de consumo de sorvete quanto o de banhos de mar (e consequentemente afogamentos). A campanha seria baseada em uma relação causal inexistente. Antídoto: sempre pergunte "que terceira variável poderia explicar essa correlação?"</div>
-        </div>
-      </div>
-    </div>
+```
+<!-- CASO PRÁTICO 3 -->
+<div id="caso-2" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">VarFácil — Correlação Espúria + Dataset de Decisões</span></div>
+<div class="data-case">
+  <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>VarFácil Supermercados · Correlação: Sorvete × Afogamentos</h3><p>Dataset público brasileiro adaptado · correlação espúria clássica</p></div></div>
+  <div class="dc-body">
+    <div class="dc-context">📋 O gerente de marketing da VarFácil encontrou uma correlação de <strong>r = 0,91</strong> entre as vendas de sorvete e o número de afogamentos nas praias paulistas — e quer lançar uma campanha de sorvete nas praias no verão. Analise os dados abaixo.</div>
+    <div class="dt-wrap"><table class="dt-table">
+      <thead><tr><th>Mês</th><th>Temp. Média (°C)</th><th>Vendas Sorvete (ton)</th><th>Afogamentos (RJ+SP)</th></tr></thead>
+      <tbody>
+        <tr><td>Jan</td><td class="num">32</td><td class="num pos">148</td><td class="num neg">42</td></tr>
+        <tr><td>Fev</td><td class="num">31</td><td class="num pos">141</td><td class="num neg">38</td></tr>
+        <tr><td>Mar</td><td class="num">29</td><td class="num">118</td><td class="num">31</td></tr>
+        <tr><td>Abr</td><td class="num">25</td><td class="num">82</td><td class="num">18</td></tr>
+        <tr><td>Mai</td><td class="num">21</td><td class="num">55</td><td class="num">11</td></tr>
+        <tr><td>Jun</td><td class="num">18</td><td class="num neg">38</td><td class="num neg">7</td></tr>
+        <tr><td>Jul</td><td class="num">17</td><td class="num neg">34</td><td class="num neg">6</td></tr>
+        <tr><td>Ago</td><td class="num">19</td><td class="num">42</td><td class="num">9</td></tr>
+        <tr><td>Set</td><td class="num">23</td><td class="num">68</td><td class="num">14</td></tr>
+        <tr><td>Out</td><td class="num">27</td><td class="num">95</td><td class="num">22</td></tr>
+        <tr><td>Nov</td><td class="num">30</td><td class="num pos">128</td><td class="num neg">35</td></tr>
+        <tr><td>Dez</td><td class="num hi">33</td><td class="num pos hi">158</td><td class="num neg hi">48</td></tr>
+      </tbody>
+    </table></div>
+    <div class="chart-wrap">
+      <div class="chart-title">Sorvete × Afogamentos — as séries se movem juntas, mas por quê?</div>
+      <svg class="line-chart-svg" viewBox="0 0 600 130" preserveAspectRatio="none">
+```
 
-    <div id="ativ-2" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 3</span><span class="sl-title">Detetive de Vieses</span></div>
-    <div class="activity">
-      <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Detetive de Vieses</h3><p>Analise uma decisão real em busca de vieses cognitivos</p></div></div>
-      <div class="act-body">
-        <div class="objective">🎯 Identificar pelo menos 3 vieses em uma decisão real e propor antídotos organizacionais concretos.</div>
-        <div class="fg"><label class="fl">Descreva a decisão — contexto, quem decidiu, como foi tomada, resultado</label><textarea class="fta" id="a3-dec" rows="4" placeholder="Ex.: decidimos lançar produto baseados em feedback de 5 clientes fiéis, sem pesquisa formal. Vendas 60% abaixo." oninput="sv('a3-dec',2)"></textarea></div>
-        <div class="fg"><label class="fl">Que dados foram considerados — e quais foram ignorados?</label><input class="fi" id="a3-dados" placeholder="Ex.: só feedbacks positivos; ignoramos dados de clientes que abandonaram" oninput="sv('a3-dados',2)"></div>
-        <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p3')">Gerar Prompt para IA ↗</button></div>
-        <div class="prompt-block" id="p3" style="display:none">
-          <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p3" onclick="copyPrompt('p3','cp-p3')">📋 Copiar</button></div>
-          <div class="pb-text" id="pt3"></div>
-          <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
-        </div>
-        <div class="canvas"><div class="canvas-lbl">📝 Meu Antídoto — processo que mudaria</div><textarea class="fta" id="a3-anti" style="min-height:52px" placeholder="Que ritual organizacional implementaria para evitar esse viés no futuro?" oninput="sv('a3-anti',2)"></textarea></div>
-      </div>
+<text x="40" y="18" fill="#F0A500" font-size="9" font-weight="600">— Sorvete (ton)</text><text x="160" y="18" fill="#B91C1C" font-size="9" font-weight="600">— Afogamentos (×3.5)</text>
+<polyline points="35.0,22.3 85.5,27.4 135.9,44.1 186.4,70.3 236.8,89.9 287.3,102.2 337.7,105.1 388.2,99.3 438.6,80.4 489.1,60.8 539.5,36.9 590.0,15.1" fill="none" stroke="#F0A500" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="35.0,23.1 85.5,33.2 135.9,51.0 186.4,84.0 236.8,101.8 287.3,112.0 337.7,114.5 388.2,106.9 438.6,94.2 489.1,73.9 539.5,40.9 590.0,7.8" fill="none" stroke="#B91C1C" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="35.0" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="85.5" y="126" text-anchor="middle" fill="#8899BB" font-size="9">F</text><text x="135.9" y="126" text-anchor="middle" fill="#8899BB" font-size="9">M</text><text x="186.4" y="126" text-anchor="middle" fill="#8899BB" font-size="9">A</text><text x="236.8" y="126" text-anchor="middle" fill="#8899BB" font-size="9">M</text><text x="287.3" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="337.7" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="388.2" y="126" text-anchor="middle" fill="#8899BB" font-size="9">A</text><text x="438.6" y="126" text-anchor="middle" fill="#8899BB" font-size="9">S</text><text x="489.1" y="126" text-anchor="middle" fill="#8899BB" font-size="9">O</text><text x="539.5" y="126" text-anchor="middle" fill="#8899BB" font-size="9">N</text><text x="590.0" y="126" text-anchor="middle" fill="#8899BB" font-size="9">D</text>
+</svg>
+</div>
+<div class="calc-box">
+<div style="font-size:.8rem;font-weight:600;color:var(--slate);margin-bottom:.6rem">Calcule o coeficiente de correlação aproximado</div>
+<div class="calc-row">
+<span class="calc-lbl">Covariância estimada:</span>
+<input class="calc-input" id="ci-cov" type="number" placeholder="ex: 524" oninput="calcCorr()">
+<span class="calc-lbl">DP Sorvete:</span>
+<input class="calc-input" id="ci-dp1" type="number" placeholder="ex: 44" oninput="calcCorr()">
+<span class="calc-lbl">DP Afog.:</span>
+<input class="calc-input" id="ci-dp2" type="number" placeholder="ex: 14" oninput="calcCorr()">
+</div>
+<div class="calc-result"><span class="cr-label">r = cov / (dp₁ × dp₂)</span><span class="cr-value" id="cr-val">—</span></div>
+<p style="font-size:.75rem;color:var(--slate);margin-top:.5rem">Dica: use cov=524, DP sorvete=44, DP afogamentos=13 para obter o r real do dataset</p>
+</div>
+<div class="challenge">
+<div class="ch-label">🎯 Mini-Desafio</div>
+<div class="ch-q">A correlação de 0,91 justifica a campanha “sorvete salva vidas na praia”?</div>
+<div class="ch-opts">
+<button class="ch-opt" onclick="chk(this,'wrong','e3')">Sim — correlação acima de 0,9 é fortíssima e justifica ação imediata</button>
+<button class="ch-opt" onclick="chk(this,'correct','e3')">Não — a variável C (temperatura) causa ambos; sorvete e afogamentos são efeitos independentes</button>
+<button class="ch-opt" onclick="chk(this,'wrong','e3')">Talvez — precisa de mais dados antes de qualquer conclusão</button>
+</div>
+<div class="ch-feedback" id="fb-e3"><strong>Correto!</strong> Clássica correlação espúria — a temperatura alta é a variável de confusão (C) que causa tanto o aumento de consumo de sorvete quanto o de banhos de mar (e consequentemente afogamentos). A campanha seria baseada em uma relação causal inexistente. Antídoto: sempre pergunte “que terceira variável poderia explicar essa correlação?”</div>
+</div>
+</div>
+</div>
+
+```
+<div id="ativ-2" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 3</span><span class="sl-title">Detetive de Vieses</span></div>
+<div class="activity">
+  <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Detetive de Vieses</h3><p>Analise uma decisão real em busca de vieses cognitivos</p></div></div>
+  <div class="act-body">
+    <div class="objective">🎯 Identificar pelo menos 3 vieses em uma decisão real e propor antídotos organizacionais concretos.</div>
+    <div class="fg"><label class="fl">Descreva a decisão — contexto, quem decidiu, como foi tomada, resultado</label><textarea class="fta" id="a3-dec" rows="4" placeholder="Ex.: decidimos lançar produto baseados em feedback de 5 clientes fiéis, sem pesquisa formal. Vendas 60% abaixo." oninput="sv('a3-dec',2)"></textarea></div>
+    <div class="fg"><label class="fl">Que dados foram considerados — e quais foram ignorados?</label><input class="fi" id="a3-dados" placeholder="Ex.: só feedbacks positivos; ignoramos dados de clientes que abandonaram" oninput="sv('a3-dados',2)"></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p3')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p3" style="display:none">
+      <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p3" onclick="copyPrompt('p3','cp-p3')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt3"></div>
+      <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
     </div>
-    <div class="sep"><button class="btn-complete" id="c2" onclick="done(2)">Marcar Encontro 3 como Concluído ✓</button></div>
+    <div class="canvas"><div class="canvas-lbl">📝 Meu Antídoto — processo que mudaria</div><textarea class="fta" id="a3-anti" style="min-height:52px" placeholder="Que ritual organizacional implementaria para evitar esse viés no futuro?" oninput="sv('a3-anti',2)"></textarea></div>
+  </div>
+</div>
+<div class="sep"><button class="btn-complete" id="c2" onclick="done(2)">✓ Marcar como Concluído (opcional)</button></div>
+```
+
   </div>
 </section>
 
 <!-- ██ SESSÃO 4 ██ -->
+
 <section class="session" id="s3">
   <div class="s-hero">
     <div class="h-eye">Encontro 4 · 28/04/2026</div>
     <h1 class="h-title">Problemas de Negócios<br>+ Visualização de Dados</h1>
     <p class="h-desc">Formulação precisa de problemas, servitização, storytelling com dados e os princípios de visualização que transformam análises em decisões.</p>
     <div class="h-jump">
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('caso-3')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: MedPlus</a>
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('ativ-3')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('caso-3')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: MedPlus</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('ativ-3')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
     </div>
 
-    <div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp3"></div></div><span class="h-prog-pct" id="hpv3">0%</span></div>
+```
+<div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp3"></div></div><span class="h-prog-pct" id="hpv3">0%</span></div>
+```
+
   </div>
   <div class="s-body">
     <div class="sl"><span class="sl-badge th">Teoria</span><span class="sl-title">Boas perguntas e visualização eficaz</span></div>
@@ -1051,111 +1199,118 @@ body{
       <p><strong>Eixo Y sempre em zero:</strong> eixo cortado exagera diferenças — usado para manipular, não para clareza.</p>
     </div>
 
-    <!-- CASO PRÁTICO 4 -->
-    <div id="caso-3" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">MedPlus Saúde — NPS vs. Churn por Segmento</span></div>
-    <div class="data-case">
-      <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>MedPlus Saúde · NPS vs. Taxa de Churn por Segmento</h3><p>Dados agregados de operadoras de saúde · ANS 2023</p></div></div>
-      <div class="dc-body">
-        <div class="dc-context">📋 O time de marketing apresentou ao CEO um gráfico de pizza com "satisfação por plano" e concluiu que "tudo está bem". O CFO perguntou: "mas quantos cancelaram?" — e os dados revelaram uma história completamente diferente.</div>
-        <div class="dt-wrap"><table class="dt-table">
-          <thead><tr><th>Segmento de Plano</th><th class="num">NPS</th><th class="num">Base (k clientes)</th><th class="num">Churn Anual</th><th class="num">LTV Médio (R$)</th><th class="num">Perda Anual (R$k)</th></tr></thead>
-          <tbody>
-            <tr><td>Empresarial Premium</td><td class="num pos">72</td><td class="num">28</td><td class="num neg">4%</td><td class="num">18.400</td><td class="num neg">20.608</td></tr>
-            <tr><td>Empresarial Básico</td><td class="num pos">61</td><td class="num">45</td><td class="num neg">9%</td><td class="num">6.200</td><td class="num neg">25.110</td></tr>
-            <tr><td>Individual Premium</td><td class="num pos">55</td><td class="num">12</td><td class="num neg hi">22%</td><td class="num">14.800</td><td class="num neg hi">39.072</td></tr>
-            <tr><td>Individual Básico</td><td class="num">38</td><td class="num">67</td><td class="num neg hi">31%</td><td class="num">3.600</td><td class="num neg hi">74.628</td></tr>
-            <tr><td>MEI / Autônomo</td><td class="num">29</td><td class="num">18</td><td class="num neg hi">38%</td><td class="num">4.100</td><td class="num neg hi">28.044</td></tr>
-          </tbody>
-        </table></div>
-        <div class="chart-wrap">
-          <div class="chart-title">Perda anual por segmento (R$ mil) — a história que o gráfico de pizza escondia</div>
-          <div class="bar-chart">
-    <div class="bc-row">
-      <span class="bc-label" title="Emp. Premium">Emp. Premium</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:28%;background:#1A375E">
-          <span class="bc-val">R$20k</span>
-        </div>
-      </div>
+```
+<!-- CASO PRÁTICO 4 -->
+<div id="caso-3" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">MedPlus Saúde — NPS vs. Churn por Segmento</span></div>
+<div class="data-case">
+  <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>MedPlus Saúde · NPS vs. Taxa de Churn por Segmento</h3><p>Dados agregados de operadoras de saúde · ANS 2023</p></div></div>
+  <div class="dc-body">
+    <div class="dc-context">📋 O time de marketing apresentou ao CEO um gráfico de pizza com "satisfação por plano" e concluiu que "tudo está bem". O CFO perguntou: "mas quantos cancelaram?" — e os dados revelaram uma história completamente diferente.</div>
+    <div class="dt-wrap"><table class="dt-table">
+      <thead><tr><th>Segmento de Plano</th><th class="num">NPS</th><th class="num">Base (k clientes)</th><th class="num">Churn Anual</th><th class="num">LTV Médio (R$)</th><th class="num">Perda Anual (R$k)</th></tr></thead>
+      <tbody>
+        <tr><td>Empresarial Premium</td><td class="num pos">72</td><td class="num">28</td><td class="num neg">4%</td><td class="num">18.400</td><td class="num neg">20.608</td></tr>
+        <tr><td>Empresarial Básico</td><td class="num pos">61</td><td class="num">45</td><td class="num neg">9%</td><td class="num">6.200</td><td class="num neg">25.110</td></tr>
+        <tr><td>Individual Premium</td><td class="num pos">55</td><td class="num">12</td><td class="num neg hi">22%</td><td class="num">14.800</td><td class="num neg hi">39.072</td></tr>
+        <tr><td>Individual Básico</td><td class="num">38</td><td class="num">67</td><td class="num neg hi">31%</td><td class="num">3.600</td><td class="num neg hi">74.628</td></tr>
+        <tr><td>MEI / Autônomo</td><td class="num">29</td><td class="num">18</td><td class="num neg hi">38%</td><td class="num">4.100</td><td class="num neg hi">28.044</td></tr>
+      </tbody>
+    </table></div>
+    <div class="chart-wrap">
+      <div class="chart-title">Perda anual por segmento (R$ mil) — a história que o gráfico de pizza escondia</div>
+      <div class="bar-chart">
+<div class="bc-row">
+  <span class="bc-label" title="Emp. Premium">Emp. Premium</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:28%;background:#1A375E">
+      <span class="bc-val">R$20k</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Emp. Básico">Emp. Básico</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:34%;background:#2E6DA4">
-          <span class="bc-val">R$25k</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Emp. Básico">Emp. Básico</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:34%;background:#2E6DA4">
+      <span class="bc-val">R$25k</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Ind. Premium">Ind. Premium</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:52%;background:#B91C1C">
-          <span class="bc-val">R$39k</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Ind. Premium">Ind. Premium</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:52%;background:#B91C1C">
+      <span class="bc-val">R$39k</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="Ind. Básico">Ind. Básico</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:100%;background:#91000B">
-          <span class="bc-val">R$74k</span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="Ind. Básico">Ind. Básico</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:100%;background:#91000B">
+      <span class="bc-val">R$74k</span>
     </div>
-    <div class="bc-row">
-      <span class="bc-label" title="MEI/Autônomo">MEI/Autônomo</span>
-      <div class="bc-track">
-        <div class="bc-bar" style="width:38%;background:#D97706">
-          <span class="bc-val">R$28k</span>
-        </div>
-      </div>
-    </div></div>
-        </div>
-        <div class="challenge">
-          <div class="ch-label">🎯 Mini-Desafio — Formule a Grande Ideia para o CEO</div>
-          <div class="ch-q">O CEO tem 10 segundos. Qual frase resume o insight mais importante dos dados acima?</div>
-          <div class="ch-opts">
-            <button class="ch-opt" onclick="chk(this,'wrong','e4')">O NPS médio da operadora é 51, indicando satisfação moderada no portfólio.</button>
-            <button class="ch-opt" onclick="chk(this,'correct','e4')">Clientes Individuais (Básico e Premium) representam R$ 113M em perdas anuais com churn acima de 22% — e têm NPS que parece "aceitável". Precisamos de ação imediata nesse segmento.</button>
-            <button class="ch-opt" onclick="chk(this,'wrong','e4')">O segmento Empresarial Premium tem o melhor NPS (72) e o menor churn (4%).</button>
-          </div>
-          <div class="ch-feedback" id="fb-e4"><strong>Correto!</strong> A Grande Ideia combina insight (churn alto + NPS enganoso) + recomendação (ação no segmento) + urgência (R$ 113M). O NPS do segmento Individual parece "ok" mas o churn revela que os clientes saem mesmo sem reclamar — um padrão invisível para quem só olha satisfação declarada.</div>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="bc-row">
+  <span class="bc-label" title="MEI/Autônomo">MEI/Autônomo</span>
+  <div class="bc-track">
+    <div class="bc-bar" style="width:38%;background:#D97706">
+      <span class="bc-val">R$28k</span>
     </div>
+  </div>
+</div></div>
+    </div>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio — Formule a Grande Ideia para o CEO</div>
+      <div class="ch-q">O CEO tem 10 segundos. Qual frase resume o insight mais importante dos dados acima?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e4')">O NPS médio da operadora é 51, indicando satisfação moderada no portfólio.</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e4')">Clientes Individuais (Básico e Premium) representam R$ 113M em perdas anuais com churn acima de 22% — e têm NPS que parece "aceitável". Precisamos de ação imediata nesse segmento.</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e4')">O segmento Empresarial Premium tem o melhor NPS (72) e o menor churn (4%).</button>
+      </div>
+      <div class="ch-feedback" id="fb-e4"><strong>Correto!</strong> A Grande Ideia combina insight (churn alto + NPS enganoso) + recomendação (ação no segmento) + urgência (R$ 113M). O NPS do segmento Individual parece "ok" mas o churn revela que os clientes saem mesmo sem reclamar — um padrão invisível para quem só olha satisfação declarada.</div>
+    </div>
+  </div>
+</div>
 
-    <div id="ativ-3" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 4</span><span class="sl-title">Reformulação e Storytelling</span></div>
-    <div class="activity">
-      <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Reformulador + Editor de Histórias</h3><p>Transforme pergunta vaga em SMART e construa a Grande Ideia</p></div></div>
-      <div class="act-body">
-        <div class="objective">🎯 Reformular uma pergunta vaga e construir narrativa executiva com a Grande Ideia para um insight real da sua empresa.</div>
-        <div class="fg"><label class="fl">Pergunta vaga de negócio</label><input class="fi" id="a4-perg" placeholder='Ex.: "Como melhorar as vendas?"' oninput="sv('a4-perg',3)"></div>
-        <div class="fg"><label class="fl">Insight ou resultado de análise para comunicar</label><textarea class="fta" id="a4-ins" placeholder="Ex.: clientes sem login no app por 14 dias têm 72% de chance de cancelar em 30 dias — R$ 2.400 de LTV médio cada" oninput="sv('a4-ins',3)"></textarea></div>
-        <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p4')">Gerar Prompt para IA ↗</button></div>
-        <div class="prompt-block" id="p4" style="display:none">
-          <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p4" onclick="copyPrompt('p4','cp-p4')">📋 Copiar</button></div>
-          <div class="pb-text" id="pt4"></div>
-          <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
-        </div>
-        <div class="canvas"><div class="canvas-lbl">📝 Minha Grande Ideia (máx 2 linhas)</div><textarea class="fta" id="a4-gi" style="min-height:52px" placeholder="[insight] + [recomendação] + [urgência/impacto em R$]" oninput="sv('a4-gi',3)"></textarea></div>
-      </div>
+<div id="ativ-3" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 4</span><span class="sl-title">Reformulação e Storytelling</span></div>
+<div class="activity">
+  <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Reformulador + Editor de Histórias</h3><p>Transforme pergunta vaga em SMART e construa a Grande Ideia</p></div></div>
+  <div class="act-body">
+    <div class="objective">🎯 Reformular uma pergunta vaga e construir narrativa executiva com a Grande Ideia para um insight real da sua empresa.</div>
+    <div class="fg"><label class="fl">Pergunta vaga de negócio</label><input class="fi" id="a4-perg" placeholder='Ex.: "Como melhorar as vendas?"' oninput="sv('a4-perg',3)"></div>
+    <div class="fg"><label class="fl">Insight ou resultado de análise para comunicar</label><textarea class="fta" id="a4-ins" placeholder="Ex.: clientes sem login no app por 14 dias têm 72% de chance de cancelar em 30 dias — R$ 2.400 de LTV médio cada" oninput="sv('a4-ins',3)"></textarea></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p4')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p4" style="display:none">
+      <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p4" onclick="copyPrompt('p4','cp-p4')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt4"></div>
+      <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
     </div>
-    <div class="sep"><button class="btn-complete" id="c3" onclick="done(3)">Marcar Encontro 4 como Concluído ✓</button></div>
+    <div class="canvas"><div class="canvas-lbl">📝 Minha Grande Ideia (máx 2 linhas)</div><textarea class="fta" id="a4-gi" style="min-height:52px" placeholder="[insight] + [recomendação] + [urgência/impacto em R$]" oninput="sv('a4-gi',3)"></textarea></div>
+  </div>
+</div>
+<div class="sep"><button class="btn-complete" id="c3" onclick="done(3)">✓ Marcar como Concluído (opcional)</button></div>
+```
+
   </div>
 </section>
 
 <!-- ██ SESSÃO 5 ██ -->
+
 <section class="session" id="s4">
   <div class="s-hero">
     <div class="h-eye">Encontro 5 · 30/04/2026</div>
     <h1 class="h-title">IA, Machine Learning<br>+ Modelagem Descritiva</h1>
     <p class="h-desc">GIGO, os 3 paradigmas de ML, classificação, clustering e correlação — com um dataset real de crédito para simular uma árvore de decisão.</p>
     <div class="h-jump">
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('caso-4')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: CreditoJá</a>
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('ativ-4')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('caso-4')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: CreditoJá</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('ativ-4')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade</a>
     </div>
 
-    <div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp4"></div></div><span class="h-prog-pct" id="hpv4">0%</span></div>
+```
+<div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp4"></div></div><span class="h-prog-pct" id="hpv4">0%</span></div>
+```
+
   </div>
   <div class="s-body">
     <div class="sl"><span class="sl-badge th">Teoria</span><span class="sl-title">GIGO, paradigmas e limites dos modelos</span></div>
@@ -1170,103 +1325,110 @@ body{
       <div class="ci" style="--c:#ED7D31"><h5>Por Reforço</h5><p>Aprende por tentativa e erro. Rotas logísticas, precificação dinâmica.</p></div>
     </div>
 
-    <!-- CASO PRÁTICO 5 -->
-    <div id="caso-4" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">CreditoJá — Simulando uma Árvore de Decisão</span></div>
-    <div class="data-case">
-      <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>CreditoJá · Dataset de Aprovação de Crédito</h3><p>20 clientes históricos · supervisionado · classificação binária</p></div></div>
-      <div class="dc-body">
-        <div class="dc-context">📋 A CreditoJá quer construir um modelo de crédito simples e interpretável. Os 20 clientes abaixo foram a base de treinamento. A <strong>regra mais forte que o analista encontrou:</strong> se Renda &gt; R$4.000 E Score &gt; 550, aprovar. Caso contrário, rejeitar.</div>
-        <div class="dt-wrap"><table class="dt-table">
-          <thead><tr><th>#</th><th>Renda (R$)</th><th>Score</th><th>Dívida Ativa</th><th>Real</th><th>Modelo</th></tr></thead>
-          <tbody>
-              <tr><td class="num">1</td><td class="num">5.200</td><td class="num">680</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-              <tr><td class="num">2</td><td class="num">3.100</td><td class="num">520</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
-              <tr><td class="num">3</td><td class="num">4.800</td><td class="num">590</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-              <tr><td class="num">4</td><td class="num">2.800</td><td class="num">490</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
-              <tr><td class="num">5</td><td class="num">6.100</td><td class="num">720</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-              <tr><td class="num">6</td><td class="num">4.200</td><td class="num">610</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-              <tr><td class="num">7</td><td class="num">3.500</td><td class="num">540</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
-              <tr style="background:#FFF5F5"><td class="num">8</td><td class="num">5.800</td><td class="num">480</td><td>Não</td><td>✅ Paga</td><td style="color:#B91C1C;font-weight:600">⚠️ Rejeita</td></tr>
-              <tr><td class="num">9</td><td class="num">2.200</td><td class="num">420</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
-              <tr><td class="num">10</td><td class="num">4.900</td><td class="num">670</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-              <tr><td class="num">11</td><td class="num">3.800</td><td class="num">560</td><td>Sim</td><td>✅ Paga</td><td style="color:#B91C1C;font-weight:600">⚠️ Rejeita</td></tr>
-              <tr><td class="num">12</td><td class="num">5.500</td><td class="num">700</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-              <tr><td class="num">13</td><td class="num">2.600</td><td class="num">380</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
-              <tr style="background:#FFF5F5"><td class="num">14</td><td class="num">4.100</td><td class="num">520</td><td>Não</td><td>❌ Não paga</td><td style="color:#B91C1C;font-weight:600">⚠️ Aprova</td></tr>
-              <tr><td class="num">15</td><td class="num">6.800</td><td class="num">750</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-              <tr><td class="num">16</td><td class="num">3.200</td><td class="num">510</td><td>Sim</td><td>✅ Paga</td><td style="color:#B91C1C;font-weight:600">⚠️ Rejeita</td></tr>
-              <tr><td class="num">17</td><td class="num">4.400</td><td class="num">630</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-              <tr><td class="num">18</td><td class="num">2.900</td><td class="num">440</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
-              <tr><td class="num">19</td><td class="num">5.100</td><td class="num">690</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-              <tr><td class="num">20</td><td class="num">3.600</td><td class="num">580</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
-            </tbody>
-        </table></div>
-        <div class="calc-box" style="margin-top:.8rem">
-          <div style="font-size:.8rem;font-weight:600;color:var(--slate);margin-bottom:.65rem">Calcule as métricas do modelo</div>
-          <div class="calc-row">
-            <span class="calc-lbl">Verdadeiros Positivos (VP):</span>
-            <input class="calc-input" id="ci-vp" type="number" placeholder="?" oninput="calcMetrics()">
-            <span class="calc-lbl">Verdadeiros Negativos (VN):</span>
-            <input class="calc-input" id="ci-vn" type="number" placeholder="?" oninput="calcMetrics()">
-          </div>
-          <div class="calc-row">
-            <span class="calc-lbl">Falsos Positivos (FP — aprovou e não pagou):</span>
-            <input class="calc-input" id="ci-fp" type="number" placeholder="?" oninput="calcMetrics()">
-            <span class="calc-lbl">Falsos Negativos (FN — rejeitou bom cliente):</span>
-            <input class="calc-input" id="ci-fn" type="number" placeholder="?" oninput="calcMetrics()">
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.5rem">
-            <div class="calc-result"><span class="cr-label">Acurácia = (VP+VN)/20</span><span class="cr-value" id="cr-acc">—</span></div>
-            <div class="calc-result"><span class="cr-label">Recall = VP/(VP+FN)</span><span class="cr-value" id="cr-rec">—</span></div>
-          </div>
-          <p style="font-size:.74rem;color:var(--slate);margin-top:.5rem">Gabarito: VP=9, VN=7, FP=2, FN=2 → Acurácia=80%, Recall=82%</p>
-        </div>
-        <div class="challenge">
-          <div class="ch-label">🎯 Mini-Desafio</div>
-          <div class="ch-q">O modelo tem 80% de acurácia. O CFO diz: "ótimo, aprovado". O que o analista de risco deveria responder?</div>
-          <div class="ch-opts">
-            <button class="ch-opt" onclick="chk(this,'wrong','e5')">Concordar — 80% é uma boa métrica para começar</button>
-            <button class="ch-opt" onclick="chk(this,'correct','e5')">Questionar — precisamos saber o custo do FP (aprova inadimplente) vs. FN (rejeita bom cliente). A acurácia ignora esse contexto.</button>
-            <button class="ch-opt" onclick="chk(this,'wrong','e5')">Pedir mais dados — 20 clientes é insuficiente para qualquer conclusão</button>
-          </div>
-          <div class="ch-feedback" id="fb-e5"><strong>Correto!</strong> Em crédito, FP (aprovar quem não vai pagar) gera perda financeira direta. FN (rejeitar bom cliente) gera perda de receita. Os dois erros têm custos DIFERENTES — e a acurácia os trata como equivalentes. A métrica correta depende do custo de cada tipo de erro, que é uma decisão de negócio, não técnica.</div>
-        </div>
+```
+<!-- CASO PRÁTICO 5 -->
+<div id="caso-4" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">CreditoJá — Simulando uma Árvore de Decisão</span></div>
+<div class="data-case">
+  <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>CreditoJá · Dataset de Aprovação de Crédito</h3><p>20 clientes históricos · supervisionado · classificação binária</p></div></div>
+  <div class="dc-body">
+    <div class="dc-context">📋 A CreditoJá quer construir um modelo de crédito simples e interpretável. Os 20 clientes abaixo foram a base de treinamento. A <strong>regra mais forte que o analista encontrou:</strong> se Renda &gt; R$4.000 E Score &gt; 550, aprovar. Caso contrário, rejeitar.</div>
+    <div class="dt-wrap"><table class="dt-table">
+      <thead><tr><th>#</th><th>Renda (R$)</th><th>Score</th><th>Dívida Ativa</th><th>Real</th><th>Modelo</th></tr></thead>
+      <tbody>
+          <tr><td class="num">1</td><td class="num">5.200</td><td class="num">680</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+          <tr><td class="num">2</td><td class="num">3.100</td><td class="num">520</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
+          <tr><td class="num">3</td><td class="num">4.800</td><td class="num">590</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+          <tr><td class="num">4</td><td class="num">2.800</td><td class="num">490</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
+          <tr><td class="num">5</td><td class="num">6.100</td><td class="num">720</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+          <tr><td class="num">6</td><td class="num">4.200</td><td class="num">610</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+          <tr><td class="num">7</td><td class="num">3.500</td><td class="num">540</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
+          <tr style="background:#FFF5F5"><td class="num">8</td><td class="num">5.800</td><td class="num">480</td><td>Não</td><td>✅ Paga</td><td style="color:#B91C1C;font-weight:600">⚠️ Rejeita</td></tr>
+          <tr><td class="num">9</td><td class="num">2.200</td><td class="num">420</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
+          <tr><td class="num">10</td><td class="num">4.900</td><td class="num">670</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+          <tr><td class="num">11</td><td class="num">3.800</td><td class="num">560</td><td>Sim</td><td>✅ Paga</td><td style="color:#B91C1C;font-weight:600">⚠️ Rejeita</td></tr>
+          <tr><td class="num">12</td><td class="num">5.500</td><td class="num">700</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+          <tr><td class="num">13</td><td class="num">2.600</td><td class="num">380</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
+          <tr style="background:#FFF5F5"><td class="num">14</td><td class="num">4.100</td><td class="num">520</td><td>Não</td><td>❌ Não paga</td><td style="color:#B91C1C;font-weight:600">⚠️ Aprova</td></tr>
+          <tr><td class="num">15</td><td class="num">6.800</td><td class="num">750</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+          <tr><td class="num">16</td><td class="num">3.200</td><td class="num">510</td><td>Sim</td><td>✅ Paga</td><td style="color:#B91C1C;font-weight:600">⚠️ Rejeita</td></tr>
+          <tr><td class="num">17</td><td class="num">4.400</td><td class="num">630</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+          <tr><td class="num">18</td><td class="num">2.900</td><td class="num">440</td><td>Sim</td><td>❌ Não paga</td><td>❌ Rejeita</td></tr>
+          <tr><td class="num">19</td><td class="num">5.100</td><td class="num">690</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+          <tr><td class="num">20</td><td class="num">3.600</td><td class="num">580</td><td>Não</td><td>✅ Paga</td><td>✅ Aprova</td></tr>
+        </tbody>
+    </table></div>
+    <div class="calc-box" style="margin-top:.8rem">
+      <div style="font-size:.8rem;font-weight:600;color:var(--slate);margin-bottom:.65rem">Calcule as métricas do modelo</div>
+      <div class="calc-row">
+        <span class="calc-lbl">Verdadeiros Positivos (VP):</span>
+        <input class="calc-input" id="ci-vp" type="number" placeholder="?" oninput="calcMetrics()">
+        <span class="calc-lbl">Verdadeiros Negativos (VN):</span>
+        <input class="calc-input" id="ci-vn" type="number" placeholder="?" oninput="calcMetrics()">
       </div>
+      <div class="calc-row">
+        <span class="calc-lbl">Falsos Positivos (FP — aprovou e não pagou):</span>
+        <input class="calc-input" id="ci-fp" type="number" placeholder="?" oninput="calcMetrics()">
+        <span class="calc-lbl">Falsos Negativos (FN — rejeitou bom cliente):</span>
+        <input class="calc-input" id="ci-fn" type="number" placeholder="?" oninput="calcMetrics()">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.5rem">
+        <div class="calc-result"><span class="cr-label">Acurácia = (VP+VN)/20</span><span class="cr-value" id="cr-acc">—</span></div>
+        <div class="calc-result"><span class="cr-label">Recall = VP/(VP+FN)</span><span class="cr-value" id="cr-rec">—</span></div>
+      </div>
+      <p style="font-size:.74rem;color:var(--slate);margin-top:.5rem">Gabarito: VP=9, VN=7, FP=2, FN=2 → Acurácia=80%, Recall=82%</p>
     </div>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio</div>
+      <div class="ch-q">O modelo tem 80% de acurácia. O CFO diz: "ótimo, aprovado". O que o analista de risco deveria responder?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e5')">Concordar — 80% é uma boa métrica para começar</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e5')">Questionar — precisamos saber o custo do FP (aprova inadimplente) vs. FN (rejeita bom cliente). A acurácia ignora esse contexto.</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e5')">Pedir mais dados — 20 clientes é insuficiente para qualquer conclusão</button>
+      </div>
+      <div class="ch-feedback" id="fb-e5"><strong>Correto!</strong> Em crédito, FP (aprovar quem não vai pagar) gera perda financeira direta. FN (rejeitar bom cliente) gera perda de receita. Os dois erros têm custos DIFERENTES — e a acurácia os trata como equivalentes. A métrica correta depende do custo de cada tipo de erro, que é uma decisão de negócio, não técnica.</div>
+    </div>
+  </div>
+</div>
 
-    <div id="ativ-4" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 5</span><span class="sl-title">O Arquiteto de IA</span></div>
-    <div class="activity">
-      <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Arquiteto de IA</h3><p>Selecione a arquitetura de ML mais adequada para o seu problema</p></div></div>
-      <div class="act-body">
-        <div class="objective">🎯 Identificar paradigma, algoritmo, métrica e risco ético para um problema real de ML da sua empresa.</div>
-        <div class="fg"><label class="fl">Problema de negócio a resolver com ML</label><textarea class="fta" id="a5-prob" placeholder="Ex.: banco quer aprovar/recusar crédito pessoal com obrigação de explicar a recusa ao cliente e ao Banco Central" oninput="sv('a5-prob',4)"></textarea></div>
-        <div class="fg"><label class="fl">Necessidade de explicabilidade</label>
-          <select class="fse" id="a5-exp" onchange="sv('a5-exp',4)"><option value="">Selecione...</option><option>Sim — explicabilidade obrigatória (regulatório)</option><option>Não — apenas precisão importa</option><option>Desejável mas não obrigatório</option></select></div>
-        <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p5')">Gerar Prompt para IA ↗</button></div>
-        <div class="prompt-block" id="p5" style="display:none">
-          <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p5" onclick="copyPrompt('p5','cp-p5')">📋 Copiar</button></div>
-          <div class="pb-text" id="pt5"></div>
-          <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
-        </div>
-        <div class="canvas"><div class="canvas-lbl">📝 Meu algoritmo escolhido e por quê</div><textarea class="fta" id="a5-esc" style="min-height:52px" placeholder="Qual algoritmo você escolheria? Por que interpretabilidade importa (ou não) nesse contexto?" oninput="sv('a5-esc',4)"></textarea></div>
-      </div>
+<div id="ativ-4" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade 5</span><span class="sl-title">O Arquiteto de IA</span></div>
+<div class="activity">
+  <div class="act-hd"><span class="act-badge">REFLEXÃO + IA</span><div class="act-meta"><h3>O Arquiteto de IA</h3><p>Selecione a arquitetura de ML mais adequada para o seu problema</p></div></div>
+  <div class="act-body">
+    <div class="objective">🎯 Identificar paradigma, algoritmo, métrica e risco ético para um problema real de ML da sua empresa.</div>
+    <div class="fg"><label class="fl">Problema de negócio a resolver com ML</label><textarea class="fta" id="a5-prob" placeholder="Ex.: banco quer aprovar/recusar crédito pessoal com obrigação de explicar a recusa ao cliente e ao Banco Central" oninput="sv('a5-prob',4)"></textarea></div>
+    <div class="fg"><label class="fl">Necessidade de explicabilidade</label>
+      <select class="fse" id="a5-exp" onchange="sv('a5-exp',4)"><option value="">Selecione...</option><option>Sim — explicabilidade obrigatória (regulatório)</option><option>Não — apenas precisão importa</option><option>Desejável mas não obrigatório</option></select></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p5')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p5" style="display:none">
+      <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p5" onclick="copyPrompt('p5','cp-p5')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt5"></div>
+      <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
     </div>
-    <div class="sep"><button class="btn-complete" id="c4" onclick="done(4)">Marcar Encontro 5 como Concluído ✓</button></div>
+    <div class="canvas"><div class="canvas-lbl">📝 Meu algoritmo escolhido e por quê</div><textarea class="fta" id="a5-esc" style="min-height:52px" placeholder="Qual algoritmo você escolheria? Por que interpretabilidade importa (ou não) nesse contexto?" oninput="sv('a5-esc',4)"></textarea></div>
+  </div>
+</div>
+<div class="sep"><button class="btn-complete" id="c4" onclick="done(4)">✓ Marcar como Concluído (opcional)</button></div>
+```
+
   </div>
 </section>
 
 <!-- ██ SESSÃO 6 ██ -->
+
 <section class="session" id="s5">
   <div class="s-hero">
     <div class="h-eye">Encontro 6 · 05/05/2026</div>
     <h1 class="h-title">Modelagem Preditiva<br>+ Síntese Final</h1>
     <p class="h-desc">Regressão, séries temporais, backtest, redes neurais, critérios de escolha de modelos — e o plano data-driven que você leva para a empresa.</p>
     <div class="h-jump">
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('caso-5')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: AgroSul</a>
-      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:document.getElementById('ativ-5')?.offsetTop-80||0,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade Final</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('caso-5')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Caso Prático: AgroSul</a>
+      <a href="#" onclick="document.querySelector('.ct').scrollTo({top:(document.getElementById('ativ-5')||{offsetTop:0}).offsetTop-80,behavior:'smooth'});return false;" class="h-jump-link">↓ Atividade Final</a>
     </div>
 
-    <div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp5"></div></div><span class="h-prog-pct" id="hpv5">0%</span></div>
+```
+<div class="h-prog"><span class="h-prog-lbl">Progresso</span><div class="h-prog-track"><div class="h-prog-fill" id="hp5"></div></div><span class="h-prog-pct" id="hpv5">0%</span></div>
+```
+
   </div>
   <div class="s-body">
     <div class="sl"><span class="sl-badge th">Teoria</span><span class="sl-title">Modelos, séries temporais e a Tríade do Gestor</span></div>
@@ -1291,94 +1453,114 @@ body{
       <div class="ci" style="--c:#F0A500"><h5>Ação</h5><p>Decidir com evidências imperfeitas nos prazos reais — sem paralisar em busca da análise perfeita</p></div>
     </div>
 
-    <!-- CASO PRÁTICO 6 -->
-    <div id="caso-5" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">AgroSul Cooperativa — Previsão de Demanda com Sazonalidade</span></div>
-    <div class="data-case">
-      <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>AgroSul Cooperativa · Demanda de Fertilizantes · 24 Meses</h3><p>Sazonalidade agrícola visível · previsão por média móvel + índice sazonal</p></div></div>
-      <div class="dc-body">
-        <div class="dc-context">📋 A AgroSul precisa planejar o estoque de fertilizantes para os próximos 6 meses. O histórico de 24 meses mostra sazonalidade clara. Use o índice sazonal para descobrir quantas toneladas preparar para dezembro.</div>
-        <div class="dt-wrap"><table class="dt-table">
-          <thead><tr><th>Mês</th><th class="num">Demanda Ano 1 (ton)</th><th class="num">Demanda Ano 2 (ton)</th><th class="num">Média Mensal</th><th class="num">Índice Sazonal</th></tr></thead>
-          <tbody>
-              <tr><td>Jan</td><td class="num">185</td><td class="num">198</td><td class="num">192</td><td class="num">0.61</td></tr>
-              <tr><td>Fev</td><td class="num">210</td><td class="num">225</td><td class="num">218</td><td class="num">0.70</td></tr>
-              <tr><td>Mar</td><td class="num">380</td><td class="num">395</td><td class="num">388</td><td class="num">1.24</td></tr>
-              <tr><td>Abr</td><td class="num hi">445</td><td class="num hi">460</td><td class="num hi">453</td><td class="num hi">1.45</td></tr>
-              <tr><td>Mai</td><td class="num">290</td><td class="num">305</td><td class="num">298</td><td class="num">0.95</td></tr>
-              <tr><td>Jun</td><td class="num">140</td><td class="num">152</td><td class="num">146</td><td class="num">0.47</td></tr>
-              <tr><td>Jul</td><td class="num">125</td><td class="num">138</td><td class="num">132</td><td class="num">0.42</td></tr>
-              <tr><td>Ago</td><td class="num">180</td><td class="num">192</td><td class="num">186</td><td class="num">0.60</td></tr>
-              <tr><td>Set</td><td class="num">310</td><td class="num">325</td><td class="num">318</td><td class="num">1.02</td></tr>
-              <tr><td>Out</td><td class="num">420</td><td class="num">438</td><td class="num">429</td><td class="num">1.37</td></tr>
-              <tr><td>Nov</td><td class="num">355</td><td class="num">370</td><td class="num">363</td><td class="num">1.16</td></tr>
-              <tr><td>Dez</td><td class="num hi">465</td><td class="num hi">482</td><td class="num hi">474</td><td class="num hi">1.52</td></tr>
-            </tbody>
-        </table></div>
-        <div class="chart-wrap">
-          <div class="chart-title">Sazonalidade da demanda — os dois anos seguem o mesmo padrão</div>
-          <svg class="line-chart-svg" viewBox="0 0 600 130" preserveAspectRatio="none">
-  <text x="40" y="18" fill="#1A375E" font-size="9" font-weight="600">— Ano 1</text><text x="110" y="18" fill="#F0A500" font-size="9" font-weight="600">— Ano 2</text>
-  <polyline points="35.0,87.2 85.5,81.0 135.9,39.4 186.4,23.5 236.8,61.5 287.3,98.2 337.7,101.9 388.2,88.4 438.6,56.5 489.1,29.6 539.5,45.5 590.0,18.6" fill="none" stroke="#1A375E" stroke-width="2.5" stroke-linejoin="round"/>
-  <polyline points="35.0,84.0 85.5,77.4 135.9,35.7 186.4,19.8 236.8,57.8 287.3,95.3 337.7,98.7 388.2,85.5 438.6,52.9 489.1,25.2 539.5,41.8 590.0,14.4" fill="none" stroke="#F0A500" stroke-width="2.5" stroke-linejoin="round"/>
-  <text x="35.0" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="85.5" y="126" text-anchor="middle" fill="#8899BB" font-size="9">F</text><text x="135.9" y="126" text-anchor="middle" fill="#8899BB" font-size="9">M</text><text x="186.4" y="126" text-anchor="middle" fill="#8899BB" font-size="9">A</text><text x="236.8" y="126" text-anchor="middle" fill="#8899BB" font-size="9">M</text><text x="287.3" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="337.7" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="388.2" y="126" text-anchor="middle" fill="#8899BB" font-size="9">A</text><text x="438.6" y="126" text-anchor="middle" fill="#8899BB" font-size="9">S</text><text x="489.1" y="126" text-anchor="middle" fill="#8899BB" font-size="9">O</text><text x="539.5" y="126" text-anchor="middle" fill="#8899BB" font-size="9">N</text><text x="590.0" y="126" text-anchor="middle" fill="#8899BB" font-size="9">D</text>
+```
+<!-- CASO PRÁTICO 6 -->
+<div id="caso-5" class="sl" style="margin-top:1.8rem"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">AgroSul Cooperativa — Previsão de Demanda com Sazonalidade</span></div>
+<div class="data-case">
+  <div class="dc-header"><span class="dc-badge">DADOS REAIS</span><div class="dc-meta"><h3>AgroSul Cooperativa · Demanda de Fertilizantes · 24 Meses</h3><p>Sazonalidade agrícola visível · previsão por média móvel + índice sazonal</p></div></div>
+  <div class="dc-body">
+    <div class="dc-context">📋 A AgroSul precisa planejar o estoque de fertilizantes para os próximos 6 meses. O histórico de 24 meses mostra sazonalidade clara. Use o índice sazonal para descobrir quantas toneladas preparar para dezembro.</div>
+    <div class="dt-wrap"><table class="dt-table">
+      <thead><tr><th>Mês</th><th class="num">Demanda Ano 1 (ton)</th><th class="num">Demanda Ano 2 (ton)</th><th class="num">Média Mensal</th><th class="num">Índice Sazonal</th></tr></thead>
+      <tbody>
+          <tr><td>Jan</td><td class="num">185</td><td class="num">198</td><td class="num">192</td><td class="num">0.61</td></tr>
+          <tr><td>Fev</td><td class="num">210</td><td class="num">225</td><td class="num">218</td><td class="num">0.70</td></tr>
+          <tr><td>Mar</td><td class="num">380</td><td class="num">395</td><td class="num">388</td><td class="num">1.24</td></tr>
+          <tr><td>Abr</td><td class="num hi">445</td><td class="num hi">460</td><td class="num hi">453</td><td class="num hi">1.45</td></tr>
+          <tr><td>Mai</td><td class="num">290</td><td class="num">305</td><td class="num">298</td><td class="num">0.95</td></tr>
+          <tr><td>Jun</td><td class="num">140</td><td class="num">152</td><td class="num">146</td><td class="num">0.47</td></tr>
+          <tr><td>Jul</td><td class="num">125</td><td class="num">138</td><td class="num">132</td><td class="num">0.42</td></tr>
+          <tr><td>Ago</td><td class="num">180</td><td class="num">192</td><td class="num">186</td><td class="num">0.60</td></tr>
+          <tr><td>Set</td><td class="num">310</td><td class="num">325</td><td class="num">318</td><td class="num">1.02</td></tr>
+          <tr><td>Out</td><td class="num">420</td><td class="num">438</td><td class="num">429</td><td class="num">1.37</td></tr>
+          <tr><td>Nov</td><td class="num">355</td><td class="num">370</td><td class="num">363</td><td class="num">1.16</td></tr>
+          <tr><td>Dez</td><td class="num hi">465</td><td class="num hi">482</td><td class="num hi">474</td><td class="num hi">1.52</td></tr>
+        </tbody>
+    </table></div>
+    <div class="chart-wrap">
+      <div class="chart-title">Sazonalidade da demanda — os dois anos seguem o mesmo padrão</div>
+      <svg class="line-chart-svg" viewBox="0 0 600 130" preserveAspectRatio="none">
+```
+
+<text x="40" y="18" fill="#1A375E" font-size="9" font-weight="600">— Ano 1</text><text x="110" y="18" fill="#F0A500" font-size="9" font-weight="600">— Ano 2</text>
+<polyline points="35.0,87.2 85.5,81.0 135.9,39.4 186.4,23.5 236.8,61.5 287.3,98.2 337.7,101.9 388.2,88.4 438.6,56.5 489.1,29.6 539.5,45.5 590.0,18.6" fill="none" stroke="#1A375E" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="35.0,84.0 85.5,77.4 135.9,35.7 186.4,19.8 236.8,57.8 287.3,95.3 337.7,98.7 388.2,85.5 438.6,52.9 489.1,25.2 539.5,41.8 590.0,14.4" fill="none" stroke="#F0A500" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="35.0" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="85.5" y="126" text-anchor="middle" fill="#8899BB" font-size="9">F</text><text x="135.9" y="126" text-anchor="middle" fill="#8899BB" font-size="9">M</text><text x="186.4" y="126" text-anchor="middle" fill="#8899BB" font-size="9">A</text><text x="236.8" y="126" text-anchor="middle" fill="#8899BB" font-size="9">M</text><text x="287.3" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="337.7" y="126" text-anchor="middle" fill="#8899BB" font-size="9">J</text><text x="388.2" y="126" text-anchor="middle" fill="#8899BB" font-size="9">A</text><text x="438.6" y="126" text-anchor="middle" fill="#8899BB" font-size="9">S</text><text x="489.1" y="126" text-anchor="middle" fill="#8899BB" font-size="9">O</text><text x="539.5" y="126" text-anchor="middle" fill="#8899BB" font-size="9">N</text><text x="590.0" y="126" text-anchor="middle" fill="#8899BB" font-size="9">D</text>
 </svg>
-        </div>
-        <div class="calc-box">
-          <div style="font-size:.8rem;font-weight:600;color:var(--slate);margin-bottom:.6rem">Previsão para Dezembro (Ano 3)</div>
-          <div class="calc-row">
-            <span class="calc-lbl">Média geral histórica (ton):</span>
-            <input class="calc-input" id="ci-mg" type="number" placeholder="ex: 312" oninput="calcForecast()">
-            <span class="calc-lbl">Índice sazonal de Dez (tabela):</span>
-            <input class="calc-input" id="ci-is" type="number" step="0.01" placeholder="ex: 1.45" oninput="calcForecast()">
-          </div>
-          <div class="calc-result"><span class="cr-label">Previsão Dez = Média × Índice</span><span class="cr-value" id="cr-prev">—</span></div>
-          <p style="font-size:.74rem;color:var(--slate);margin-top:.5rem">Dica: média geral ≈ 312 ton · índice de dezembro ≈ 1,45 → previsão ≈ 452 ton</p>
-        </div>
-        <div class="challenge">
-          <div class="ch-label">🎯 Mini-Desafio</div>
-          <div class="ch-q">A previsão dá 452 toneladas para dezembro. O gerente de compras quer pedir exatamente esse valor. O que o analista deveria recomendar?</div>
-          <div class="ch-opts">
-            <button class="ch-opt" onclick="chk(this,'wrong','e6')">Pedir exatamente 452 ton — o modelo é preciso com dados de 2 anos</button>
-            <button class="ch-opt" onclick="chk(this,'correct','e6')">Pedir 452 ton + margem de segurança, e monitorar eventos externos (clima, preços) que o modelo não captura</button>
-            <button class="ch-opt" onclick="chk(this,'wrong','e6')">Pedir 500 ton para garantir — melhor sobrar do que faltar</button>
-          </div>
-          <div class="ch-feedback" id="fb-e6"><strong>Correto!</strong> O modelo de média móvel com índice sazonal é uma excelente linha de base, mas não captura choques exógenos: variação cambial que afeta preço de importação, eventos climáticos extremos, regulações setoriais. A margem de segurança deve ser dimensionada pelo custo de ruptura (perda de venda) vs. custo de excesso (capital imobilizado) — uma decisão de negócio, não apenas estatística.</div>
-        </div>
-      </div>
-    </div>
+</div>
+<div class="calc-box">
+<div style="font-size:.8rem;font-weight:600;color:var(--slate);margin-bottom:.6rem">Previsão para Dezembro (Ano 3)</div>
+<div class="calc-row">
+<span class="calc-lbl">Média geral histórica (ton):</span>
+<input class="calc-input" id="ci-mg" type="number" placeholder="ex: 312" oninput="calcForecast()">
+<span class="calc-lbl">Índice sazonal de Dez (tabela):</span>
+<input class="calc-input" id="ci-is" type="number" step="0.01" placeholder="ex: 1.45" oninput="calcForecast()">
+</div>
+<div class="calc-result"><span class="cr-label">Previsão Dez = Média × Índice</span><span class="cr-value" id="cr-prev">—</span></div>
+<p style="font-size:.74rem;color:var(--slate);margin-top:.5rem">Dica: média geral ≈ 312 ton · índice de dezembro ≈ 1,45 → previsão ≈ 452 ton</p>
+</div>
+<div class="challenge">
+<div class="ch-label">🎯 Mini-Desafio</div>
+<div class="ch-q">A previsão dá 452 toneladas para dezembro. O gerente de compras quer pedir exatamente esse valor. O que o analista deveria recomendar?</div>
+<div class="ch-opts">
+<button class="ch-opt" onclick="chk(this,'wrong','e6')">Pedir exatamente 452 ton — o modelo é preciso com dados de 2 anos</button>
+<button class="ch-opt" onclick="chk(this,'correct','e6')">Pedir 452 ton + margem de segurança, e monitorar eventos externos (clima, preços) que o modelo não captura</button>
+<button class="ch-opt" onclick="chk(this,'wrong','e6')">Pedir 500 ton para garantir — melhor sobrar do que faltar</button>
+</div>
+<div class="ch-feedback" id="fb-e6"><strong>Correto!</strong> O modelo de média móvel com índice sazonal é uma excelente linha de base, mas não captura choques exógenos: variação cambial que afeta preço de importação, eventos climáticos extremos, regulações setoriais. A margem de segurança deve ser dimensionada pelo custo de ruptura (perda de venda) vs. custo de excesso (capital imobilizado) — uma decisão de negócio, não apenas estatística.</div>
+</div>
+</div>
+</div>
 
-    <div id="ativ-5" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade Final</span><span class="sl-title">Plano Data-Driven de 90 Dias — Síntese do Curso</span></div>
-    <div class="activity">
-      <div class="act-hd"><span class="act-badge">SÍNTESE DO CURSO</span><div class="act-meta"><h3>O Integrador — Plano de 90 Dias</h3><p>Conecte os 3 temas do curso em um plano concreto para a sua organização</p></div></div>
-      <div class="act-body">
-        <div class="objective">🎯 Construir um plano data-driven de 90 dias conectando estratégia, decisão e analytics à realidade da sua empresa — referência para o Instrumento Avaliativo 2.</div>
-        <div class="fg"><label class="fl">Empresa — setor, porte, como decide hoje, nível atual de dados</label><textarea class="fta" id="a6-emp" placeholder="Ex.: distribuidora de medicamentos, 500 funcionários, Excel + Power BI básico, TI terceirizada, sem cientista de dados" oninput="sv('a6-emp',5)"></textarea></div>
-        <div class="fg"><label class="fl">Principal desafio que dados poderiam resolver</label><input class="fi" id="a6-des" placeholder="Ex.: prever demanda por SKU para reduzir ruptura e excesso de estoque" oninput="sv('a6-des',5)"></div>
-        <div class="fg"><label class="fl">Maior obstáculo não-técnico</label><input class="fi" id="a6-obs" placeholder="Ex.: CEO decide por intuição e não valoriza análises que contradizem sua experiência" oninput="sv('a6-obs',5)"></div>
-        <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p6')">Gerar Prompt para IA ↗</button></div>
-        <div class="prompt-block" id="p6" style="display:none">
-          <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p6" onclick="copyPrompt('p6','cp-p6')">📋 Copiar</button></div>
-          <div class="pb-text" id="pt6"></div>
-          <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a><a href="https://gemini.google.com" target="_blank" class="pb-link">Gemini ↗</a></div>
-        </div>
-        <div class="canvas"><div class="canvas-lbl">📝 Síntese Pessoal do Curso</div><textarea class="fta" id="a6-sin" style="min-height:90px" placeholder="Qual o insight mais valioso que você leva? O que muda na forma como você vai tomar decisões daqui em diante?" oninput="sv('a6-sin',5)"></textarea></div>
-      </div>
+```
+<div id="ativ-5" class="sl" style="margin-top:1.8rem"><span class="sl-badge ac">Atividade Final</span><span class="sl-title">Plano Data-Driven de 90 Dias — Síntese do Curso</span></div>
+<div class="activity">
+  <div class="act-hd"><span class="act-badge">SÍNTESE DO CURSO</span><div class="act-meta"><h3>O Integrador — Plano de 90 Dias</h3><p>Conecte os 3 temas do curso em um plano concreto para a sua organização</p></div></div>
+  <div class="act-body">
+    <div class="objective">🎯 Construir um plano data-driven de 90 dias conectando estratégia, decisão e analytics à realidade da sua empresa — referência para o Instrumento Avaliativo 2.</div>
+    <div class="fg"><label class="fl">Empresa — setor, porte, como decide hoje, nível atual de dados</label><textarea class="fta" id="a6-emp" placeholder="Ex.: distribuidora de medicamentos, 500 funcionários, Excel + Power BI básico, TI terceirizada, sem cientista de dados" oninput="sv('a6-emp',5)"></textarea></div>
+    <div class="fg"><label class="fl">Principal desafio que dados poderiam resolver</label><input class="fi" id="a6-des" placeholder="Ex.: prever demanda por SKU para reduzir ruptura e excesso de estoque" oninput="sv('a6-des',5)"></div>
+    <div class="fg"><label class="fl">Maior obstáculo não-técnico</label><input class="fi" id="a6-obs" placeholder="Ex.: CEO decide por intuição e não valoriza análises que contradizem sua experiência" oninput="sv('a6-obs',5)"></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showPrompt('p6')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p6" style="display:none">
+      <div class="pb-header"><span class="pb-label">Prompt pronto — copie e cole</span><button class="pb-copy" id="cp-p6" onclick="copyPrompt('p6','cp-p6')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt6"></div>
+      <div class="pb-cta"><span class="pb-cta-lbl">Abrir no:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a><a href="https://gemini.google.com" target="_blank" class="pb-link">Gemini ↗</a></div>
     </div>
+    <div class="canvas"><div class="canvas-lbl">📝 Síntese Pessoal do Curso</div><textarea class="fta" id="a6-sin" style="min-height:90px" placeholder="Qual o insight mais valioso que você leva? O que muda na forma como você vai tomar decisões daqui em diante?" oninput="sv('a6-sin',5)"></textarea></div>
+  </div>
+</div>
 
-    <div class="card" style="text-align:center;padding:2rem;margin-top:1rem">
-      <div style="font-size:2.5rem;margin-bottom:.75rem">🎓</div>
-      <h4 style="justify-content:center;font-size:1.1rem;color:var(--ink);margin-bottom:.6rem">Parabéns pelo Curso!</h4>
-      <p>Data Driven Business · MBA LIVE · Ibmec · 2026<br>Use o botão "PDF do Encontro" para exportar um relatório de cada encontro com todas as suas análises.</p>
-    </div>
-    <div class="sep"><button class="btn-complete" id="c5" onclick="done(5)">Concluir o Curso ✓</button></div>
+<div class="card" style="text-align:center;padding:2rem;margin-top:1rem">
+  <div style="font-size:2.5rem;margin-bottom:.75rem">🎓</div>
+  <h4 style="justify-content:center;font-size:1.1rem;color:var(--ink);margin-bottom:.6rem">Parabéns pelo Curso!</h4>
+  <p>Data Driven Business · MBA LIVE · Ibmec · 2026<br>Use o botão "PDF do Encontro" para exportar um relatório de cada encontro com todas as suas análises.</p>
+</div>
+<div class="sep"><button class="btn-complete" id="c5" onclick="done(5)">✓ Marcar Curso como Concluído (opcional)</button></div>
+```
+
   </div>
 </section>
+
+<!-- MOBILE BOTTOM NAV -->
+
+<nav class="mob-nav" id="mob-nav">
+  <div class="mob-nav-inner">
+    <button class="mob-tab active" id="mt0" onclick="go(0)"><span class="mob-tab-num">1</span>Estratégia</button>
+    <button class="mob-tab" id="mt1" onclick="go(1)"><span class="mob-tab-num">2</span>Ciência Dados</button>
+    <button class="mob-tab" id="mt2" onclick="go(2)"><span class="mob-tab-num">3</span>Pens. Crítico</button>
+    <button class="mob-tab" id="mt3" onclick="go(3)"><span class="mob-tab-num">4</span>Problemas+Viz</button>
+    <button class="mob-tab" id="mt4" onclick="go(4)"><span class="mob-tab-num">5</span>IA e ML</button>
+    <button class="mob-tab" id="mt5" onclick="go(5)"><span class="mob-tab-num">6</span>Modelagem</button>
+  </div>
+</nav>
 
 </main>
 
 <!-- ════════════════════════════════════
      JAVASCRIPT
 ════════════════════════════════════ -->
+
 <script>
 // ── State ──────────────────────────────────────────────────────
 const SK='ddb_v3';
@@ -1417,18 +1599,30 @@ function upProg(si){
 
 function done(i){
   if(!S.done.includes(i))S.done.push(i);save();upProg(i);
-  if(i<5)setTimeout(()=>go(i+1),350);
+  const mt=document.getElementById('mt'+i);
+  if(mt)mt.classList.add('done');
+  // Navegação livre — não avança automaticamente
 }
 
 // ── Navigation ─────────────────────────────────────────────────
 function go(idx){
   document.querySelectorAll('.nav-btn').forEach((n,i)=>n.classList.toggle('active',i===idx));
   document.querySelectorAll('.session').forEach((s,i)=>s.classList.toggle('active',i===idx));
-  document.querySelector('.ct').scrollTo({top:0,behavior:'smooth'});
+  document.querySelectorAll('.mob-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+  // scroll content area on desktop, window on mobile
+  const ct=document.querySelector('.ct');
+  if(ct&&ct.scrollHeight>ct.clientHeight){ct.scrollTo({top:0,behavior:'smooth'})}
+  else{window.scrollTo({top:0,behavior:'smooth'})}
 }
 
 // ── Accordion ─────────────────────────────────────────────────
-function acc(btn){const b=btn.nextElementSibling;const o=btn.classList.toggle('open');b.classList.toggle('open',o)}
+function acc(btn){
+  const body = btn.parentElement.querySelector('.acc-body');
+  if(!body) return;
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+}
 
 // ── Challenge ─────────────────────────────────────────────────
 function chk(btn,result,key){
@@ -1572,13 +1766,12 @@ Português brasileiro. Específico e acionável.`,
 function showPrompt(pid){
   const block=document.getElementById(pid);
   if(!block)return;
-  const isVisible=block.style.display!=='none';
-  if(isVisible){block.style.display='none';return}
+  if(block.style.display==='block'){block.style.display='none';return;}
   const textKey='pt'+pid.replace('p','');
   const textEl=document.getElementById(textKey);
   if(textEl&&PTEXTS[textKey])textEl.textContent=PTEXTS[textKey]();
   block.style.display='block';
-  block.scrollIntoView({behavior:'smooth',block:'nearest'});
+  setTimeout(()=>block.scrollIntoView({behavior:'smooth',block:'nearest'}),50);
 }
 
 function copyPrompt(pid,btnId){
@@ -1707,7 +1900,7 @@ function exportPDF(){
   let cover=document.getElementById('__pcover');
   if(!cover){cover=document.createElement('div');cover.id='__pcover';document.body.prepend(cover)}
   cover.className='print-cover';
-  cover.innerHTML=`<div class="pc-eye">ENCONTRO ${active+1} · MBA LIVE · IBMEC · 2026</div><div class="pc-title">Data Driven Business<br>${titles[active]}</div><div class="pc-sub">${dates[active]}${emp?' · '+emp:''}</div><div class="pc-meta">Prof. Dr. Thiago Lima · COPPEAD/UFRJ · IPETEC/UCP · Escola Naval<br>Docente: Prof. Victor Batista dos Santos<br>Gerado em ${new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'})}</div>`;
+  cover.innerHTML=`<div class="pc-eye">ENCONTRO ${active+1} · MBA LIVE · IBMEC · 2026</div><div class="pc-title">Data Driven Business<br>${titles[active]}</div><div class="pc-sub">${dates[active]}${emp?' · '+emp:''}</div><div class="pc-meta">Prof. Dr. Thiago Lima · Prof. Victor Batista dos Santos<br>Gerado em ${new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'})}</div>`;
   window.print();
   setTimeout(()=>{
     document.querySelectorAll('.acc-body').forEach(b=>b.classList.remove('open'));
@@ -1719,7 +1912,7 @@ function exportPDF(){
 
 
 // Anchor scroll helper for content area
-function scrollTo(anchorId) {
+function scrollToAnchor(anchorId) {
   const target = document.getElementById(anchorId);
   const ct = document.querySelector('.ct');
   if (target && ct) {
@@ -1731,7 +1924,10 @@ function scrollTo(anchorId) {
 // ── Init ───────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded',()=>{
   restoreAll();upProg();initCharts();
+  // Restore mobile tab done states
+  S.done.forEach(i=>{const mt=document.getElementById('mt'+i);if(mt)mt.classList.add('done')});
 });
 </script>
+
 </body>
 </html>
