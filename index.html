@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -6,369 +7,1955 @@
 <title>Data Driven Business — MBA LIVE · Ibmec</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
+/* ─── TOKENS ─────────────────────────────────────────── */
 :root {
-  --navy: #1A375E; --navy2: #0D1E3A; --gold: #F0A500; --gold2: #FFB820;
-  --white: #FFFFFF; --off: #F5F7FA; --smoke: #E8ECF4; --steel: #C0CAD8;
-  --slate: #6B7A99; --ink: #1A2540; --teal: #0A7A99; --red: #C0392B;
-  --green: #166534; --r: 12px;
+  --navy:  #1A375E;
+  --navy2: #0D1E3A;
+  --gold:  #F0A500;
+  --gold2: #FFB820;
+  --white: #FFFFFF;
+  --off:   #F5F7FA;
+  --smoke: #E8ECF4;
+  --steel: #C0CAD8;
+  --slate: #6B7A99;
+  --ink:   #1A2540;
+  --teal:  #0A7A99;
+  --red:   #C0392B;
+  --green: #166534;
+  --r:     10px;
 }
+
+/* ─── RESET ──────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background: var(--off); color: var(--ink); min-height: 100vh; padding-bottom: 80px; }
+html { -webkit-text-size-adjust: 100% }
+body {
+font-family: ‘Inter’, sans-serif;
+background: var(–off);
+color: var(–ink);
+min-height: 100vh;
+padding-bottom: 80px;
+}
 
-/* NAVEGAÇÃO MOBILE-OPTIMIZED */
-.topbar { background: var(--navy); border-bottom: 2px solid var(--gold); padding: 0 16px; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
-.brand { display: flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; color: var(--white); }
-.brand-pill { background: var(--gold); color: var(--navy); font-size: 9px; font-weight: 800; padding: 3px 8px; border-radius: 100px; }
-.tabnav { background: var(--navy2); border-bottom: 1px solid rgba(255,255,255,.1); position: sticky; top: 56px; z-index: 90; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+/* ─── TOP BAR ────────────────────────────────────────── */
+.topbar {
+background: var(–navy);
+border-bottom: 2px solid var(–gold);
+padding: 0 16px;
+height: 52px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+.brand {
+display: flex;
+align-items: center;
+gap: 8px;
+font-family: ‘Syne’, sans-serif;
+font-weight: 700;
+font-size: 14px;
+color: var(–white);
+}
+.brand-pill {
+background: var(–gold);
+color: var(–navy);
+font-size: 10px;
+font-weight: 800;
+padding: 2px 7px;
+border-radius: 100px;
+letter-spacing: .04em;
+}
+.topbar-right {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.prog-badge {
+font-size: 11px;
+font-weight: 600;
+color: var(–gold);
+background: rgba(240,165,0,.12);
+border: 1px solid rgba(240,165,0,.25);
+padding: 3px 10px;
+border-radius: 100px;
+}
+.pdf-btn {
+background: var(–gold);
+color: var(–navy);
+border: none;
+border-radius: 7px;
+padding: 5px 12px;
+font-family: ‘Inter’, sans-serif;
+font-size: 12px;
+font-weight: 700;
+cursor: pointer;
+}
+
+/* ─── TAB NAV ────────────────────────────────────────── */
+.tabnav {
+background: var(–navy2);
+border-bottom: 1px solid rgba(255,255,255,.08);
+position: sticky;
+top: 52px;
+z-index: 90;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+scrollbar-width: none;
+}
 .tabnav::-webkit-scrollbar { display: none }
-.tabnav-inner { display: flex; min-width: max-content; padding: 0 8px; }
-.tab-btn { padding: 14px 16px; background: none; border: none; border-bottom: 3px solid transparent; color: rgba(255,255,255,.4); font-size: 11px; font-weight: 600; white-space: nowrap; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: 0.2s; cursor: pointer; }
-.tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
-.tab-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,.2); }
-.tab-btn.done .tab-dot { background: #4ade80; }
+.tabnav-inner {
+display: flex;
+min-width: max-content;
+padding: 0 12px;
+}
+.tab-btn {
+flex-shrink: 0;
+padding: 10px 14px;
+background: none;
+border: none;
+border-bottom: 2px solid transparent;
+color: rgba(255,255,255,.45);
+font-family: ‘Inter’, sans-serif;
+font-size: 12px;
+font-weight: 600;
+cursor: pointer;
+white-space: nowrap;
+transition: color .15s, border-color .15s;
+display: flex;
+align-items: center;
+gap: 5px;
+}
+.tab-btn.active {
+color: var(–gold);
+border-bottom-color: var(–gold);
+}
+.tab-btn.done .tab-dot {
+background: #4ade80;
+}
+.tab-dot {
+width: 5px;
+height: 5px;
+border-radius: 50%;
+background: rgba(255,255,255,.2);
+flex-shrink: 0;
+}
 
-/* CARDS E CONTEÚDO */
-.session { display: none; }
-.session.active { display: block; }
-.hero { background: var(--navy); padding: 24px 16px; color: white; position: relative; overflow: hidden; }
-.hero-title { font-family: 'Syne', sans-serif; font-size: 24px; line-height: 1.2; margin-bottom: 8px; }
-.hero-desc { font-size: 14px; color: rgba(255,255,255,.6); margin-bottom: 16px; }
-.body { padding: 16px; }
-.card { background: var(--white); border-radius: var(--r); border: 1px solid var(--smoke); padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-.card-gold { border-left: 4px solid var(--gold); background: #FFFDF5; }
-.card-navy { background: var(--navy); color: white; padding: 16px; border-radius: var(--r); margin-bottom: 16px; }
-.cgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); gap: 10px; margin-bottom: 16px; }
-.ci { background: var(--white); border: 1px solid var(--smoke); border-radius: var(--r); padding: 12px; border-top: 4px solid var(--c, var(--gold)); }
-.ci h5 { font-size: 12px; margin-bottom: 4px; font-family: 'Syne', sans-serif; }
-.ci p { font-size: 11px; color: var(--slate); line-height: 1.4; }
+/* ─── CONTENT ────────────────────────────────────────── */
+.session { display: none }
+.session.active { display: block }
 
-/* COMPONENTES DE FORMULÁRIO */
-.fg { margin-bottom: 16px; }
-.fl { display: block; font-size: 11px; font-weight: 700; color: var(--slate); margin-bottom: 6px; text-transform: uppercase; }
-.fi, .fta, .fse { width: 100%; background: var(--white); border: 2px solid var(--steel); border-radius: 8px; padding: 12px; font-size: 16px; font-family: inherit; outline: none; }
-.calc-box { background: var(--off); border: 1px solid var(--steel); border-radius: var(--r); padding: 16px; margin-bottom: 16px; }
-.calc-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
-.calc-input { width: 100%; height: 48px; border: 2px solid var(--steel); border-radius: 8px; padding: 0 12px; font-family: 'JetBrains Mono', monospace; font-size: 16px; text-align: right; }
+/* ─── HERO ───────────────────────────────────────────── */
+.hero {
+background: var(–navy);
+padding: 20px 16px 18px;
+position: relative;
+overflow: hidden;
+}
+.hero::after {
+content: ‘’;
+position: absolute;
+right: -20px; top: -20px;
+width: 140px; height: 140px;
+border-radius: 50%;
+background: radial-gradient(circle, rgba(240,165,0,.1) 0%, transparent 70%);
+pointer-events: none;
+}
+.hero-eyebrow {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: .12em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 6px;
+}
+.hero-title {
+font-family: ‘Syne’, sans-serif;
+font-size: 22px;
+font-weight: 800;
+color: var(–white);
+line-height: 1.2;
+margin-bottom: 8px;
+}
+.hero-desc {
+font-size: 13px;
+color: rgba(255,255,255,.55);
+line-height: 1.6;
+margin-bottom: 12px;
+}
+.hero-links {
+display: flex;
+gap: 6px;
+flex-wrap: wrap;
+}
+.hero-link {
+font-size: 11px;
+font-weight: 600;
+color: rgba(240,165,0,.8);
+background: rgba(240,165,0,.1);
+border: 1px solid rgba(240,165,0,.25);
+padding: 4px 10px;
+border-radius: 100px;
+cursor: pointer;
+text-decoration: none;
+}
+.hero-prog {
+display: flex;
+align-items: center;
+gap: 8px;
+margin-top: 10px;
+}
+.hp-lbl { font-size: 10px; color: rgba(255,255,255,.35) }
+.hp-track {
+flex: 1; max-width: 120px;
+height: 3px;
+background: rgba(255,255,255,.1);
+border-radius: 2px;
+}
+.hp-fill {
+height: 100%;
+background: var(–gold);
+border-radius: 2px;
+transition: width .4s ease;
+}
+.hp-pct { font-size: 10px; font-weight: 700; color: var(–gold) }
 
-/* TABELAS RESPONSIVAS */
-.tbl-wrap { overflow-x: auto; border: 1px solid var(--smoke); border-radius: var(--r); margin: 12px 0; background: white; -webkit-overflow-scrolling: touch; }
-.tbl { width: 100%; border-collapse: collapse; min-width: 600px; font-size: 12px; }
-.tbl th { background: var(--navy); color: white; padding: 12px 10px; text-align: left; position: sticky; left: 0; }
-.tbl td { padding: 10px; border-bottom: 1px solid var(--smoke); }
-.num { text-align: right; font-family: 'JetBrains Mono', monospace; }
-.hi { background: #FFF7ED !important; font-weight: 600; }
+/* ─── BODY ───────────────────────────────────────────── */
+.body { padding: 14px 14px 20px }
 
-@media (min-width: 768px) {
-  body { max-width: 800px; margin: 0 auto; background: #e2e8f0; border-left: 1px solid #cbd5e1; border-right: 1px solid #cbd5e1; }
-  .topbar, .tabnav { max-width: 800px; margin: 0 auto; left: 50%; transform: translateX(-50%); width: 100%; }
+/* ─── SECTION LABEL ──────────────────────────────────── */
+.slabel {
+display: flex;
+align-items: center;
+gap: 8px;
+margin: 18px 0 10px;
+}
+.slabel:first-child { margin-top: 0 }
+.sl-badge {
+font-size: 9px;
+font-weight: 800;
+letter-spacing: .1em;
+text-transform: uppercase;
+padding: 3px 8px;
+border-radius: 100px;
+}
+.sl-badge.th  { background:#EFF6FF; color:#1D4ED8; border:1px solid #BFDBFE }
+.sl-badge.ex  { background:#FFF7ED; color:#C2410C; border:1px solid #FED7AA }
+.sl-badge.dt  { background:#F0FDF4; color:#166534; border:1px solid #BBF7D0 }
+.sl-badge.ac  { background:#FAF5FF; color:#7E22CE; border:1px solid #E9D5FF }
+.sl-title {
+font-family: ‘Syne’, sans-serif;
+font-size: 14px;
+font-weight: 700;
+color: var(–ink);
+}
+
+/* ─── CARD ───────────────────────────────────────────── */
+.card {
+background: var(–white);
+border-radius: var(–r);
+border: 1px solid var(–smoke);
+box-shadow: 0 1px 8px rgba(26,55,94,.06);
+padding: 14px;
+margin-bottom: 10px;
+}
+.card-gold  { border-left: 3px solid var(–gold); background: #FFFDF5 }
+.card-navy  { background: var(–navy); border-color: var(–navy) }
+.card-navy p { color: rgba(255,255,255,.7) }
+.card-navy strong { color: var(–gold2) }
+.card-red   { border-left: 3px solid var(–red); background: #FFF5F5 }
+.card h4 {
+font-family: ‘Syne’, sans-serif;
+font-size: 13px;
+font-weight: 700;
+color: var(–ink);
+margin-bottom: 8px;
+display: flex;
+align-items: center;
+gap: 5px;
+}
+.card-navy h4 { color: var(–gold) }
+.card p {
+font-size: 13px;
+line-height: 1.65;
+color: #3A4A68;
+margin-bottom: 6px;
+}
+.card p:last-child { margin-bottom: 0 }
+
+/* ─── CONCEPT GRID ───────────────────────────────────── */
+.cgrid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8px;
+margin-bottom: 10px;
+}
+.ci {
+background: var(–white);
+border: 1px solid var(–smoke);
+border-radius: var(–r);
+padding: 10px;
+border-top: 3px solid var(–c, var(–gold));
+}
+.ci h5 {
+font-size: 11px;
+font-weight: 700;
+color: var(–ink);
+margin-bottom: 4px;
+font-family: ‘Syne’, sans-serif;
+}
+.ci p { font-size: 11px; color: var(–slate); line-height: 1.45; margin: 0 }
+
+/* ─── ACCORDION ──────────────────────────────────────── */
+.acc {
+border: 1px solid var(–smoke);
+border-radius: var(–r);
+overflow: hidden;
+margin-bottom: 8px;
+background: var(–white);
+}
+.acc-btn {
+width: 100%;
+padding: 12px 14px;
+background: var(–white);
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+font-family: ‘Inter’, sans-serif;
+font-size: 13px;
+font-weight: 500;
+color: var(–ink);
+text-align: left;
+-webkit-tap-highlight-color: transparent;
+}
+.acc-btn.open { background: var(–off) }
+.acc-arrow {
+font-size: 10px;
+color: var(–gold);
+flex-shrink: 0;
+transition: transform .2s;
+font-style: normal;
+}
+.acc-btn.open .acc-arrow { transform: rotate(180deg) }
+.acc-body { display: none; background: var(–off); border-top: 1px solid var(–smoke) }
+.acc-body.open { display: block }
+.acc-inner { padding: 12px 14px }
+.acc-inner ul { padding-left: 16px }
+.acc-inner li {
+font-size: 13px;
+color: #3A4A68;
+line-height: 1.6;
+margin-bottom: 5px;
+}
+.acc-inner li::marker { color: var(–gold) }
+.acc-inner p { font-size: 13px; color: #3A4A68; line-height: 1.6; margin-bottom: 5px }
+
+/* ─── MATURITY BAR ───────────────────────────────────── */
+.mat {
+display: flex;
+gap: 3px;
+border-radius: var(–r);
+overflow: hidden;
+margin: 8px 0;
+}
+.mat-step {
+flex: 1;
+padding: 8px 2px;
+text-align: center;
+font-size: 10px;
+font-weight: 700;
+color: var(–white);
+line-height: 1.3;
+}
+
+/* ─── DATA CASE ──────────────────────────────────────── */
+.data-case {
+background: var(–white);
+border-radius: var(–r);
+border: 2px solid var(–gold);
+overflow: hidden;
+margin-bottom: 10px;
+box-shadow: 0 2px 16px rgba(240,165,0,.12);
+}
+.dc-head {
+background: var(–navy);
+padding: 12px 14px;
+}
+.dc-badge {
+display: inline-block;
+background: var(–gold);
+color: var(–navy);
+font-size: 9px;
+font-weight: 800;
+letter-spacing: .08em;
+padding: 2px 7px;
+border-radius: 4px;
+margin-bottom: 5px;
+}
+.dc-head h3 {
+font-family: ‘Syne’, sans-serif;
+font-size: 14px;
+font-weight: 700;
+color: var(–white);
+line-height: 1.3;
+}
+.dc-head p {
+font-size: 11px;
+color: rgba(255,255,255,.45);
+margin-top: 2px;
+}
+.dc-body { padding: 12px 14px }
+.dc-ctx {
+font-size: 12px;
+color: #92400E;
+line-height: 1.55;
+padding: 8px 10px;
+background: #FFFBEB;
+border-radius: 7px;
+border-left: 3px solid var(–gold);
+margin-bottom: 12px;
+}
+
+/* ─── TABLE ──────────────────────────────────────────── */
+.tbl-wrap {
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+border-radius: var(–r);
+border: 1px solid var(–smoke);
+margin-bottom: 10px;
+}
+.tbl {
+width: 100%;
+border-collapse: collapse;
+font-size: 12px;
+min-width: 400px;
+}
+.tbl th {
+background: var(–navy);
+color: var(–white);
+padding: 7px 10px;
+text-align: left;
+font-size: 10px;
+font-weight: 700;
+letter-spacing: .03em;
+white-space: nowrap;
+}
+.tbl td {
+padding: 6px 10px;
+border-bottom: 1px solid var(–smoke);
+white-space: nowrap;
+color: var(–ink);
+}
+.tbl tr:last-child td { border-bottom: none }
+.tbl tr:nth-child(even) td { background: var(–off) }
+.tbl tr:hover td { background: #EEF4FF }
+.num { text-align: right; font-family: ‘JetBrains Mono’, monospace }
+.pos { color: var(–green); font-weight: 600 }
+.neg { color: var(–red); font-weight: 600 }
+.hi  { background: #FFF7ED !important; font-weight: 600 }
+
+/* ─── BAR CHART ──────────────────────────────────────── */
+.chart-wrap {
+background: var(–off);
+border-radius: var(–r);
+border: 1px solid var(–smoke);
+padding: 10px;
+margin-bottom: 10px;
+}
+.chart-title {
+font-size: 11px;
+font-weight: 600;
+color: var(–slate);
+margin-bottom: 8px;
+}
+.barchart { display: flex; flex-direction: column; gap: 5px }
+.bc-row { display: flex; align-items: center; gap: 6px }
+.bc-lbl {
+font-size: 10px;
+color: var(–slate);
+width: 80px;
+flex-shrink: 0;
+text-align: right;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.bc-track {
+flex: 1;
+background: var(–smoke);
+border-radius: 3px;
+height: 20px;
+position: relative;
+}
+.bc-bar {
+height: 100%;
+border-radius: 3px;
+display: flex;
+align-items: center;
+padding-left: 6px;
+transition: width .8s ease;
+}
+.bc-val {
+font-size: 10px;
+font-weight: 700;
+color: var(–white);
+font-family: ‘JetBrains Mono’, monospace;
+white-space: nowrap;
+}
+.bc-val.dark { color: var(–ink) }
+
+/* ─── LINE CHART ─────────────────────────────────────── */
+.linechart { width: 100%; height: 100px; display: block }
+
+/* ─── CHALLENGE ──────────────────────────────────────── */
+.challenge {
+background: var(–navy2);
+border-radius: var(–r);
+border: 1px solid rgba(240,165,0,.2);
+padding: 12px 14px;
+margin-top: 10px;
+}
+.ch-label {
+font-size: 10px;
+font-weight: 800;
+letter-spacing: .1em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 6px;
+}
+.ch-q {
+font-size: 13px;
+color: rgba(255,255,255,.85);
+line-height: 1.55;
+margin-bottom: 10px;
+}
+.ch-opts { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px }
+.ch-opt {
+background: rgba(255,255,255,.05);
+border: 1px solid rgba(255,255,255,.1);
+border-radius: var(–r);
+padding: 9px 12px;
+font-size: 12px;
+color: rgba(255,255,255,.7);
+text-align: left;
+cursor: pointer;
+width: 100%;
+line-height: 1.45;
+-webkit-tap-highlight-color: transparent;
+transition: all .15s;
+}
+.ch-opt:active { opacity: .8 }
+.ch-opt.correct { background: rgba(22,101,52,.3); border-color: #4ade80; color: #4ade80; pointer-events: none }
+.ch-opt.wrong   { background: rgba(185,28,28,.2); border-color: #f87171; color: #f87171; pointer-events: none }
+.ch-fb {
+display: none;
+padding: 8px 10px;
+border-radius: 7px;
+font-size: 12px;
+line-height: 1.55;
+margin-top: 6px;
+}
+.ch-fb.show { display: block }
+.ch-fb.ok { background: rgba(22,101,52,.2); border: 1px solid rgba(74,222,128,.3); color: #86efac }
+.ch-fb.ko { background: rgba(185,28,28,.15); border: 1px solid rgba(248,113,113,.3); color: #fca5a5 }
+
+/* ─── CALCULATOR ─────────────────────────────────────── */
+.calc-box {
+background: var(–off);
+border: 1px solid var(–steel);
+border-radius: var(–r);
+padding: 12px 14px;
+margin-bottom: 10px;
+}
+.calc-lbl { font-size: 11px; color: var(–slate); margin-bottom: 8px; font-weight: 600 }
+.calc-fields { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px }
+.calc-field { display: flex; align-items: center; gap: 8px; flex-wrap: wrap }
+.calc-field label { font-size: 12px; color: var(–slate); flex: 1; min-width: 140px }
+.calc-input {
+width: 90px;
+background: var(–white);
+border: 1.5px solid var(–steel);
+border-radius: 7px;
+padding: 6px 8px;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 13px;
+color: var(–ink);
+text-align: right;
+outline: none;
+}
+.calc-input:focus { border-color: var(–gold) }
+.calc-result {
+background: var(–navy);
+border-radius: 7px;
+padding: 8px 12px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.cr-lbl { font-size: 11px; color: rgba(255,255,255,.45) }
+.cr-val { font-family: ‘JetBrains Mono’, monospace; font-size: 16px; font-weight: 700; color: var(–gold) }
+
+/* ─── ACTIVITY ───────────────────────────────────────── */
+.activity {
+background: var(–white);
+border-radius: var(–r);
+border: 1px solid var(–smoke);
+overflow: hidden;
+margin-bottom: 10px;
+box-shadow: 0 1px 8px rgba(26,55,94,.06);
+}
+.act-head {
+background: var(–navy);
+padding: 12px 14px;
+}
+.act-badge {
+display: inline-block;
+background: var(–gold);
+color: var(–navy);
+font-size: 9px;
+font-weight: 800;
+letter-spacing: .08em;
+padding: 2px 7px;
+border-radius: 4px;
+margin-bottom: 5px;
+}
+.act-head h3 {
+font-family: ‘Syne’, sans-serif;
+font-size: 15px;
+font-weight: 700;
+color: var(–white);
+}
+.act-head p { font-size: 11px; color: rgba(255,255,255,.45); margin-top: 2px }
+.act-body { padding: 14px }
+.objective {
+font-size: 12px;
+color: #92400E;
+line-height: 1.55;
+padding: 8px 10px;
+background: #FFFBEB;
+border-radius: 7px;
+border-left: 3px solid var(–gold);
+margin-bottom: 12px;
+font-style: italic;
+}
+
+/* ─── FORM ───────────────────────────────────────────── */
+.fg { margin-bottom: 10px }
+.fl {
+display: block;
+font-size: 10px;
+font-weight: 700;
+letter-spacing: .07em;
+text-transform: uppercase;
+color: var(–slate);
+margin-bottom: 5px;
+}
+.fi, .fta, .fse {
+width: 100%;
+background: var(–off);
+border: 1.5px solid var(–steel);
+border-radius: 8px;
+color: var(–ink);
+font-family: ‘Inter’, sans-serif;
+font-size: 14px;
+padding: 10px 12px;
+outline: none;
+transition: border-color .15s;
+-webkit-appearance: none;
+}
+.fi:focus, .fta:focus, .fse:focus { border-color: var(–gold) }
+.fta { resize: vertical; min-height: 72px; line-height: 1.5 }
+
+/* ─── PROMPT BLOCK ───────────────────────────────────── */
+.prompt-block {
+margin-top: 10px;
+border-radius: var(–r);
+background: var(–navy2);
+border: 1px solid rgba(255,255,255,.1);
+overflow: hidden;
+display: none;
+}
+.prompt-block.open { display: block }
+.pb-head {
+padding: 8px 12px;
+background: rgba(240,165,0,.1);
+border-bottom: 1px solid rgba(240,165,0,.15);
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.pb-lbl { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(–gold) }
+.pb-copy {
+background: var(–gold);
+color: var(–navy);
+border: none;
+border-radius: 5px;
+padding: 4px 10px;
+font-size: 11px;
+font-weight: 700;
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
+}
+.pb-copy.copied { background: var(–green); color: var(–white) }
+.pb-text {
+padding: 10px 12px;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 11px;
+line-height: 1.6;
+color: rgba(168,210,255,.85);
+white-space: pre-wrap;
+overflow-x: auto;
+}
+.pb-links {
+padding: 8px 12px;
+background: rgba(255,255,255,.03);
+border-top: 1px solid rgba(255,255,255,.06);
+display: flex;
+align-items: center;
+gap: 6px;
+flex-wrap: wrap;
+}
+.pb-links-lbl { font-size: 10px; color: rgba(255,255,255,.3) }
+.pb-link {
+font-size: 11px;
+font-weight: 600;
+color: var(–gold);
+text-decoration: none;
+border: 1px solid rgba(240,165,0,.3);
+padding: 3px 9px;
+border-radius: 100px;
+}
+
+/* ─── CANVAS ─────────────────────────────────────────── */
+.canvas {
+margin-top: 10px;
+border: 1.5px dashed var(–steel);
+border-radius: var(–r);
+padding: 10px 12px;
+background: linear-gradient(135deg, var(–smoke), var(–white));
+}
+.canvas-lbl {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: .07em;
+text-transform: uppercase;
+color: #92400E;
+margin-bottom: 6px;
+}
+
+/* ─── BUTTONS ────────────────────────────────────────── */
+.btn-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px }
+.btn {
+display: inline-flex;
+align-items: center;
+gap: 5px;
+font-family: ‘Inter’, sans-serif;
+font-size: 13px;
+font-weight: 600;
+padding: 9px 14px;
+border-radius: 8px;
+border: none;
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
+transition: opacity .15s;
+}
+.btn:active { opacity: .8 }
+.btn-navy { background: var(–navy); color: var(–white) }
+.btn-ghost { background: transparent; color: var(–navy); border: 1.5px solid var(–steel) }
+.btn-full { width: 100%; justify-content: center }
+
+.complete-btn {
+width: 100%;
+padding: 13px;
+margin-top: 20px;
+background: var(–navy);
+color: var(–white);
+border: none;
+border-radius: var(–r);
+font-family: ‘Inter’, sans-serif;
+font-size: 14px;
+font-weight: 600;
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 6px;
+}
+.complete-btn.done { background: var(–green) }
+
+/* ─── TIMELINE ───────────────────────────────────────── */
+.tl { display: flex; flex-direction: column }
+.tli { display: flex; gap: 10px; padding-bottom: 12px; position: relative }
+.tli::before {
+content: ‘’;
+position: absolute;
+left: 12px; top: 24px;
+width: 1px; bottom: 0;
+background: var(–steel);
+}
+.tli:last-child::before { display: none }
+.tl-dot {
+width: 25px; height: 25px;
+border-radius: 50%; flex-shrink: 0;
+background: var(–white);
+border: 2px solid var(–gold);
+display: flex; align-items: center; justify-content: center;
+font-size: 11px; font-weight: 700; color: var(–gold);
+font-family: ‘JetBrains Mono’, monospace;
+}
+.tl-b h5 { font-size: 13px; font-weight: 600; color: var(–ink); margin-bottom: 3px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap }
+.tl-tag { font-size: 10px; color: #92400E; background: #FFF7ED; border: 1px solid #FED7AA; padding: 1px 6px; border-radius: 100px }
+.tl-b p { font-size: 12px; color: var(–slate); line-height: 1.5 }
+
+/* ─── COMPARE TABLE ──────────────────────────────────── */
+.cmp { border-radius: var(–r); overflow: hidden; border: 1px solid var(–smoke); margin: 8px 0 }
+.cmp-row { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(–smoke) }
+.cmp-row:last-child { border-bottom: none }
+.cmp-cell { padding: 7px 10px; font-size: 12px; color: #3A4A68; line-height: 1.4 }
+.cmp-hd  { background: var(–navy);  color: var(–white); font-weight: 600; font-size: 11px }
+.cmp-hd2 { background: var(–teal); color: var(–white); font-weight: 600; font-size: 11px }
+.cmp-row:nth-child(even) .cmp-cell:not(.cmp-hd):not(.cmp-hd2) { background: var(–off) }
+
+/* ─── MELHORIAS DE NAVEGAÇÃO MOBILE ─────────────────── */
+
+/* 1. Tabela com scroll lateral no celular */
+.tbl-wrap {
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+margin-bottom: 15px;
+}
+.tbl {
+min-width: 600px;
+}
+
+/* 2. Inputs sem zoom no iPhone e com área de toque ideal */
+.fi, .fta, .fse, .calc-input {
+font-size: 16px !important;
+padding: 10px !important;
+}
+.fi, .fse, .calc-input {
+height: 44px;
+}
+
+/* 3. Grid de conceitos com texto legível */
+.cgrid {
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+gap: 10px;
+}
+
+/* 4. Abas com toque fácil */
+.tabnav-inner {
+overflow-x: auto;
+gap: 5px;
+}
+.tab-btn {
+padding: 13px 18px !important;
+min-height: 44px;
+}
+
+/* ─── PRINT ──────────────────────────────────────────── */
+@media print {
+
+- { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important }
+  body { background: var(–white) !important; padding: 0 }
+  .topbar, .tabnav, .complete-btn, .btn-row, .pb-copy, .pb-links { display: none !important }
+  .session { display: none !important }
+  .session.print-on { display: block !important }
+  .acc-body { display: block !important }
+  .prompt-block { display: block !important; background: #F8FAFC !important; border: 1px solid #ddd !important }
+  .pb-text { color: #2D4A72 !important }
+  .pb-head { background: #EEF6FF !important }
+  .pb-lbl { color: #1D4ED8 !important }
+  .hero { background: var(–navy) !important }
+  .hero-title { color: var(–white) !important; font-size: 18pt }
+  .hero-eyebrow { color: var(–gold) !important }
+  .card { border: 1px solid #ddd !important; box-shadow: none !important; page-break-inside: avoid }
+  .card-gold { border-left: 3px solid var(–gold) !important }
+  .data-case, .activity { border: 1.5px solid var(–gold) !important; page-break-inside: avoid }
+  .dc-head, .act-head { background: var(–navy) !important }
+  .challenge { background: #F5F7FA !important; border: 1px solid #ddd !important; page-break-inside: avoid }
+  .ch-opts { display: none !important }
+  .canvas { background: #FFFBF0 !important; border-color: var(–gold) !important }
+  .fi, .fta, .fse { background: #FAFAFA !important; border: 1px solid #ccc !important; color: #000 !important }
+  .print-cover {
+  page-break-after: always;
+  background: var(–navy) !important;
+  color: var(–white) !important;
+  padding: 2cm 1.5cm;
+  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  }
+  .pc-eye  { color: var(–gold) !important; font-size: 9pt; letter-spacing: .12em; margin-bottom: .5cm }
+  .pc-title{ font-family:‘Syne’,sans-serif; font-size: 22pt; color: var(–white) !important; margin-bottom: .3cm; line-height: 1.2 }
+  .pc-sub  { font-size: 11pt; color: rgba(255,255,255,.6) !important; margin-bottom: 1.5cm }
+  .pc-meta { font-size: 9pt; color: rgba(255,255,255,.4) !important; border-top: 1px solid rgba(255,255,255,.15); padding-top: .4cm }
+  }
+
+/* ─── DESKTOP ENHANCEMENT ────────────────────────────── */
+@media (min-width: 700px) {
+body { max-width: 720px; margin: 0 auto; padding-bottom: 40px }
+body::before {
+content: ‘’;
+display: block;
+position: fixed;
+top: 0; left: 0; right: 0; bottom: 0;
+background: var(–navy2);
+z-index: -1;
+}
+.topbar, .tabnav { max-width: 720px; margin: 0 auto; left: 50%; transform: translateX(-50%); position: sticky }
+.topbar { transform: none; position: sticky; left: auto }
+.tabnav { transform: none; position: sticky; left: auto }
+.cgrid { grid-template-columns: repeat(2, 1fr) }
+.body { padding: 18px 18px 24px }
+.hero { padding: 24px 18px 20px }
+.hero-title { font-size: 26px }
+.card { padding: 16px 18px }
+.tbl { min-width: unset }
 }
 </style>
+
 </head>
 <body>
 
+<!-- TOP BAR -->
+
 <header class="topbar">
-  <div class="brand"><span class="brand-pill">MBA LIVE</span> Data Driven Business</div>
+  <div class="brand">
+    <span class="brand-pill">MBA LIVE</span>
+    Data Driven Business
+  </div>
   <div class="topbar-right">
     <span class="prog-badge" id="prog-lbl">0/6</span>
-    <button class="pdf-btn" onclick="window.print()">↓ PDF</button>
+    <button class="pdf-btn" onclick="exportPDF()">↓ PDF</button>
   </div>
 </header>
+
+<!-- TAB NAV -->
 
 <nav class="tabnav">
   <div class="tabnav-inner">
     <button class="tab-btn active" id="tb0" onclick="go(0)"><span class="tab-dot"></span>E1 · Estratégia</button>
-    <button class="tab-btn" id="tb1" onclick="go(1)"><span class="tab-dot"></span>E2 · Ciência</button>
-    <button class="tab-btn" id="tb2" onclick="go(2)"><span class="tab-dot"></span>E3 · Crítico</button>
-    <button class="tab-btn" id="tb3" onclick="go(3)"><span class="tab-dot"></span>E4 · Viz</button>
-    <button class="tab-btn" id="tb4" onclick="go(4)"><span class="tab-dot"></span>E5 · IA/ML</button>
+    <button class="tab-btn" id="tb1" onclick="go(1)"><span class="tab-dot"></span>E2 · Ciência de Dados</button>
+    <button class="tab-btn" id="tb2" onclick="go(2)"><span class="tab-dot"></span>E3 · Pens. Crítico</button>
+    <button class="tab-btn" id="tb3" onclick="go(3)"><span class="tab-dot"></span>E4 · Problemas+Viz</button>
+    <button class="tab-btn" id="tb4" onclick="go(4)"><span class="tab-dot"></span>E5 · IA e ML</button>
     <button class="tab-btn" id="tb5" onclick="go(5)"><span class="tab-dot"></span>E6 · Modelagem</button>
   </div>
 </nav>
 
+<!-- ══════════════════════════════════════
+     SESSÃO 1
+══════════════════════════════════════ -->
+
 <section class="session active" id="s0">
   <div class="hero">
-    <div style="font-size:10px; color:var(--gold); font-weight:700; margin-bottom:4px;">ENCONTRO 1 · 14/04/2026</div>
+    <div class="hero-eyebrow">Encontro 1 · 14/04/2026</div>
     <h1 class="hero-title">Estratégia de Dados + Ética</h1>
-    <p class="hero-desc">Por que dados são ativos estratégicos e os 6 pilares da maturidade.</p>
+    <p class="hero-desc">Por que dados são ativos estratégicos, como construir uma estratégia em 6 pilares e os limites éticos que toda organização precisa respeitar.</p>
+    <div class="hero-links">
+      <a class="hero-link" onclick="scrollTo('caso-0')">↓ Caso Prático</a>
+      <a class="hero-link" onclick="scrollTo('ativ-0')">↓ Atividade</a>
+    </div>
+    <div class="hero-prog">
+      <span class="hp-lbl">Progresso</span>
+      <div class="hp-track"><div class="hp-fill" id="hp0" style="width:0%"></div></div>
+      <span class="hp-pct" id="hpv0">0%</span>
+    </div>
   </div>
   <div class="body">
-    <div class="card card-gold">
-      <h4>🌀 VUCA/BANI e Antifragilidade</h4>
-      <p>Em mundos voláteis, a vantagem migra para quem decide melhor. Antifragilidade é usar o caos (dados de crise) para se fortalecer.</p>
-    </div>
-    <div class="cgrid">
-      <div class="ci" style="--c:#4A78B8"><h5>1. Alinhamento</h5><p>Decisões conectadas aos OKRs e BSC.</p></div>
-      <div class="ci" style="--c:#C0392B"><h5>5. Integração</h5><p>Dados influenciando a ponta operacional.</p></div>
-    </div>
+
+```
+<div class="slabel"><span class="sl-badge th">Teoria</span><span class="sl-title">VUCA/BANI e os 6 Pilares</span></div>
+
+<div class="card card-gold">
+  <h4>🌀 O Mundo Ficou Difícil de Gerenciar</h4>
+  <p>VUCA e BANI descrevem dois olhares sobre a turbulência contemporânea. Em ambos, a vantagem migra para quem <strong>decide melhor com dados</strong>.</p>
+  <p><strong>Antifragilidade (Taleb):</strong> organizações que se fortalecem com volatilidade usam dados para ver oportunidades nas crises — Amazon, Netflix, Mercado Livre em 2020.</p>
+</div>
+
+<div class="cgrid">
+  <div class="ci" style="--c:#4A78B8"><h5>Volatilidade / Brittle</h5><p>Mudanças rápidas revelam fragilidade estrutural oculta</p></div>
+  <div class="ci" style="--c:#1A5490"><h5>Incerteza / Ansioso</h5><p>Dados em excesso ampliam a paralisia decisória</p></div>
+  <div class="ci" style="--c:#C0392B"><h5>Complexidade / Não-linear</h5><p>Causas pequenas geram efeitos desproporcionais</p></div>
+  <div class="ci" style="--c:#F0A500"><h5>A Resposta</h5><p>Dados encurtam: percepção → interpretação → ação</p></div>
+</div>
+
+<div class="acc"><button class="acc-btn" onclick="acc(this)">Os 6 Pilares da Estratégia de Dados <i class="acc-arrow">▼</i></button><div class="acc-body"><div class="acc-inner"><ul>
+  <li><strong>1. Alinhamento Estratégico</strong> — Que decisões precisamos tomar melhor? (BSC, OKRs)</li>
+  <li><strong>2. Arquitetura de Dados</strong> — Mapear fontes, qualidade e lacunas</li>
+  <li><strong>3. Infraestrutura</strong> — Cloud vs. On-Premise; Warehouse vs. Lake</li>
+  <li><strong>4. Capital Humano</strong> — Equipe certa + modelo organizacional</li>
+  <li><strong>5. Integração Decisória</strong> — Dados influenciando decisões reais — o pilar mais raro</li>
+  <li><strong>6. Monitoramento</strong> — Estratégia de dados como sistema vivo</li>
+</ul></div></div></div>
+
+<div class="acc"><button class="acc-btn" onclick="acc(this)">Os 5 Estágios de Maturidade Analítica <i class="acc-arrow">▼</i></button><div class="acc-body"><div class="acc-inner">
+  <div class="mat">
+    <div class="mat-step" style="background:#4A78B8">1<br>Descr.</div>
+    <div class="mat-step" style="background:#2E6DA4">2<br>Diag.</div>
+    <div class="mat-step" style="background:#1A5490">3<br>Pred.</div>
+    <div class="mat-step" style="background:#0A4480">4<br>Presc.</div>
+    <div class="mat-step" style="background:#032C5C">5<br>Auto.</div>
+  </div>
+  <p>A maioria das empresas brasileiras opera entre 1 e 2. O salto para o preditivo exige qualidade de dados, talento e — sobretudo — cultura.</p>
+</div></div></div>
+
+<div class="acc"><button class="acc-btn" onclick="acc(this)">LGPD — 5 Pontos Essenciais <i class="acc-arrow">▼</i></button><div class="acc-body"><div class="acc-inner"><ul>
+  <li><strong>Bases Legais:</strong> consentimento, contrato e legítimo interesse são as mais comuns</li>
+  <li><strong>Direitos do Titular:</strong> Acesso, correção, portabilidade, eliminação</li>
+  <li><strong>ANPD:</strong> multas até 2% do faturamento, limitadas a R$ 50M por infração</li>
+  <li><strong>DPO:</strong> Encarregado de proteção de dados — obrigatório em muitos casos</li>
+  <li><strong>Além do compliance:</strong> Legal ≠ ético. "Devemos fazer isso?"</li>
+</ul></div></div></div>
+
+<!-- CASO PRÁTICO 1 -->
+<div id="caso-0" class="slabel" style="margin-top:20px"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">NeoBank Brasil</span></div>
+<div class="data-case">
+  <div class="dc-head">
+    <span class="dc-badge">DADOS REAIS</span>
+    <h3>NeoBank · Diagnóstico de Maturidade Analítica</h3>
+    <p>6 Pilares avaliados em 8 áreas · Escala 0–5</p>
+  </div>
+  <div class="dc-body">
+    <div class="dc-ctx">📋 O NeoBank realizou um workshop interno. Cada área avaliou sua maturidade nos 6 Pilares. Analise a tabela e identifique onde agir primeiro.</div>
     <div class="tbl-wrap">
-      <table class="tbl">
-        <thead><tr><th>Pilar</th><th>Fin.</th><th>Mkt.</th><th>Risco</th><th>RH</th><th>Méd.</th></tr></thead>
+      <table class="tbl" id="t1">
+        <thead><tr><th>Pilar</th><th>Fin.</th><th>Mkt.</th><th>Risco</th><th>Ops.</th><th>RH</th><th>TI</th><th>Prod.</th><th>Jur.</th><th>Méd.</th></tr></thead>
         <tbody>
-          <tr><td>Alinhamento</td><td class="num">4</td><td class="num">3</td><td class="num">4</td><td class="num hi">1</td><td class="num">3.0</td></tr>
-          <tr><td>Arquitetura</td><td class="num">3</td><td class="num hi">1</td><td class="num">4</td><td class="num hi">1</td><td class="num">2.2</td></tr>
+          <tr><td>1. Alinhamento</td><td class="num">4</td><td class="num">3</td><td class="num">4</td><td class="num">2</td><td class="num hi">1</td><td class="num">3</td><td class="num">4</td><td class="num hi">1</td><td class="num pos" id="m1"></td></tr>
+          <tr><td>2. Arquitetura</td><td class="num">3</td><td class="num hi">1</td><td class="num">4</td><td class="num hi">1</td><td class="num hi">1</td><td class="num">5</td><td class="num">3</td><td class="num hi">1</td><td class="num neg" id="m2"></td></tr>
+          <tr><td>3. Infraestrutura</td><td class="num">4</td><td class="num">2</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num">5</td><td class="num">4</td><td class="num">2</td><td class="num pos" id="m3"></td></tr>
+          <tr><td>4. Cap. Humano</td><td class="num">3</td><td class="num">2</td><td class="num">4</td><td class="num hi">1</td><td class="num hi">1</td><td class="num">4</td><td class="num">3</td><td class="num hi">1</td><td class="num neg" id="m4"></td></tr>
+          <tr><td>5. Integração Dec.</td><td class="num">2</td><td class="num hi">1</td><td class="num">3</td><td class="num hi">1</td><td class="num hi">1</td><td class="num">2</td><td class="num">2</td><td class="num hi">1</td><td class="num neg" id="m5"></td></tr>
+          <tr><td>6. Monitoramento</td><td class="num">2</td><td class="num hi">1</td><td class="num">4</td><td class="num">2</td><td class="num hi">1</td><td class="num">3</td><td class="num">2</td><td class="num hi">1</td><td class="num neg" id="m6"></td></tr>
         </tbody>
       </table>
     </div>
+    <div class="chart-wrap">
+      <div class="chart-title">Média por Pilar — onde o NeoBank é mais fraco?</div>
+      <div class="barchart" id="bc1"></div>
     </div>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio</div>
+      <div class="ch-q">Qual pilar priorizar para o maior salto de maturidade com menor esforço?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e1')">3 · Infraestrutura — nota razoável, só falta investir mais</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e1')">5 · Integração Decisória — nota mais baixa e impacto direto nas decisões</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e1')">1 · Alinhamento — sem estratégia nada funciona</button>
+      </div>
+      <div class="ch-fb" id="fb-e1"><strong>Correto!</strong> O Pilar 5 tem a menor média (1,6) e é o mais diretamente ligado ao valor percebido pela liderança. É o típico Quick Win de alto impacto.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ATIVIDADE 1 -->
+<div id="ativ-0" class="slabel" style="margin-top:20px"><span class="sl-badge ac">Atividade 1</span><span class="sl-title">Diagnóstico da Sua Empresa</span></div>
+<div class="activity">
+  <div class="act-head">
+    <span class="act-badge">REFLEXÃO + IA</span>
+    <h3>O Diagnóstico Relâmpago</h3>
+    <p>Aplique os 6 Pilares à sua empresa e gere um prompt para a IA analisar</p>
+  </div>
+  <div class="act-body">
+    <div class="objective">🎯 Identificar estágio de maturidade, pilar mais fraco e Quick Win de 90 dias.</div>
+    <div class="fg"><label class="fl">Sua empresa — setor, porte e modelo de negócio</label><input class="fi" id="a1-emp" placeholder="Ex.: rede de academias, 30 unidades, B2C" oninput="sv('a1-emp',0)"></div>
+    <div class="fg"><label class="fl">Como as decisões importantes são tomadas hoje?</label><textarea class="fta" id="a1-dec" placeholder="Ex.: principalmente pela intuição do CEO e relatórios em Excel" oninput="sv('a1-dec',0)"></textarea></div>
+    <div class="fg"><label class="fl">Qual pilar acredita ser o mais fraco?</label>
+      <select class="fse" id="a1-pil" onchange="sv('a1-pil',0)">
+        <option value="">Selecione...</option>
+        <option>1 · Alinhamento Estratégico</option><option>2 · Arquitetura de Dados</option>
+        <option>3 · Infraestrutura</option><option>4 · Capital Humano</option>
+        <option>5 · Integração Decisória</option><option>6 · Monitoramento</option>
+      </select>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-navy" onclick="showP('p1')">Gerar Prompt para IA ↗</button>
+    </div>
+    <div class="prompt-block" id="p1">
+      <div class="pb-head"><span class="pb-lbl">Prompt — copie e cole no Claude.ai ou ChatGPT</span><button class="pb-copy" id="cp1" onclick="copyP('p1','cp1')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt1"></div>
+      <div class="pb-links"><span class="pb-links-lbl">Abrir:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
+    </div>
+    <div class="canvas">
+      <div class="canvas-lbl">📝 Meu Quick Win — anote após usar a IA</div>
+      <textarea class="fta" id="a1-qw" style="min-height:56px" placeholder="Qual ação concreta faria nos próximos 30 dias?" oninput="sv('a1-qw',0)"></textarea>
+    </div>
+  </div>
+</div>
+<button class="complete-btn" id="c0" onclick="done(0)">✓ Marcar como Concluído (opcional)</button>
+```
+
+  </div>
 </section>
+
+<!-- ══════════════════════════════════════
+     SESSÃO 2
+══════════════════════════════════════ -->
 
 <section class="session" id="s1">
-  <div class="hero"><h1 class="hero-title">Ciência de Dados + Roadmap</h1></div>
-  <div class="body">
-    <div class="card card-navy">
-      <h4>🗺️ Roadmap de 4 Fases</h4>
-      <p>Fase 1: Diagnóstico | Fase 2: Estruturação | Fase 3: Execução | Fase 4: Escala.</p>
-    </div>
-    </div>
-</section>
-<section class="session" id="s2">
   <div class="hero">
-    <div style="font-size:10px; color:var(--gold); font-weight:700; margin-bottom:4px;">ENCONTRO 3 · 23/04/2026</div>
-    <h1 class="hero-title">Pensamento Crítico-Analítico</h1>
-    <p class="hero-desc">Vieses cognitivos, o Caso Wald e por que correlação não é causalidade.</p>
+    <div class="hero-eyebrow">Encontro 2 · 16/04/2026</div>
+    <h1 class="hero-title">Ciência de Dados + Roadmap</h1>
+    <p class="hero-desc">Ecossistema, papéis, projetos vs. produtos de dados e as 4 fases do roadmap de implantação.</p>
+    <div class="hero-links">
+      <a class="hero-link" onclick="scrollTo('caso-1')">↓ Caso Prático</a>
+      <a class="hero-link" onclick="scrollTo('ativ-1')">↓ Atividade</a>
+    </div>
+    <div class="hero-prog"><span class="hp-lbl">Progresso</span><div class="hp-track"><div class="hp-fill" id="hp1" style="width:0%"></div></div><span class="hp-pct" id="hpv1">0%</span></div>
   </div>
   <div class="body">
+    <div class="slabel"><span class="sl-badge th">Teoria</span><span class="sl-title">Papéis e Roadmap de 4 Fases</span></div>
+    <div class="cgrid">
+      <div class="ci" style="--c:#1A375E"><h5>Data Scientist</h5><p>Modelos ML + estatística + comunicação</p></div>
+      <div class="ci" style="--c:#007A99"><h5>Data Engineer</h5><p>Pipelines e ETL — sem ele 80% do tempo é limpeza</p></div>
+      <div class="ci" style="--c:#ED7D31"><h5>Data Analyst</h5><p>BI, dashboards, SQL — interface dados↔gestores</p></div>
+      <div class="ci" style="--c:#F0A500"><h5>Business Translator</h5><p>O mais escasso: traduz negócio↔dados</p></div>
+    </div>
     <div class="card card-gold">
-      <h4>✈️ O Caso Wald — O Dado Invisível</h4>
-      <p>Abraham Wald percebeu que os furos nos aviões que voltavam da guerra indicavam onde eles <strong>podiam</strong> ser atingidos e sobreviver. O reforço deveria ser onde <strong>não havia furos</strong> (pois os aviões atingidos ali caíram).</p>
-      <p><strong>Insight:</strong> No negócio, cuidado ao analisar apenas os "sobreviventes" (clientes que ficaram, campanhas que deram certo).</p>
+      <h4>🗺️ As 4 Fases do Roadmap</h4>
+      <div class="tl">
+        <div class="tli"><div class="tl-dot">1</div><div class="tl-b"><h5>Diagnóstico <span class="tl-tag">0–3 meses</span></h5><p>Mapear casos de uso e Quick Wins. Não compre tecnologia antes desse passo.</p></div></div>
+        <div class="tli"><div class="tl-dot">2</div><div class="tl-b"><h5>Estruturação <span class="tl-tag">3–9 meses</span></h5><p>Stack tecnológico, contratações, primeiros processos de governança.</p></div></div>
+        <div class="tli"><div class="tl-dot">3</div><div class="tl-b"><h5>Execução <span class="tl-tag">9–18 meses</span></h5><p>2–3 Quick Wins de alta visibilidade. Comunique em linguagem de negócio.</p></div></div>
+        <div class="tli"><div class="tl-dot">4</div><div class="tl-b"><h5>Escalabilidade <span class="tl-tag">18–36 meses</span></h5><p>Ciência de dados no DNA. CDO no comitê executivo.</p></div></div>
+      </div>
     </div>
 
-    <div id="caso-2" class="slabel"><span class="sl-badge th">Caso Prático</span><h4>VarFácil · Correlação Espúria</h4></div>
-    <div class="card">
-      <p style="font-size:13px; margin-bottom:12px;">Analise a relação entre Venda de Sorvete e Afogamentos (r = 0,91).</p>
-      <div class="tbl-wrap">
-        <table class="tbl">
-          <thead><tr><th>Mês</th><th>Temp. (°C)</th><th>Sorvete (ton)</th><th>Afogamentos</th></tr></thead>
-          <tbody>
-            <tr><td>Jan</td><td class="num">32</td><td class="num">148</td><td class="num">42</td></tr>
-            <tr><td>Jul</td><td class="num">17</td><td class="num">34</td><td class="num">6</td></tr>
-            <tr><td>Dez</td><td class="num hi">33</td><td class="num hi">158</td><td class="num hi">48</td></tr>
-          </tbody>
-        </table>
+```
+<div id="caso-1" class="slabel" style="margin-top:20px"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">LogBR Distribuidora</span></div>
+<div class="data-case">
+  <div class="dc-head"><span class="dc-badge">DADOS REAIS</span><h3>LogBR · Portfólio de Projetos de Dados 2024</h3><p>12 projetos · custo, fase, status e ROI estimado</p></div>
+  <div class="dc-body">
+    <div class="dc-ctx">📋 A LogBR iniciou 12 projetos de dados em 2024. Identifique qual projeto pausado deveria ser reativado primeiro com base no ROI × custo.</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>#</th><th>Projeto</th><th>Custo (R$k)</th><th>Status</th><th>ROI Est.</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Dashboard Vendas</td><td class="num">45</td><td>✅</td><td class="num pos">3.2×</td></tr>
+        <tr><td>2</td><td>Previsão Demanda</td><td class="num">180</td><td>🔄</td><td class="num pos">7.8×</td></tr>
+        <tr><td>3</td><td>Data Lake AWS</td><td class="num">320</td><td>🔄</td><td class="num">1.4×</td></tr>
+        <tr><td>4</td><td>Otimização Rotas</td><td class="num">95</td><td>⏸</td><td class="num pos">5.1×</td></tr>
+        <tr><td>5</td><td>Detecção Fraude</td><td class="num">140</td><td>✅</td><td class="num pos">4.3×</td></tr>
+        <tr><td>6</td><td>Churn Clientes</td><td class="num">75</td><td>⏸</td><td class="num pos">6.2×</td></tr>
+        <tr><td>7</td><td>Relatórios BI</td><td class="num">55</td><td>✅</td><td class="num">1.1×</td></tr>
+        <tr><td>8</td><td>ML Precificação</td><td class="num">210</td><td>⏸</td><td class="num pos">9.4×</td></tr>
+        <tr><td>9</td><td>Segmentação</td><td class="num">88</td><td>🔄</td><td class="num pos">3.8×</td></tr>
+        <tr><td>10</td><td>App Motoristas</td><td class="num">165</td><td>✅</td><td class="num">2.2×</td></tr>
+        <tr><td>11</td><td>Gov. Dados LGPD</td><td class="num">90</td><td>🔄</td><td class="num">0.8×</td></tr>
+        <tr><td>12</td><td>Alerta Estoque</td><td class="num">42</td><td>⏸</td><td class="num pos">4.7×</td></tr>
+      </tbody>
+    </table></div>
+    <div class="chart-wrap">
+      <div class="chart-title">ROI por projeto (⏸ pausados em laranja)</div>
+      <div class="barchart" id="bc2"></div>
+    </div>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio</div>
+      <div class="ch-q">Qual projeto pausado reativar PRIMEIRO considerando ROI e custo?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e2')">ML Precificação (ROI 9.4× · R$210k) — maior ROI</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e2')">Alerta Estoque (ROI 4.7× · R$42k) — melhor razão ROI/custo</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e2')">Otimização Rotas (ROI 5.1× · R$95k) — ROI alto com custo médio</button>
       </div>
-      <div class="calc-box">
-        <div class="fl">Simulador de Correlação (r)</div>
-        <div class="calc-field"><label>Covariância:</label><input class="calc-input" id="ci-cov" type="number" placeholder="Ex: 524" oninput="calcCorr()"></div>
-        <div class="calc-field"><label>DP Sorvete * DP Afog:</label><input class="calc-input" id="ci-dp-prod" type="number" placeholder="Ex: 572" oninput="calcCorr()"></div>
-        <div class="calc-result"><span>Resultado r:</span><span id="cr-corr" class="cr-val">—</span></div>
-      </div>
+      <div class="ch-fb" id="fb-e2"><strong>Correto!</strong> Alerta de Estoque tem o melhor custo-benefício: ROI 4.7× com apenas R$42k. ML de Precificação tem ROI maior, mas custa 5× mais e está na Fase 1 — levará muito mais tempo para entregar valor.</div>
     </div>
   </div>
+</div>
+
+<div id="ativ-1" class="slabel" style="margin-top:20px"><span class="sl-badge ac">Atividade 2</span><span class="sl-title">Roadmap da Sua Empresa</span></div>
+<div class="activity">
+  <div class="act-head"><span class="act-badge">REFLEXÃO + IA</span><h3>O Arquiteto de Dados</h3><p>Base do Instrumento Avaliativo 2</p></div>
+  <div class="act-body">
+    <div class="objective">🎯 Construir um roadmap de 4 fases conectado à realidade da sua empresa.</div>
+    <div class="fg"><label class="fl">Empresa, porte e situação atual com dados</label><textarea class="fta" id="a2-emp" placeholder="Ex.: distribuidora de alimentos, 800 funcionários, usa Excel, TI terceirizada" oninput="sv('a2-emp',1)"></textarea></div>
+    <div class="fg"><label class="fl">Objetivo estratégico que dados podem apoiar</label><input class="fi" id="a2-obj" placeholder="Ex.: reduzir ruptura de estoque e aumentar margem em 15%" oninput="sv('a2-obj',1)"></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showP('p2')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p2">
+      <div class="pb-head"><span class="pb-lbl">Prompt — copie e cole</span><button class="pb-copy" id="cp2" onclick="copyP('p2','cp2')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt2"></div>
+      <div class="pb-links"><span class="pb-links-lbl">Abrir:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
+    </div>
+    <div class="canvas"><div class="canvas-lbl">📝 Notas do Roadmap</div><textarea class="fta" id="a2-notas" style="min-height:56px" placeholder="O que o roadmap acertou? O que mudaria para sua realidade?" oninput="sv('a2-notas',1)"></textarea></div>
+  </div>
+</div>
+<button class="complete-btn" id="c1" onclick="done(1)">✓ Marcar como Concluído (opcional)</button>
+```
+
+  </div>
 </section>
+
+<!-- ══════════════════════════════════════
+     SESSÃO 3
+══════════════════════════════════════ -->
+
+<section class="session" id="s2">
+  <div class="hero">
+    <div class="hero-eyebrow">Encontro 3 · 23/04/2026</div>
+    <h1 class="hero-title">Pensamento Crítico-Analítico</h1>
+    <p class="hero-desc">Vieses cognitivos, o Caso Wald, o Ciclo D3 e por que correlação não é causalidade — com dataset real para explorar.</p>
+    <div class="hero-links">
+      <a class="hero-link" onclick="scrollTo('caso-2')">↓ Caso Prático</a>
+      <a class="hero-link" onclick="scrollTo('ativ-2')">↓ Atividade</a>
+    </div>
+    <div class="hero-prog"><span class="hp-lbl">Progresso</span><div class="hp-track"><div class="hp-fill" id="hp2" style="width:0%"></div></div><span class="hp-pct" id="hpv2">0%</span></div>
+  </div>
+  <div class="body">
+    <div class="slabel"><span class="sl-badge th">Teoria</span><span class="sl-title">Vieses e o Ciclo D3</span></div>
+    <div class="card card-gold">
+      <h4>✈️ O Caso Wald — O Dado Invisível</h4>
+      <p>1943: militares propuseram blindar as áreas com mais marcas de bala nos aviões que voltaram. Wald identificou o erro: eram os sobreviventes. As áreas sem marcas eram onde os abatidos foram atingidos.</p>
+      <p><strong>No negócio:</strong> medir NPS só de quem ficou, avaliar campanhas só com retorno, estudar só empresas bem-sucedidas. <strong>A ausência de dados é o dado mais importante.</strong></p>
+    </div>
+    <div class="acc"><button class="acc-btn" onclick="acc(this)">Os 8 Vieses Críticos e seus Antídotos <i class="acc-arrow">▼</i></button><div class="acc-body"><div class="acc-inner"><ul>
+      <li><strong>Disponibilidade:</strong> superestimamos o que está na memória recente → use dados históricos</li>
+      <li><strong>Confirmação:</strong> buscamos dados que confirmam o que já cremos → hipótese rival obrigatória</li>
+      <li><strong>Ancoragem:</strong> a primeira info ancora todas as avaliações → defina BATNA antes</li>
+      <li><strong>Sobrevivência:</strong> vemos só o que chegou até nós → "o que não estou vendo?"</li>
+      <li><strong>Groupthink:</strong> grupos suprimem crítica → advocatus diaboli</li>
+      <li><strong>Ilusão de Controle:</strong> superestimamos influência em eventos externos</li>
+      <li><strong>Aversão à Perda:</strong> dor da perda vale 2× o prazer do ganho → sunk cost não decide o futuro</li>
+      <li><strong>HiPPO Effect:</strong> maior salário prevalece sobre dados → pré-mortem e experimentos A/B</li>
+    </ul></div></div></div>
+    <div class="acc"><button class="acc-btn" onclick="acc(this)">O Ciclo D3 — 6 Etapas <i class="acc-arrow">▼</i></button><div class="acc-body"><div class="acc-inner"><ul>
+      <li><strong>1. Definir</strong> o Problema — pergunta errada = análise errada</li>
+      <li><strong>2. Coletar</strong> Dados — fontes internas + externas, qualidade e completude</li>
+      <li><strong>3. Preparar</strong> — 60–80% do tempo total. Limpeza e integração</li>
+      <li><strong>4. Analisar</strong> — descritiva, diagnóstica, preditiva ou prescritiva</li>
+      <li><strong>5. Decidir</strong> — insights + julgamento humano. Dados reduzem incerteza, não substituem julgamento</li>
+      <li><strong>6. Monitorar</strong> — loop de aprendizagem retroalimenta projetos futuros</li>
+    </ul></div></div></div>
+
+```
+<div id="caso-2" class="slabel" style="margin-top:20px"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">VarFácil — Correlação Espúria</span></div>
+<div class="data-case">
+  <div class="dc-head"><span class="dc-badge">DADOS REAIS</span><h3>VarFácil · Sorvete × Afogamentos</h3><p>Dataset público brasileiro · correlação espúria clássica</p></div>
+  <div class="dc-body">
+    <div class="dc-ctx">📋 O gerente de marketing encontrou correlação de <strong>r = 0,91</strong> entre vendas de sorvete e afogamentos nas praias e quer lançar uma campanha. Analise os dados.</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Mês</th><th>Temp. (°C)</th><th>Sorvete (ton)</th><th>Afogamentos</th></tr></thead>
+      <tbody>
+        <tr><td>Jan</td><td class="num">32</td><td class="num pos">148</td><td class="num neg">42</td></tr>
+        <tr><td>Fev</td><td class="num">31</td><td class="num pos">141</td><td class="num neg">38</td></tr>
+        <tr><td>Mar</td><td class="num">29</td><td class="num">118</td><td class="num">31</td></tr>
+        <tr><td>Abr</td><td class="num">25</td><td class="num">82</td><td class="num">18</td></tr>
+        <tr><td>Mai</td><td class="num">21</td><td class="num">55</td><td class="num">11</td></tr>
+        <tr><td>Jun</td><td class="num">18</td><td class="num neg">38</td><td class="num neg">7</td></tr>
+        <tr><td>Jul</td><td class="num">17</td><td class="num neg">34</td><td class="num neg">6</td></tr>
+        <tr><td>Ago</td><td class="num">19</td><td class="num">42</td><td class="num">9</td></tr>
+        <tr><td>Set</td><td class="num">23</td><td class="num">68</td><td class="num">14</td></tr>
+        <tr><td>Out</td><td class="num">27</td><td class="num">95</td><td class="num">22</td></tr>
+        <tr><td>Nov</td><td class="num">30</td><td class="num pos">128</td><td class="num neg">35</td></tr>
+        <tr><td>Dez</td><td class="num hi">33</td><td class="num pos hi">158</td><td class="num neg hi">48</td></tr>
+      </tbody>
+    </table></div>
+    <div class="chart-wrap">
+      <div class="chart-title">Sorvete vs. Afogamentos — as séries se movem juntas, mas por quê?</div>
+      <svg class="linechart" id="lc3" viewBox="0 0 400 100" preserveAspectRatio="none"></svg>
+    </div>
+    <div class="calc-box">
+      <div class="calc-lbl">Calcule o coeficiente de correlação</div>
+      <div class="calc-fields">
+        <div class="calc-field"><label>Covariância estimada:</label><input class="calc-input" id="ci-cov" type="number" placeholder="ex: 524" oninput="calcCorr()"></div>
+        <div class="calc-field"><label>Desvio-padrão Sorvete:</label><input class="calc-input" id="ci-dp1" type="number" placeholder="ex: 44" oninput="calcCorr()"></div>
+        <div class="calc-field"><label>Desvio-padrão Afog.:</label><input class="calc-input" id="ci-dp2" type="number" placeholder="ex: 13" oninput="calcCorr()"></div>
+      </div>
+      <div class="calc-result"><span class="cr-lbl">r = cov ÷ (dp₁ × dp₂)</span><span class="cr-val" id="cr-corr">—</span></div>
+      <p style="font-size:11px;color:var(--slate);margin-top:6px">Dica: use 524, 44, 13 para obter o r real do dataset</p>
+    </div>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio</div>
+      <div class="ch-q">A correlação de 0,91 justifica a campanha "sorvete salva vidas na praia"?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e3')">Sim — correlação acima de 0,9 justifica ação imediata</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e3')">Não — temperatura é a variável C que causa ambos; sorvete e afogamentos são efeitos independentes</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e3')">Talvez — precisa de mais dados antes de qualquer conclusão</button>
+      </div>
+      <div class="ch-fb" id="fb-e3"><strong>Correto!</strong> Correlação espúria clássica — a temperatura alta é a variável de confusão que causa tanto o aumento do consumo de sorvete quanto dos banhos de mar. Antídoto: sempre pergunte "que terceira variável poderia explicar essa correlação?"</div>
+    </div>
+  </div>
+</div>
+
+<div id="ativ-2" class="slabel" style="margin-top:20px"><span class="sl-badge ac">Atividade 3</span><span class="sl-title">Detetive de Vieses</span></div>
+<div class="activity">
+  <div class="act-head"><span class="act-badge">REFLEXÃO + IA</span><h3>O Detetive de Vieses</h3><p>Analise uma decisão real em busca de vieses cognitivos</p></div>
+  <div class="act-body">
+    <div class="objective">🎯 Identificar pelo menos 3 vieses em uma decisão real e propor antídotos concretos.</div>
+    <div class="fg"><label class="fl">Descreva a decisão — contexto, como foi tomada, resultado</label><textarea class="fta" id="a3-dec" placeholder="Ex.: lançamos produto baseados em 5 feedbacks positivos de clientes fiéis. Vendas 60% abaixo." oninput="sv('a3-dec',2)"></textarea></div>
+    <div class="fg"><label class="fl">Que dados foram considerados — e quais foram ignorados?</label><input class="fi" id="a3-dados" placeholder="Ex.: só os feedbacks positivos; ignoramos dados de quem não comprou" oninput="sv('a3-dados',2)"></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showP('p3')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p3">
+      <div class="pb-head"><span class="pb-lbl">Prompt — copie e cole</span><button class="pb-copy" id="cp3" onclick="copyP('p3','cp3')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt3"></div>
+      <div class="pb-links"><span class="pb-links-lbl">Abrir:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
+    </div>
+    <div class="canvas"><div class="canvas-lbl">📝 Meu Antídoto — o que mudaria no processo</div><textarea class="fta" id="a3-anti" style="min-height:56px" placeholder="Que ritual organizacional implementaria para evitar esse viés no futuro?" oninput="sv('a3-anti',2)"></textarea></div>
+  </div>
+</div>
+<button class="complete-btn" id="c2" onclick="done(2)">✓ Marcar como Concluído (opcional)</button>
+```
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SESSÃO 4
+══════════════════════════════════════ -->
 
 <section class="session" id="s3">
   <div class="hero">
-    <div style="font-size:10px; color:var(--gold); font-weight:700; margin-bottom:4px;">ENCONTRO 4 · 28/04/2026</div>
-    <h1 class="hero-title">Problemas + Visualização</h1>
-    <p class="hero-desc">Formulação SMART e Storytelling com dados.</p>
+    <div class="hero-eyebrow">Encontro 4 · 28/04/2026</div>
+    <h1 class="hero-title">Problemas de Negócios + Visualização</h1>
+    <p class="hero-desc">Formulação precisa de problemas, servitização, storytelling e os princípios de visualização que transformam análises em decisões.</p>
+    <div class="hero-links">
+      <a class="hero-link" onclick="scrollTo('caso-3')">↓ Caso Prático</a>
+      <a class="hero-link" onclick="scrollTo('ativ-3')">↓ Atividade</a>
+    </div>
+    <div class="hero-prog"><span class="hp-lbl">Progresso</span><div class="hp-track"><div class="hp-fill" id="hp3" style="width:0%"></div></div><span class="hp-pct" id="hpv3">0%</span></div>
   </div>
   <div class="body">
+    <div class="slabel"><span class="sl-badge th">Teoria</span><span class="sl-title">Boa pergunta e visualização eficaz</span></div>
+    <div class="cgrid">
+      <div class="ci" style="--c:#1A375E"><h5>Específica e Mensurável</h5><p>KPI + segmento + horizonte + critério de sucesso</p></div>
+      <div class="ci" style="--c:#007A99"><h5>Orientada à Decisão</h5><p>Se não muda nenhuma decisão, não vale o esforço</p></div>
+      <div class="ci" style="--c:#ED7D31"><h5>Alinhada à Estratégia</h5><p>Conectada ao BSC, OKRs ou objetivos declarados</p></div>
+      <div class="ci" style="--c:#5A3A8E"><h5>Focada em Soluções</h5><p>Aponta para ação — não apenas diagnóstico</p></div>
+    </div>
     <div class="card card-navy">
-      <h4>📊 Regras de Visualização</h4>
-      <p><strong>1. Título é a Mensagem:</strong> Em vez de "Vendas por Região", use "Região Sul caiu 15%".</p>
-      <p><strong>2. Menos é Mais:</strong> Remova bordas, linhas de grade desnecessárias e cores vibrantes que não indicam dados.</p>
+      <h4>📊 Regras de Ouro da Visualização</h4>
+      <p><strong>Teste dos 3 segundos:</strong> mostre por 3s — o que chamou atenção? Se não for o insight central, redesenhe.</p>
+      <p><strong>O título é a mensagem:</strong> "Vendas por Região" é descrição. "Sul superou meta em 34%" é insight.</p>
+      <p><strong>Nunca gráfico de pizza:</strong> o cérebro não compara ângulos. Use barras horizontais.</p>
+      <p><strong>Eixo Y sempre em zero:</strong> eixo cortado exagera diferenças.</p>
     </div>
-    
-    <div class="fg">
-      <label class="fl">Sua Pergunta de Negócio (Vaga)</label>
-      <input class="fi" id="a4-perg" placeholder='Ex: "Como vender mais?"' oninput="sv('a4-perg',3)">
+
+```
+<div id="caso-3" class="slabel" style="margin-top:20px"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">MedPlus Saúde — NPS vs. Churn</span></div>
+<div class="data-case">
+  <div class="dc-head"><span class="dc-badge">DADOS REAIS</span><h3>MedPlus · NPS vs. Churn por Segmento</h3><p>Dados agregados ANS 2023</p></div>
+  <div class="dc-body">
+    <div class="dc-ctx">📋 O marketing apresentou um gráfico de pizza com "satisfação por plano" e concluiu que "tudo está bem". O CFO perguntou: "mas quantos cancelaram?" — os dados revelaram uma história diferente.</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Segmento</th><th>NPS</th><th>Churn</th><th>LTV (R$)</th><th>Perda Anual</th></tr></thead>
+      <tbody>
+        <tr><td>Emp. Premium</td><td class="num pos">72</td><td class="num">4%</td><td class="num">18.400</td><td class="num">R$20k</td></tr>
+        <tr><td>Emp. Básico</td><td class="num pos">61</td><td class="num">9%</td><td class="num">6.200</td><td class="num">R$25k</td></tr>
+        <tr><td>Ind. Premium</td><td class="num pos">55</td><td class="num hi">22%</td><td class="num">14.800</td><td class="num neg hi">R$39k</td></tr>
+        <tr><td>Ind. Básico</td><td class="num">38</td><td class="num hi">31%</td><td class="num">3.600</td><td class="num neg hi">R$75k</td></tr>
+        <tr><td>MEI/Autônomo</td><td class="num">29</td><td class="num hi">38%</td><td class="num">4.100</td><td class="num neg hi">R$28k</td></tr>
+      </tbody>
+    </table></div>
+    <div class="chart-wrap">
+      <div class="chart-title">Perda anual por segmento — o que o gráfico de pizza escondia</div>
+      <div class="barchart" id="bc4"></div>
     </div>
-    <div class="fg">
-      <label class="fl">Reforma SMART</label>
-      <textarea class="fta" id="a4-ins" placeholder="Ex: Aumentar conversão no checkout em 5% no segmento Mobile até Junho." oninput="sv('a4-ins',3)"></textarea>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio — Formule a Grande Ideia para o CEO</div>
+      <div class="ch-q">O CEO tem 10 segundos. Qual frase resume o insight mais importante?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e4')">O NPS médio é 51, indicando satisfação moderada no portfólio.</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e4')">Clientes Individuais representam R$113k em perdas anuais com churn acima de 22% — NPS aparentemente "ok" mascara uma sangria invisível. Precisamos agir agora.</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e4')">Empresarial Premium tem o melhor NPS (72) e menor churn (4%).</button>
+      </div>
+      <div class="ch-fb" id="fb-e4"><strong>Correto!</strong> A Grande Ideia combina insight + recomendação + urgência. O NPS do segmento Individual parece aceitável, mas o churn alto revela que os clientes saem sem reclamar — padrão invisível para quem só olha satisfação declarada.</div>
     </div>
   </div>
+</div>
+
+<div id="ativ-3" class="slabel" style="margin-top:20px"><span class="sl-badge ac">Atividade 4</span><span class="sl-title">Reformulação e Storytelling</span></div>
+<div class="activity">
+  <div class="act-head"><span class="act-badge">REFLEXÃO + IA</span><h3>O Reformulador + Editor de Histórias</h3><p>Transforme pergunta vaga em SMART e construa a Grande Ideia</p></div>
+  <div class="act-body">
+    <div class="objective">🎯 Reformular uma pergunta vaga e construir narrativa executiva com a Grande Ideia.</div>
+    <div class="fg"><label class="fl">Pergunta vaga de negócio</label><input class="fi" id="a4-perg" placeholder='Ex.: "Como melhorar as vendas?"' oninput="sv('a4-perg',3)"></div>
+    <div class="fg"><label class="fl">Insight ou resultado de análise para comunicar</label><textarea class="fta" id="a4-ins" placeholder="Ex.: clientes sem login no app por 14 dias têm 72% de chance de cancelar em 30 dias — R$2.400 de LTV médio cada" oninput="sv('a4-ins',3)"></textarea></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showP('p4')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p4">
+      <div class="pb-head"><span class="pb-lbl">Prompt — copie e cole</span><button class="pb-copy" id="cp4" onclick="copyP('p4','cp4')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt4"></div>
+      <div class="pb-links"><span class="pb-links-lbl">Abrir:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
+    </div>
+    <div class="canvas"><div class="canvas-lbl">📝 Minha Grande Ideia (máx 2 linhas)</div><textarea class="fta" id="a4-gi" style="min-height:52px" placeholder="[insight] + [recomendação] + [urgência/impacto em R$]" oninput="sv('a4-gi',3)"></textarea></div>
+  </div>
+</div>
+<button class="complete-btn" id="c3" onclick="done(3)">✓ Marcar como Concluído (opcional)</button>
+```
+
+  </div>
 </section>
+
+<!-- ══════════════════════════════════════
+     SESSÃO 5
+══════════════════════════════════════ -->
 
 <section class="session" id="s4">
   <div class="hero">
-    <h1 class="hero-title">IA e Machine Learning</h1>
-    <p class="hero-desc">Modelagem, GIGO e Paradigmas (Supervisionado vs Não-Supervisionado).</p>
+    <div class="hero-eyebrow">Encontro 5 · 30/04/2026</div>
+    <h1 class="hero-title">IA, Machine Learning + Modelagem Descritiva</h1>
+    <p class="hero-desc">GIGO, 3 paradigmas de ML, classificação, clustering e correlação — com dataset real de crédito para simular árvore de decisão.</p>
+    <div class="hero-links">
+      <a class="hero-link" onclick="scrollTo('caso-4')">↓ Caso Prático</a>
+      <a class="hero-link" onclick="scrollTo('ativ-4')">↓ Atividade</a>
+    </div>
+    <div class="hero-prog"><span class="hp-lbl">Progresso</span><div class="hp-track"><div class="hp-fill" id="hp4" style="width:0%"></div></div><span class="hp-pct" id="hpv4">0%</span></div>
   </div>
   <div class="body">
-    <div class="card card-gold">
-      <h4>🤖 Os 3 Paradigmas</h4>
-      <div class="cgrid">
-        <div class="ci" style="--c:var(--navy)"><h5>Supervisionado</h5><p>Prever rótulos (Churn, Fraude).</p></div>
-        <div class="ci" style="--c:var(--teal)"><h5>Não-Superv.</h5><p>Achar grupos (Segmentação).</p></div>
-        <div class="ci" style="--c:var(--gold)"><h5>Reforço</h5><p>Aprender por tentativa e erro.</p></div>
+    <div class="slabel"><span class="sl-badge th">Teoria</span><span class="sl-title">GIGO, paradigmas e limites dos modelos</span></div>
+    <div class="card card-red">
+      <h4>⚠️ GIGO — O Axioma Mais Importante</h4>
+      <p><strong>Garbage In, Garbage Out.</strong> Modelos sofisticados com dados incorretos produzem respostas erradas com aparência de precisão — mais perigoso do que não ter análise alguma.</p>
+      <p>Antes de qualquer análise: <em>de onde vieram esses dados? Quando foram coletados? Há vieses de seleção?</em></p>
+    </div>
+    <div class="cgrid">
+      <div class="ci" style="--c:#1A375E"><h5>Supervisionado</h5><p>Dados rotulados. Churn, fraude, crédito, classificação.</p></div>
+      <div class="ci" style="--c:#007A99"><h5>Não Supervisionado</h5><p>Sem rótulo. Segmentação, anomalias, coocorrência.</p></div>
+      <div class="ci" style="--c:#ED7D31"><h5>Por Reforço</h5><p>Tentativa e erro. Rotas, precificação dinâmica.</p></div>
+    </div>
+    <div class="acc"><button class="acc-btn" onclick="acc(this)">Correlação ≠ Causalidade — O Erro Mais Caro <i class="acc-arrow">▼</i></button><div class="acc-body"><div class="acc-inner">
+      <p><strong>4 razões para uma correlação:</strong> A causa B | B causa A | C causa ambos | coincidência</p>
+      <p>Sorvete e afogamentos correlacionam r=0,91. Causa real: temperatura alta no verão.</p>
+      <p><strong>Antídoto:</strong> experimentos A/B randomizados. Amazon e Netflix realizam dezenas de milhares por ano.</p>
+    </div></div></div>
+
+```
+<div id="caso-4" class="slabel" style="margin-top:20px"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">CreditoJá — Simulando Árvore de Decisão</span></div>
+<div class="data-case">
+  <div class="dc-head"><span class="dc-badge">DADOS REAIS</span><h3>CreditoJá · Dataset de Aprovação de Crédito</h3><p>20 clientes · supervisionado · classificação binária</p></div>
+  <div class="dc-body">
+    <div class="dc-ctx">📋 <strong>Regra do analista:</strong> se Renda &gt; R$4.000 E Score &gt; 550 → aprovar. Caso contrário → rejeitar. Avalie o desempenho da regra na tabela abaixo (⚠️ = modelo errou).</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>#</th><th>Renda</th><th>Score</th><th>Real</th><th>Modelo</th></tr></thead>
+      <tbody id="credit-tbody"></tbody>
+    </table></div>
+    <div class="calc-box">
+      <div class="calc-lbl">Calcule as métricas do modelo (gabarito: VP=9, VN=7, FP=2, FN=2)</div>
+      <div class="calc-fields">
+        <div class="calc-field"><label>Verdadeiros Positivos (VP):</label><input class="calc-input" id="ci-vp" type="number" placeholder="?" oninput="calcMetrics()"></div>
+        <div class="calc-field"><label>Verdadeiros Negativos (VN):</label><input class="calc-input" id="ci-vn" type="number" placeholder="?" oninput="calcMetrics()"></div>
+        <div class="calc-field"><label>Falsos Positivos (FP — aprovou e não pagou):</label><input class="calc-input" id="ci-fp" type="number" placeholder="?" oninput="calcMetrics()"></div>
+        <div class="calc-field"><label>Falsos Negativos (FN — rejeitou bom cliente):</label><input class="calc-input" id="ci-fn" type="number" placeholder="?" oninput="calcMetrics()"></div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <div class="calc-result" style="flex:1"><span class="cr-lbl">Acurácia</span><span class="cr-val" id="cr-acc">—</span></div>
+        <div class="calc-result" style="flex:1"><span class="cr-lbl">Recall</span><span class="cr-val" id="cr-rec">—</span></div>
       </div>
     </div>
-
-    <div id="caso-4" class="slabel"><span class="sl-badge th">Métricas</span><h4>CreditoJá · Matriz de Confusão</h4></div>
-    <div class="card">
-      <p style="font-size:13px; margin-bottom:10px;">Calcule o desempenho do modelo de aprovação (N=20).</p>
-      <div class="calc-field"><label>Verdadeiros Positivos (VP):</label><input class="calc-input" id="ci-vp" type="number" oninput="calcMetrics()"></div>
-      <div class="calc-field"><label>Verdadeiros Negativos (VN):</label><input class="calc-input" id="ci-vn" type="number" oninput="calcMetrics()"></div>
-      <div class="calc-result"><span>Acurácia do Modelo:</span><span id="cr-acc" class="cr-val">—</span></div>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio</div>
+      <div class="ch-q">O modelo tem 80% de acurácia. O CFO diz "ótimo, aprovado". O que o analista de risco deveria responder?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e5')">Concordar — 80% é uma boa métrica para começar</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e5')">Questionar — o custo do FP (aprova inadimplente) e do FN (rejeita bom cliente) são diferentes. Acurácia ignora esse contexto.</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e5')">Pedir mais dados — 20 clientes é insuficiente</button>
+      </div>
+      <div class="ch-fb" id="fb-e5"><strong>Correto!</strong> Em crédito, FP gera perda direta e FN gera perda de receita — custos diferentes que a acurácia trata como equivalentes. A métrica correta depende do custo de cada erro, que é uma decisão de negócio, não técnica.</div>
     </div>
   </div>
+</div>
+
+<div id="ativ-4" class="slabel" style="margin-top:20px"><span class="sl-badge ac">Atividade 5</span><span class="sl-title">O Arquiteto de IA</span></div>
+<div class="activity">
+  <div class="act-head"><span class="act-badge">REFLEXÃO + IA</span><h3>O Arquiteto de IA</h3><p>Selecione a arquitetura de ML mais adequada para o seu problema</p></div>
+  <div class="act-body">
+    <div class="objective">🎯 Identificar paradigma, algoritmo, métrica e risco ético para um problema real de ML.</div>
+    <div class="fg"><label class="fl">Problema de negócio a resolver com ML</label><textarea class="fta" id="a5-prob" placeholder="Ex.: banco quer aprovar/recusar crédito com obrigação de explicar a recusa ao cliente e ao Banco Central" oninput="sv('a5-prob',4)"></textarea></div>
+    <div class="fg"><label class="fl">Necessidade de explicabilidade</label>
+      <select class="fse" id="a5-exp" onchange="sv('a5-exp',4)"><option value="">Selecione...</option><option>Sim — obrigatória (regulatório)</option><option>Não — apenas precisão importa</option><option>Desejável mas não obrigatório</option></select></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showP('p5')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p5">
+      <div class="pb-head"><span class="pb-lbl">Prompt — copie e cole</span><button class="pb-copy" id="cp5" onclick="copyP('p5','cp5')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt5"></div>
+      <div class="pb-links"><span class="pb-links-lbl">Abrir:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a></div>
+    </div>
+    <div class="canvas"><div class="canvas-lbl">📝 Algoritmo escolhido e justificativa</div><textarea class="fta" id="a5-esc" style="min-height:52px" placeholder="Qual algoritmo escolheria? Por que interpretabilidade importa (ou não) nesse contexto?" oninput="sv('a5-esc',4)"></textarea></div>
+  </div>
+</div>
+<button class="complete-btn" id="c4" onclick="done(4)">✓ Marcar como Concluído (opcional)</button>
+```
+
+  </div>
 </section>
+
+<!-- ══════════════════════════════════════
+     SESSÃO 6
+══════════════════════════════════════ -->
+
 <section class="session" id="s5">
   <div class="hero">
-    <div style="font-size:10px; color:var(--gold); font-weight:700; margin-bottom:4px;">ENCONTRO 6 · 05/05/2026</div>
-    <h1 class="hero-title">Modelagem Preditiva + Síntese</h1>
-    <p class="hero-desc">Séries temporais, Sazonalidade e o Plano Data-Driven de 90 dias.</p>
+    <div class="hero-eyebrow">Encontro 6 · 05/05/2026</div>
+    <h1 class="hero-title">Modelagem Preditiva + Síntese Final</h1>
+    <p class="hero-desc">Regressão, séries temporais, redes neurais, critérios de escolha de modelos e o plano data-driven que você leva para a empresa.</p>
+    <div class="hero-links">
+      <a class="hero-link" onclick="scrollTo('caso-5')">↓ Caso Prático</a>
+      <a class="hero-link" onclick="scrollTo('ativ-5')">↓ Atividade Final</a>
+    </div>
+    <div class="hero-prog"><span class="hp-lbl">Progresso</span><div class="hp-track"><div class="hp-fill" id="hp5" style="width:0%"></div></div><span class="hp-pct" id="hpv5">0%</span></div>
   </div>
   <div class="body">
+    <div class="slabel"><span class="sl-badge th">Teoria</span><span class="sl-title">Modelos, séries temporais e a Tríade do Gestor</span></div>
     <div class="card card-gold">
-      <h4>🔮 George Box</h4>
+      <h4>📐 George Box</h4>
       <p><em>"Todos os modelos estão errados. Mas alguns são úteis."</em></p>
-      <p>O foco do gestor não é a perfeição estatística, mas a redução da incerteza para a tomada de decisão.</p>
+      <p>A questão não é se erra — é se erra de forma aceitável para o propósito. O gestor define o propósito; o cientista calibra o modelo.</p>
     </div>
-
-    <div id="caso-5" class="slabel"><span class="sl-badge th">Previsão</span><h4>AgroSul · Demanda de Fertilizantes</h4></div>
     <div class="card">
-      <p style="font-size:13px; margin-bottom:12px;">Calcule a previsão para Dezembro (Ano 3) usando a média e o índice sazonal.</p>
-      <div class="calc-box">
-        <div class="calc-field"><label>Média Geral Histórica (ton):</label><input class="calc-input" id="ci-mg" type="number" placeholder="Ex: 312" oninput="calcForecast()"></div>
-        <div class="calc-field"><label>Índice Sazonal de Dezembro:</label><input class="calc-input" id="ci-is" type="number" step="0.01" placeholder="Ex: 1.45" oninput="calcForecast()"></div>
-        <div class="calc-result"><span>Previsão Dezembro:</span><span id="cr-prev" class="cr-val">—</span></div>
+      <h4>🔮 Critérios para Escolha do Modelo</h4>
+      <div class="cmp">
+        <div class="cmp-row"><div class="cmp-cell cmp-hd">Critério</div><div class="cmp-cell cmp-hd2">Recomendação</div></div>
+        <div class="cmp-row"><div class="cmp-cell">Volume escasso (&lt;10k)</div><div class="cmp-cell">Modelos simples generalizam melhor</div></div>
+        <div class="cmp-row"><div class="cmp-cell">Explicabilidade obrigatória</div><div class="cmp-cell">Regressão Logística ou Árvore</div></div>
+        <div class="cmp-row"><div class="cmp-cell">Urgência de negócio</div><div class="cmp-cell">Comece simples — não busque o perfeito</div></div>
+        <div class="cmp-row"><div class="cmp-cell">Imagem ou texto</div><div class="cmp-cell">Deep Learning é inevitável</div></div>
+        <div class="cmp-row"><div class="cmp-cell">Série temporal</div><div class="cmp-cell">SARIMA + Prophet + backtest</div></div>
       </div>
+    </div>
+    <div class="cgrid">
+      <div class="ci" style="--c:#1A375E"><h5>Curiosidade</h5><p>Questionar crenças com evidências — mesmo contra a intuição</p></div>
+      <div class="ci" style="--c:#007A99"><h5>Rigor</h5><p>Avaliar criticamente qualidade de dados e validade das interpretações</p></div>
+      <div class="ci" style="--c:#F0A500"><h5>Ação</h5><p>Decidir com evidências imperfeitas nos prazos reais</p></div>
     </div>
 
-    <div id="ativ-5" class="slabel"><span class="sl-badge th">Final</span><h4>Plano de 90 Dias</h4></div>
-    <div class="card">
-      <div class="fg">
-        <label class="fl">Principal desafio que dados podem resolver na sua empresa</label>
-        <textarea class="fta" id="a6-des" placeholder="Ex: Reduzir ruptura de estoque em 15%..." oninput="sv('a6-des',5)"></textarea>
-      </div>
-      <div class="fg">
-        <label class="fl">Maior obstáculo não-técnico</label>
-        <input class="fi" id="a6-obs" placeholder="Ex: Cultura do CEO (HiPPO Effect)" oninput="sv('a6-obs',5)">
-      </div>
-      <button class="btn btn-navy" style="background:var(--navy); color:white; width:100%; height:44px; border-radius:8px; border:none; font-weight:600;" onclick="showP('p6')">Gerar Plano de Ação ↗</button>
-      
-      <div class="prompt-block" id="p6" style="margin-top:12px; background:var(--navy2); border-radius:var(--r); display:none;">
-        <div style="padding:12px; border-bottom:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
-          <span style="color:var(--gold); font-size:10px; font-weight:800;">PROMPT PARA IA</span>
-          <button onclick="copyP('p6')" style="background:var(--gold); border:none; padding:4px 8px; border-radius:4px; font-size:10px; font-weight:700;">Copiar</button>
-        </div>
-        <div class="pb-text" id="pt6" style="padding:12px; color:#a8d2ff; font-family:'JetBrains Mono',monospace; font-size:12px; white-space:pre-wrap;"></div>
-      </div>
+```
+<div id="caso-5" class="slabel" style="margin-top:20px"><span class="sl-badge dt">Caso Prático</span><span class="sl-title">AgroSul — Previsão de Demanda</span></div>
+<div class="data-case">
+  <div class="dc-head"><span class="dc-badge">DADOS REAIS</span><h3>AgroSul Cooperativa · Demanda de Fertilizantes · 24 Meses</h3><p>Sazonalidade agrícola visível · índice sazonal + média móvel</p></div>
+  <div class="dc-body">
+    <div class="dc-ctx">📋 A AgroSul precisa planejar o estoque para os próximos 6 meses. Use o índice sazonal para calcular a previsão para dezembro.</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Mês</th><th>Ano 1 (ton)</th><th>Ano 2 (ton)</th><th>Média</th><th>Índice Saz.</th></tr></thead>
+      <tbody id="agro-tbody"></tbody>
+    </table></div>
+    <div class="chart-wrap">
+      <div class="chart-title">Sazonalidade — os dois anos seguem o mesmo padrão</div>
+      <svg class="linechart" id="lc6" viewBox="0 0 400 100" preserveAspectRatio="none"></svg>
     </div>
+    <div class="calc-box">
+      <div class="calc-lbl">Previsão para Dezembro (Ano 3) = Média Geral × Índice Sazonal</div>
+      <div class="calc-fields">
+        <div class="calc-field"><label>Média geral histórica (ton):</label><input class="calc-input" id="ci-mg" type="number" placeholder="ex: 312" oninput="calcForecast()"></div>
+        <div class="calc-field"><label>Índice sazonal de Dez:</label><input class="calc-input" id="ci-is" type="number" step="0.01" placeholder="ex: 1.45" oninput="calcForecast()"></div>
+      </div>
+      <div class="calc-result"><span class="cr-lbl">Previsão Dez = Média × Índice</span><span class="cr-val" id="cr-prev">—</span></div>
+      <p style="font-size:11px;color:var(--slate);margin-top:6px">Dica: média ≈ 312 ton · índice Dez ≈ 1,45 → previsão ≈ 452 ton</p>
+    </div>
+    <div class="challenge">
+      <div class="ch-label">🎯 Mini-Desafio</div>
+      <div class="ch-q">A previsão dá 452 ton. O gerente quer pedir exatamente esse valor. O que o analista deveria recomendar?</div>
+      <div class="ch-opts">
+        <button class="ch-opt" onclick="chk(this,'wrong','e6')">Pedir exatamente 452 ton — o modelo é preciso com 2 anos de dados</button>
+        <button class="ch-opt" onclick="chk(this,'correct','e6')">452 ton + margem de segurança, monitorando eventos externos que o modelo não captura</button>
+        <button class="ch-opt" onclick="chk(this,'wrong','e6')">Pedir 500 ton para garantir — melhor sobrar do que faltar</button>
+      </div>
+      <div class="ch-fb" id="fb-e6"><strong>Correto!</strong> O modelo de média móvel com índice sazonal é uma ótima linha de base, mas não captura choques exógenos: câmbio, eventos climáticos, regulações setoriais. A margem de segurança deve ser dimensionada pelo custo de ruptura vs. custo de excesso — decisão de negócio, não estatística.</div>
+    </div>
+  </div>
+</div>
 
-    <div class="card" style="text-align:center; padding:24px; margin-top:20px;">
-      <div style="font-size:40px; margin-bottom:10px;">🎓</div>
-      <h4 style="justify-content:center;">Parabéns pela Jornada!</h4>
-      <p style="font-size:13px; color:var(--slate);">MBA LIVE · Data Driven Business · Ibmec 2026</p>
+<div id="ativ-5" class="slabel" style="margin-top:20px"><span class="sl-badge ac">Atividade Final</span><span class="sl-title">Plano Data-Driven de 90 Dias</span></div>
+<div class="activity">
+  <div class="act-head"><span class="act-badge">SÍNTESE DO CURSO</span><h3>O Integrador — Plano de 90 Dias</h3><p>Conecte os 3 temas em um plano concreto para a sua organização</p></div>
+  <div class="act-body">
+    <div class="objective">🎯 Construir um plano data-driven de 90 dias — referência para o Instrumento Avaliativo 2.</div>
+    <div class="fg"><label class="fl">Empresa — setor, porte, como decide hoje, nível atual de dados</label><textarea class="fta" id="a6-emp" placeholder="Ex.: distribuidora de medicamentos, 500 funcionários, Excel + Power BI básico, TI terceirizada" oninput="sv('a6-emp',5)"></textarea></div>
+    <div class="fg"><label class="fl">Principal desafio que dados poderiam resolver</label><input class="fi" id="a6-des" placeholder="Ex.: prever demanda por SKU para reduzir ruptura e excesso de estoque" oninput="sv('a6-des',5)"></div>
+    <div class="fg"><label class="fl">Maior obstáculo não-técnico</label><input class="fi" id="a6-obs" placeholder="Ex.: CEO decide por intuição e não valoriza análises que contradizem sua experiência" oninput="sv('a6-obs',5)"></div>
+    <div class="btn-row"><button class="btn btn-navy" onclick="showP('p6')">Gerar Prompt para IA ↗</button></div>
+    <div class="prompt-block" id="p6">
+      <div class="pb-head"><span class="pb-lbl">Prompt — copie e cole</span><button class="pb-copy" id="cp6" onclick="copyP('p6','cp6')">📋 Copiar</button></div>
+      <div class="pb-text" id="pt6"></div>
+      <div class="pb-links"><span class="pb-links-lbl">Abrir:</span><a href="https://claude.ai" target="_blank" class="pb-link">Claude.ai ↗</a><a href="https://chatgpt.com" target="_blank" class="pb-link">ChatGPT ↗</a><a href="https://gemini.google.com" target="_blank" class="pb-link">Gemini ↗</a></div>
     </div>
-    <button class="complete-btn" id="c5" onclick="done(5)" style="width:100%; height:52px; background:var(--navy); color:white; border:none; border-radius:var(--r); font-weight:700; margin-top:20px;">✓ FINALIZAR CURSO</button>
+    <div class="canvas"><div class="canvas-lbl">📝 Síntese Pessoal do Curso</div><textarea class="fta" id="a6-sin" style="min-height:80px" placeholder="Qual o insight mais valioso? O que muda na forma como você vai tomar decisões daqui em diante?" oninput="sv('a6-sin',5)"></textarea></div>
+  </div>
+</div>
+
+<div class="card" style="text-align:center;padding:20px;margin-top:10px">
+  <div style="font-size:2.2rem;margin-bottom:8px">🎓</div>
+  <h4 style="justify-content:center;font-size:15px;color:var(--ink);margin-bottom:6px">Parabéns pelo Curso!</h4>
+  <p style="font-size:13px">Data Driven Business · MBA LIVE · Ibmec · 2026<br>Prof. Dr. Thiago Lima</p>
+</div>
+<button class="complete-btn" id="c5" onclick="done(5)">✓ Marcar Curso como Concluído (opcional)</button>
+```
+
   </div>
 </section>
 
+<!-- ═══════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════ -->
+
 <script>
-// ── ESTADO E PERSISTÊNCIA ──────────────────────────
-const SK = 'ddb_v2026';
-let S = (() => { 
-  try { return JSON.parse(localStorage.getItem(SK)) || {f:{},done:[]} } 
-  catch { return {f:{},done:[]} } 
-})();
+// ── State ──────────────────────────────────────────────
+const SK = 'ddb_v4';
+let S = (() => { try { return JSON.parse(localStorage.getItem(SK)) || {f:{},done:[]} } catch { return {f:{},done:[]} } })();
 const save = () => localStorage.setItem(SK, JSON.stringify(S));
 
-// ── NAVEGAÇÃO ──────────────────────────────────────
-function go(idx) {
-  document.querySelectorAll('.tab-btn').forEach((t, i) => t.classList.toggle('active', i === idx));
-  document.querySelectorAll('.session').forEach((s, i) => s.classList.toggle('active', i === idx));
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  // Scroll suave na barra de abas mobile
-  const tb = document.getElementById('tb' + idx);
-  if (tb) tb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-}
+const SF = [
+  ['a1-emp','a1-dec','a1-pil','a1-qw'],
+  ['a2-emp','a2-obj','a2-notas'],
+  ['a3-dec','a3-dados','a3-anti'],
+  ['a4-perg','a4-ins','a4-gi'],
+  ['a5-prob','a5-exp','a5-esc'],
+  ['a6-emp','a6-des','a6-obs','a6-sin'],
+];
 
-function scrollTo(id) {
+function sv(id, si) {
   const el = document.getElementById(id);
-  if (el) {
-    const offset = window.innerWidth < 768 ? 120 : 150;
-    const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top, behavior: 'smooth' });
-  }
+  if (!el) return;
+  S.f[id] = el.value;
+  save();
+  upProg(si);
 }
 
-// ── INTERATIVIDADE ──────────────────────────────────
-function acc(btn) {
-  const body = btn.parentElement.querySelector('.acc-body');
-  if (body) body.classList.toggle('open');
+function restoreAll() {
+  Object.entries(S.f).forEach(([id, v]) => {
+    const el = document.getElementById(id);
+    if (el) el.value = v;
+  });
+}
+
+// ── Progress ────────────────────────────────────────────
+function upProg(si) {
+  if (si === undefined) { for (let i = 0; i < 6; i++) upProg(i); return; }
+  const filled = SF[si].filter(f => S.f[f]?.trim()).length;
+  const isDone = S.done.includes(si);
+  const pct = isDone ? 100 : Math.min(85, Math.round((filled / SF[si].length) * 80));
+  const fp = document.getElementById('hp' + si);
+  const fv = document.getElementById('hpv' + si);
+  if (fp) fp.style.width = pct + '%';
+  if (fv) fv.textContent = pct + '%';
+  const tb = document.getElementById('tb' + si);
+  if (tb) tb.classList.toggle('done', isDone);
+  const cb = document.getElementById('c' + si);
+  if (cb && isDone) { cb.classList.add('done'); cb.textContent = '✓ Concluído'; }
+  document.getElementById('prog-lbl').textContent = S.done.length + '/6';
 }
 
 function done(i) {
   if (!S.done.includes(i)) S.done.push(i);
-  save(); 
-  const btn = document.getElementById('c' + i);
-  if (btn) { btn.classList.add('done'); btn.textContent = '✓ Concluído'; }
-  document.getElementById('prog-lbl').textContent = S.done.length + '/6';
+  save(); upProg(i);
 }
 
-function sv(id, si) {
+// ── Navigation ──────────────────────────────────────────
+function go(idx) {
+  document.querySelectorAll('.tab-btn').forEach((t, i) => t.classList.toggle('active', i === idx));
+  document.querySelectorAll('.session').forEach((s, i) => s.classList.toggle('active', i === idx));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Scroll tab into view
+  const tb = document.getElementById('tb' + idx);
+  if (tb) tb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+
+// ── Scroll to anchor ────────────────────────────────────
+function scrollTo(id) {
   const el = document.getElementById(id);
-  if (el) { S.f[id] = el.value; save(); }
-}
-
-// ── CÁLCULOS ────────────────────────────────────────
-function calcCorr() {
-  const cov = parseFloat(document.getElementById('ci-cov').value) || 0;
-  const prod = parseFloat(document.getElementById('ci-dp-prod').value) || 1;
-  const res = document.getElementById('cr-corr');
-  if (res) res.textContent = (cov / prod).toFixed(3);
-}
-
-function calcMetrics() {
-  const vp = parseFloat(document.getElementById('ci-vp').value) || 0;
-  const vn = parseFloat(document.getElementById('ci-vn').value) || 0;
-  const total = 20; 
-  const res = document.getElementById('cr-acc');
-  if (res) res.textContent = (((vp + vn) / total) * 100).toFixed(0) + '%';
-}
-
-function calcForecast() {
-  const mg = parseFloat(document.getElementById('ci-mg').value) || 0;
-  const is = parseFloat(document.getElementById('ci-is').value) || 0;
-  const res = document.getElementById('cr-prev');
-  if (res) res.textContent = (mg * is).toFixed(0) + ' ton';
-}
-
-// ── PROMPTS E IA ────────────────────────────────────
-function showP(pid) {
-  const block = document.getElementById(pid);
-  if (!block) return;
-  block.style.display = block.style.display === 'block' ? 'none' : 'block';
-  
-  if (pid === 'p6') {
-    const des = S.f['a6-des'] || '[Desafio não informado]';
-    const obs = S.f['a6-obs'] || '[Obstáculo não informado]';
-    document.getElementById('pt6').textContent = `Atue como um Chief Data Officer (CDO). 
-Minha empresa enfrenta o desafio: ${des}. 
-O maior obstáculo é: ${obs}. 
-
-Crie um plano de 90 dias focado em 3 frentes:
-1. Quick Win Analítico (Baixo custo, alto impacto).
-2. Estratégia para mitigar o obstáculo cultural citado.
-3. Definição da stack mínima para escalar.
-Seja direto e executivo.`;
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.pageYOffset - 110;
+    window.scrollTo({ top, behavior: 'smooth' });
   }
 }
 
-function copyP(pid) {
-  const text = document.getElementById('pt' + pid.replace('p','')).textContent;
-  navigator.clipboard.writeText(text).then(() => alert('Copiado!'));
+// ── Accordion ────────────────────────────────────────────
+function acc(btn) {
+  const body = btn.parentElement.querySelector('.acc-body');
+  if (!body) return;
+  const open = !body.classList.contains('open');
+  body.classList.toggle('open', open);
+  btn.classList.toggle('open', open);
 }
 
-// ── INICIALIZAÇÃO ───────────────────────────────────
-window.onload = () => {
-  // Restaura inputs salvos
-  Object.entries(S.f).forEach(([id, val]) => {
-    const el = document.getElementById(id);
-    if (el) el.value = val;
-  });
-  // Restaura botões de conclusão
-  S.done.forEach(i => {
-    const btn = document.getElementById('c' + i);
-    if (btn) { btn.classList.add('done'); btn.textContent = '✓ Concluído'; }
-  });
-  document.getElementById('prog-lbl').textContent = S.done.length + '/6';
+// ── Challenge ────────────────────────────────────────────
+function chk(btn, result, key) {
+  btn.closest('.ch-opts').querySelectorAll('.ch-opt').forEach(b => b.disabled = true);
+  btn.classList.add(result);
+  const fb = document.getElementById('fb-' + key);
+  if (fb) { fb.classList.add('show', result === 'correct' ? 'ok' : 'ko'); }
+}
+
+// ── Calculators ──────────────────────────────────────────
+function calcCorr() {
+  const cov = parseFloat(document.getElementById('ci-cov')?.value) || 0;
+  const d1  = parseFloat(document.getElementById('ci-dp1')?.value) || 0;
+  const d2  = parseFloat(document.getElementById('ci-dp2')?.value) || 0;
+  const el  = document.getElementById('cr-corr');
+  if (el) el.textContent = (cov && d1 && d2) ? (cov / (d1 * d2)).toFixed(3) : '—';
+}
+
+function calcMetrics() {
+  const vp = parseFloat(document.getElementById('ci-vp')?.value) || 0;
+  const vn = parseFloat(document.getElementById('ci-vn')?.value) || 0;
+  const fp = parseFloat(document.getElementById('ci-fp')?.value) || 0;
+  const fn = parseFloat(document.getElementById('ci-fn')?.value) || 0;
+  const acc = document.getElementById('cr-acc');
+  const rec = document.getElementById('cr-rec');
+  if (acc) acc.textContent = (vp+vn+fp+fn > 0) ? ((vp+vn)/20*100).toFixed(0)+'%' : '—';
+  if (rec) rec.textContent = (vp+fn > 0) ? (vp/(vp+fn)*100).toFixed(0)+'%' : '—';
+}
+
+function calcForecast() {
+  const mg = parseFloat(document.getElementById('ci-mg')?.value) || 0;
+  const is = parseFloat(document.getElementById('ci-is')?.value) || 0;
+  const el = document.getElementById('cr-prev');
+  if (el) el.textContent = (mg && is) ? (mg * is).toFixed(0) + ' ton' : '—';
+}
+
+// ── Prompts ──────────────────────────────────────────────
+const v = id => (document.getElementById(id)?.value || '').trim() || '[não preenchido]';
+
+const PROMPTS = {
+  pt1: () => `Você é consultor sênior em estratégia de dados. Analise a empresa e gere um diagnóstico objetivo.
+
+Empresa: ${v('a1-emp')}
+Como decide hoje: ${v('a1-dec')}
+Pilar mais fraco (autoavaliação): ${v('a1-pil')}
+
+Com base nos 6 Pilares (Alinhamento, Arquitetura, Infraestrutura, Capital Humano, Integração Decisória, Monitoramento):
+1. Confirme ou corrija a autoavaliação — justifique brevemente
+2. Qual seria o Quick Win mais impactante nos próximos 90 dias?
+3. Em qual estágio de maturidade analítica (1 a 5) esta empresa está?
+4. Qual o risco de NÃO ter estratégia de dados neste setor específico?
+
+Seja direto e prático. Português brasileiro.`,
+
+  pt2: () => `Você é consultor sênior de transformação digital em Ciência de Dados.
+
+Empresa: ${v('a2-emp')}
+Objetivo estratégico: ${v('a2-obj')}
+
+Elabore um ROADMAP em 4 fases:
+FASE 1 (0-3m): 3 atividades, 1 entregável, risco principal
+FASE 2 (3-9m): 3 atividades, 1 entregável, risco principal
+FASE 3 (9-18m): 3 atividades, 1 entregável, risco principal
+FASE 4 (18-36m): 3 atividades, 1 entregável, risco principal
+
+Adicione: 3 condições críticas de sucesso específicas para essa empresa.
+Português brasileiro.`,
+
+  pt3: () => `Você é especialista em psicologia das decisões e comportamento organizacional.
+
+Decisão: ${v('a3-dec')}
+Dados considerados/ignorados: ${v('a3-dados')}
+
+Identifique pelo menos 3 vieses cognitivos. Para cada um:
+1. Nome e definição breve
+2. Como se manifesta especificamente NESSA decisão
+3. Que dado específico teria corrigido esse viés
+4. Ritual organizacional concreto que poderia ter mitigado
+
+Seja específico ao contexto — não genérico. Português brasileiro.`,
+
+  pt4: () => `Você é especialista em formulação de problemas de dados e comunicação executiva.
+
+Pergunta vaga: ${v('a4-perg')}
+Insight a comunicar: ${v('a4-ins')}
+
+PARTE 1 — REFORMULAÇÃO SMART:
+- O que está vago na pergunta original?
+- Reescreva incluindo: KPI + segmento + horizonte + critério de sucesso
+- Versão para cada perspectiva BSC
+
+PARTE 2 — GRANDE IDEIA E NARRATIVA:
+- A GRANDE IDEIA (máx 2 linhas): [insight] + [recomendação] + [urgência/impacto]
+- Estrutura de 5 minutos: Contexto | Protagonista | Desequilíbrio | Jornada | Resolução | Impacto
+- Os 2 gráficos principais: tipo, dados, título como mensagem
+- Chamada para ação: quem faz o quê, até quando
+
+Português brasileiro. Tom executivo e direto.`,
+
+  pt5: () => `Você é Machine Learning Engineer com forte orientação a negócios.
+
+Problema: ${v('a5-prob')}
+Explicabilidade: ${v('a5-exp')}
+
+Responda:
+1. PARADIGMA: supervisionado, não supervisionado ou por reforço? Por quê?
+2. ALGORITMO RECOMENDADO: vantagem e limitação no contexto específico
+3. ALGORITMO ALTERNATIVO: para mais dados e tempo
+4. MÉTRICA PRIMÁRIA: por que acurácia simples pode enganar aqui?
+5. RISCO ÉTICO: que viés histórico pode estar nos dados?
+6. PASSO IMEDIATO: o que precisa acontecer antes de qualquer desenvolvimento?
+
+Português brasileiro. Direto e orientado a decisão.`,
+
+  pt6: () => `Você é consultor sênior de transformação data-driven.
+
+Empresa: ${v('a6-emp')}
+Desafio: ${v('a6-des')}
+Obstáculo não-técnico: ${v('a6-obs')}
+
+Plano Data-Driven de 90 Dias:
+
+SEM 1-2: Problema SMART + vieses atuais + estágio de maturidade (1-5)
+SEM 3-6: Quick Win analítico de maior valor com dados existentes
+SEM 7-10: Tipo de análise/modelo e trade-off interpretabilidade × precisão
+SEM 11-12: Como apresentar ao comitê executivo (Grande Ideia + estrutura)
+
+Como superar o obstáculo não-técnico listado?
+Português brasileiro. Específico e acionável.`,
 };
+
+function showP(pid) {
+  const block = document.getElementById(pid);
+  if (!block) return;
+  const isOpen = block.classList.contains('open');
+  if (isOpen) { block.classList.remove('open'); return; }
+  const key = 'pt' + pid.replace('p', '');
+  const textEl = document.getElementById(key);
+  if (textEl && PROMPTS[key]) textEl.textContent = PROMPTS[key]();
+  block.classList.add('open');
+  setTimeout(() => {
+    const top = block.getBoundingClientRect().top + window.pageYOffset - 110;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }, 50);
+}
+
+function copyP(pid, btnId) {
+  const key = 'pt' + pid.replace('p', '');
+  const textEl = document.getElementById(key);
+  if (!textEl) return;
+  navigator.clipboard.writeText(textEl.textContent).then(() => {
+    const btn = document.getElementById(btnId);
+    if (btn) {
+      btn.textContent = '✓ Copiado';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = '📋 Copiar'; btn.classList.remove('copied'); }, 2000);
+    }
+  });
+}
+
+// ── Charts ────────────────────────────────────────────────
+function barChart(id, labels, vals, colors) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const max = Math.max(...vals);
+  el.innerHTML = labels.map((l, i) => `
+    <div class="bc-row">
+      <span class="bc-lbl" title="${l}">${l}</span>
+      <div class="bc-track">
+        <div class="bc-bar" style="width:${vals[i]/max*100}%;background:${colors[i]||'#1A375E'}">
+          <span class="bc-val">${typeof vals[i]==='number'&&vals[i]<2?vals[i].toFixed(1)+'×':vals[i]}</span>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function lineChart(id, series) {
+  const svg = document.getElementById(id);
+  if (!svg) return;
+  const W = 400, H = 90, pl = 5, pr = 5, pt = 5, pb = 15;
+  const all = series.flatMap(s => s.data);
+  const mn = Math.min(...all) * .9, mx = Math.max(...all) * 1.05;
+  const n = series[0].data.length;
+  const xs = (W - pl - pr) / (n - 1);
+  const ys = (H - pt - pb) / (mx - mn);
+  const pts = s => s.data.map((v, i) => `${pl + i*xs},${H - pb - (v - mn)*ys}`).join(' ');
+  const lbs = series[0].labels || series[0].data.map((_, i) => i + 1);
+  const step = Math.max(1, Math.floor(n / 6));
+  svg.innerHTML =
+    series.map(s => `<polyline points="${pts(s)}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round"/>`).join('') +
+    lbs.filter((_, i) => i % step === 0 || i === n - 1).map((lb, _, arr, idx = lbs.indexOf(lb)) =>
+      `<text x="${pl + idx*xs}" y="${H-1}" text-anchor="middle" fill="#8899BB" font-size="8">${lb}</text>`
+    ).join('');
+}
+
+function initCharts() {
+  // E1
+  const rows = [[4,3,4,2,1,3,4,1],[3,1,4,1,1,5,3,1],[4,2,5,3,2,5,4,2],[3,2,4,1,1,4,3,1],[2,1,3,1,1,2,2,1],[2,1,4,2,1,3,2,1]];
+  const m = rows.map(r => r.reduce((a,b)=>a+b,0)/r.length);
+  rows.forEach((_, i) => { const el = document.getElementById('m'+(i+1)); if(el) el.textContent = m[i].toFixed(1) });
+  const pilars = ['Alinhamento','Arquitetura','Infraestrutura','Cap.Humano','Integ.Dec.','Monitoramento'];
+  barChart('bc1', pilars, m, m.map(v => v>=3.5?'#166534':v>=2.5?'#F0A500':'#B91C1C'));
+
+  // E2
+  const rois = [3.2,7.8,1.4,5.1,4.3,6.2,1.1,9.4,3.8,2.2,0.8,4.7];
+  const st   = ['✅','🔄','🔄','⏸','✅','⏸','✅','⏸','🔄','✅','🔄','⏸'];
+  const proj = ['Dashboard','Prev.Demanda','DataLake','Ot.Rotas','Detec.Fraude','Churn','BI','ML Precif.','Segment.','AppMoto','LGPD','AlertaEst.'];
+  barChart('bc2', proj, rois, st.map(s=>s==='⏸'?'#D97706':s==='✅'?'#166534':'#1A375E'));
+
+  // E3 line
+  const meses = ['J','F','M','A','M','J','J','A','S','O','N','D'];
+  const sorv  = [148,141,118,82,55,38,34,42,68,95,128,158];
+  const afog  = [42,38,31,18,11,7,6,9,14,22,35,48];
+  lineChart('lc3', [
+    {data:sorv, color:'#F0A500', labels:meses},
+    {data:afog.map(v=>v*3.2), color:'#B91C1C', labels:meses}
+  ]);
+
+  // E4
+  const perdas = [20608,25110,39072,74628,28044];
+  const segs   = ['Emp.Premium','Emp.Básico','Ind.Premium','Ind.Básico','MEI/Autôn.'];
+  barChart('bc4', segs, perdas, ['#1A375E','#2E6DA4','#B91C1C','#91000B','#D97706']);
+
+  // E5 credit table
+  const clientes = [
+    [1,5200,680,'✅ Paga','✅ Aprova'],[2,3100,520,'❌ Inadimp.','❌ Rejeita'],
+    [3,4800,590,'✅ Paga','✅ Aprova'],[4,2800,490,'❌ Inadimp.','❌ Rejeita'],
+    [5,6100,720,'✅ Paga','✅ Aprova'],[6,4200,610,'✅ Paga','✅ Aprova'],
+    [7,3500,540,'❌ Inadimp.','❌ Rejeita'],[8,5800,480,'✅ Paga','⚠️ Rejeita'],
+    [9,2200,420,'❌ Inadimp.','❌ Rejeita'],[10,4900,670,'✅ Paga','✅ Aprova'],
+    [11,3800,560,'✅ Paga','⚠️ Rejeita'],[12,5500,700,'✅ Paga','✅ Aprova'],
+    [13,2600,380,'❌ Inadimp.','❌ Rejeita'],[14,4100,520,'❌ Inadimp.','⚠️ Aprova'],
+    [15,6800,750,'✅ Paga','✅ Aprova'],[16,3200,510,'✅ Paga','⚠️ Rejeita'],
+    [17,4400,630,'✅ Paga','✅ Aprova'],[18,2900,440,'❌ Inadimp.','❌ Rejeita'],
+    [19,5100,690,'✅ Paga','✅ Aprova'],[20,3600,580,'✅ Paga','✅ Aprova'],
+  ];
+  const tb = document.getElementById('credit-tbody');
+  if (tb) tb.innerHTML = clientes.map(r => {
+    const err = r[4].includes('⚠️');
+    return `<tr${err?' style="background:#FFF5F5"':''}><td>${r[0]}</td><td class="num">${r[1].toLocaleString('pt-BR')}</td><td class="num">${r[2]}</td><td>${r[3]}</td><td${err?' style="color:#B91C1C;font-weight:700"':''}>${r[4]}</td></tr>`;
+  }).join('');
+
+  // E6 agro
+  const meses6 = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+  const ano1   = [185,210,380,445,290,140,125,180,310,420,355,465];
+  const ano2   = [198,225,395,460,305,152,138,192,325,438,370,482];
+  const mg     = Math.round([...ano1,...ano2].reduce((a,b)=>a+b,0)/24);
+  const atb    = document.getElementById('agro-tbody');
+  if (atb) atb.innerHTML = meses6.map((m, i) => {
+    const med = Math.round((ano1[i]+ano2[i])/2);
+    const idx = (med/mg).toFixed(2);
+    const hi  = parseFloat(idx) > 1.2 || parseFloat(idx) < 0.7;
+    return `<tr><td>${m}</td><td class="num">${ano1[i]}</td><td class="num">${ano2[i]}</td><td class="num${hi?' hi':''}">${med}</td><td class="num${hi?' hi':''}">${idx}</td></tr>`;
+  }).join('');
+  lineChart('lc6', [
+    {data:ano1, color:'#1A375E', labels:meses6},
+    {data:ano2, color:'#F0A500', labels:meses6}
+  ]);
+}
+
+// ── PDF Export ────────────────────────────────────────────
+function exportPDF() {
+  const active = [...document.querySelectorAll('.session')].findIndex(s => s.classList.contains('active'));
+  document.querySelectorAll('.acc-body').forEach(b => b.classList.add('open'));
+  document.querySelectorAll('.session').forEach((s, i) => s.classList.toggle('print-on', i === active));
+  const titles = ['Estratégia de Dados + Ética','Ciência de Dados + Roadmap','Pensamento Crítico-Analítico','Problemas de Negócios + Visualização','IA, Machine Learning + Modelagem Descritiva','Modelagem Preditiva + Síntese Final'];
+  const dates  = ['14/04/2026','16/04/2026','23/04/2026','28/04/2026','30/04/2026','05/05/2026'];
+  const emp    = S.f['a1-emp'] || S.f['a6-emp'] || '';
+  let cover    = document.getElementById('__pc');
+  if (!cover) { cover = document.createElement('div'); cover.id = '__pc'; document.body.prepend(cover); }
+  cover.className = 'print-cover';
+  cover.innerHTML = `<div class="pc-eye">ENCONTRO ${active+1} · MBA LIVE · IBMEC · 2026</div><div class="pc-title">Data Driven Business<br>${titles[active]}</div><div class="pc-sub">${dates[active]}${emp?' · '+emp:''}</div><div class="pc-meta">Prof. Dr. Thiago Lima · MBA LIVE · Ibmec<br>Prof. Victor Batista dos Santos<br>Gerado em ${new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'})}</div>`;
+  window.print();
+  setTimeout(() => {
+    document.querySelectorAll('.acc-body').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.session').forEach(s => s.classList.remove('print-on'));
+    if (cover) cover.remove();
+  }, 1000);
+}
+
+// ── Init ──────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  restoreAll();
+  upProg();
+  initCharts();
+  S.done.forEach(i => { const tb = document.getElementById('tb'+i); if(tb) tb.classList.add('done') });
+});
 </script>
+
 </body>
 </html>
