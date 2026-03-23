@@ -543,7 +543,10 @@ body {
 <body>
 
 <div id="topbar">
-  <div class="brand"><span class="pill">MBA LIVE</span> Data Driven Business</div>
+  <div style="display:flex;flex-direction:column;gap:1px">
+    <div class="brand"><span class="pill">MBA LIVE</span> Data Driven Business</div>
+    <div style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:.02em">Prof. Dr. Thiago Lima · fins pedagógicos</div>
+  </div>
   <div class="right">
     <span id="prog-lbl">0/6</span>
     <button id="pdf-btn" onclick="exportPDF()">↓ PDF</button>
@@ -653,6 +656,12 @@ body {
       <div class="act-head"><span class="act-badge">REFLEXÃO + IA</span><h3>O Diagnóstico Relâmpago</h3><p>Aplique os 6 Pilares à sua empresa</p></div>
       <div class="act-body">
         <div class="obj">🎯 Identificar estágio de maturidade, pilar mais fraco e Quick Win de 90 dias.</div>
+        <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 12px;margin-bottom:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1D4ED8;margin-bottom:5px;">📚 Objetivos de Aprendizagem</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Aplicar os 6 Pilares da Estratégia de Dados a uma organização real</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Identificar o estágio de maturidade analítica da empresa</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Formular um Quick Win de alto impacto para os próximos 90 dias</li>
+  </ul>
+</div>
         <div class="fg"><label class="fl">Sua empresa — setor, porte e modelo de negócio</label><input class="fi" id="a1-emp" placeholder="Ex.: rede de academias, 30 unidades, B2C" oninput="sv('a1-emp',0)"></div>
         <div class="fg"><label class="fl">Como as decisões são tomadas hoje?</label><textarea class="fta" id="a1-dec" placeholder="Ex.: intuição do CEO e relatórios mensais em Excel" oninput="sv('a1-dec',0)"></textarea></div>
         <div class="fg"><label class="fl">Qual pilar é o mais fraco?</label>
@@ -666,6 +675,18 @@ body {
         <div class="canvas"><div class="canvas-lbl">📝 Meu Quick Win — anote após usar a IA</div><textarea class="fta" id="a1-qw" placeholder="Qual ação concreta faria nos próximos 30 dias?" oninput="sv('a1-qw',0)"></textarea></div>
       </div>
     </div>
+<div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:10px 12px;margin-top:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#166534;margin-bottom:6px;">🎤 Apresentação do Grupo — 5 minutos</div>
+  <p style="font-size:12px;color:#14532D;margin-bottom:8px;line-height:1.55;">Cada grupo apresenta o diagnóstico da sua empresa usando os 6 Pilares como framework. O objetivo é praticar comunicação executiva orientada a dados.</p>
+  <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:4px;">Estrutura sugerida:</div>
+  <ol style="padding-left:16px;margin:0 0 8px;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Contexto: setor, porte, como a empresa decide hoje</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">2 min — Diagnóstico: nota de 0–5 para cada pilar + justificativa dos 2 mais fracos</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Quick Win: ação concreta de 90 dias com impacto esperado</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Perguntas e debate com a turma</li>
+  </ol>
+  <div style="font-size:11px;font-weight:700;color:#B91C1C;margin-bottom:4px;">⚠️ Pontos críticos que a turma vai questionar:</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Por que esse pilar e não outro? Qual evidência concreta sustenta a nota?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">O Quick Win proposto resolve a causa-raiz ou apenas o sintoma?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Qual seria o custo de NÃO agir nos próximos 90 dias?</li>
+  </ul>
+</div>
     <button class="complete-btn" id="c0" onclick="done(0)">✓ Marcar como Concluído (opcional)</button>
   </div>
 </div>
@@ -734,6 +755,12 @@ body {
       <div class="act-head"><span class="act-badge">REFLEXÃO + IA</span><h3>O Arquiteto de Dados</h3><p>Base do Instrumento Avaliativo 2</p></div>
       <div class="act-body">
         <div class="obj">🎯 Construir um roadmap de 4 fases conectado à realidade da sua empresa.</div>
+        <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 12px;margin-bottom:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1D4ED8;margin-bottom:5px;">📚 Objetivos de Aprendizagem</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Estruturar um roadmap de implantação de Ciência de Dados em 4 fases</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Conectar decisões tecnológicas aos objetivos estratégicos do negócio</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Identificar riscos e condições críticas de sucesso específicos ao contexto</li>
+  </ul>
+</div>
         <div class="fg"><label class="fl">Empresa, porte e situação atual com dados</label><textarea class="fta" id="a2-emp" placeholder="Ex.: distribuidora de alimentos, 800 funcionários, usa Excel, TI terceirizada" oninput="sv('a2-emp',1)"></textarea></div>
         <div class="fg"><label class="fl">Objetivo estratégico que dados podem apoiar</label><input class="fi" id="a2-obj" placeholder="Ex.: reduzir ruptura de estoque em 15%" oninput="sv('a2-obj',1)"></div>
         <button class="btn-gen" onclick="showP('p2')">Gerar Prompt para IA ↗</button>
@@ -741,6 +768,18 @@ body {
         <div class="canvas"><div class="canvas-lbl">📝 Notas do Roadmap</div><textarea class="fta" id="a2-notas" placeholder="O que acertou? O que mudaria para sua realidade?" oninput="sv('a2-notas',1)"></textarea></div>
       </div>
     </div>
+<div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:10px 12px;margin-top:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#166534;margin-bottom:6px;">🎤 Apresentação do Grupo — 7 minutos</div>
+  <p style="font-size:12px;color:#14532D;margin-bottom:8px;line-height:1.55;">O grupo apresenta o Roadmap de Implantação como se estivesse defendendo para o Comitê Executivo. Linguagem de negócio — sem jargão técnico.</p>
+  <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:4px;">Estrutura sugerida:</div>
+  <ol style="padding-left:16px;margin:0 0 8px;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Empresa e situação atual: onde estamos hoje</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Visão estratégica: por que dados são críticos para este negócio</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">3 min — Roadmap fase a fase: entregável, prazo e risco de cada fase</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Condições críticas de sucesso</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Pergunta final: "O que precisa acontecer para isso decolar?"</li>
+  </ol>
+  <div style="font-size:11px;font-weight:700;color:#B91C1C;margin-bottom:4px;">⚠️ Pontos críticos que a turma vai questionar:</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Como vocês priorizaram os projetos da Fase 1 — critério de impacto × viabilidade?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Qual é o plano B se a Fase 2 atrasar 3 meses?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Como o CEO vai saber que a Fase 3 foi bem-sucedida? Qual a métrica de negócio?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Onde está o maior risco humano — não técnico — do roadmap?</li>
+  </ul>
+</div>
     <button class="complete-btn" id="c1" onclick="done(1)">✓ Marcar como Concluído (opcional)</button>
   </div>
 </div>
@@ -827,6 +866,12 @@ body {
       <div class="act-head"><span class="act-badge">REFLEXÃO + IA</span><h3>O Detetive de Vieses</h3><p>Analise uma decisão real em busca de vieses cognitivos</p></div>
       <div class="act-body">
         <div class="obj">🎯 Identificar pelo menos 3 vieses em uma decisão real e propor antídotos concretos.</div>
+        <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 12px;margin-bottom:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1D4ED8;margin-bottom:5px;">📚 Objetivos de Aprendizagem</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Reconhecer vieses cognitivos em processos decisórios reais</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Relacionar cada viés ao dado ausente que poderia tê-lo corrigido</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Propor rituais organizacionais concretos como antídotos aos vieses identificados</li>
+  </ul>
+</div>
         <div class="fg"><label class="fl">Descreva a decisão — contexto, como foi tomada, resultado</label><textarea class="fta" id="a3-dec" placeholder="Ex.: lançamos produto baseados em 5 feedbacks positivos. Vendas 60% abaixo." oninput="sv('a3-dec',2)"></textarea></div>
         <div class="fg"><label class="fl">Que dados foram considerados — e quais ignorados?</label><input class="fi" id="a3-dados" placeholder="Ex.: só feedbacks positivos; ignoramos dados de quem não comprou" oninput="sv('a3-dados',2)"></div>
         <button class="btn-gen" onclick="showP('p3')">Gerar Prompt para IA ↗</button>
@@ -834,6 +879,18 @@ body {
         <div class="canvas"><div class="canvas-lbl">📝 Meu Antídoto — o que mudaria no processo</div><textarea class="fta" id="a3-anti" placeholder="Que ritual organizacional implementaria para evitar esse viés?" oninput="sv('a3-anti',2)"></textarea></div>
       </div>
     </div>
+<div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:10px 12px;margin-top:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#166534;margin-bottom:6px;">🎤 Apresentação do Grupo — 5 minutos</div>
+  <p style="font-size:12px;color:#14532D;margin-bottom:8px;line-height:1.55;">O grupo apresenta a análise de vieses de uma decisão real como se fosse uma sessão de pré-mortem executivo — o objetivo é aprender, não culpar.</p>
+  <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:4px;">Estrutura sugerida:</div>
+  <ol style="padding-left:16px;margin:0 0 8px;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — A decisão: contexto, atores, resultado</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">2 min — Os 3 vieses identificados: nome, manifestação específica e dado ausente</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Proposta de antídoto: ritual ou processo organizacional concreto</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Lição transferível: como isso se aplica a outras decisões da empresa</li>
+  </ol>
+  <div style="font-size:11px;font-weight:700;color:#B91C1C;margin-bottom:4px;">⚠️ Pontos críticos que a turma vai questionar:</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Como vocês distinguiram viés de simples erro de julgamento?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">O antídoto proposto é realista para a cultura da empresa — ou é teórico?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Se houvessem mais dados, a decisão teria sido diferente — ou o viés ainda prevaleceria?</li>
+  </ul>
+</div>
     <button class="complete-btn" id="c2" onclick="done(2)">✓ Marcar como Concluído (opcional)</button>
   </div>
 </div>
@@ -895,6 +952,12 @@ body {
       <div class="act-head"><span class="act-badge">REFLEXÃO + IA</span><h3>O Reformulador + Editor de Histórias</h3><p>Pergunta vaga → SMART → Grande Ideia</p></div>
       <div class="act-body">
         <div class="obj">🎯 Reformular uma pergunta vaga e construir narrativa executiva com a Grande Ideia.</div>
+        <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 12px;margin-bottom:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1D4ED8;margin-bottom:5px;">📚 Objetivos de Aprendizagem</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Reformular perguntas vagas de negócio no formato SMART</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Construir a Grande Ideia — síntese de insight, recomendação e urgência</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Estruturar uma narrativa de dados de 5 minutos orientada à tomada de decisão</li>
+  </ul>
+</div>
         <div class="fg"><label class="fl">Pergunta vaga de negócio</label><input class="fi" id="a4-perg" placeholder='Ex.: "Como melhorar as vendas?"' oninput="sv('a4-perg',3)"></div>
         <div class="fg"><label class="fl">Insight ou resultado de análise para comunicar</label><textarea class="fta" id="a4-ins" placeholder="Ex.: clientes sem login por 14 dias têm 72% de chance de cancelar — R$2.400 de LTV cada" oninput="sv('a4-ins',3)"></textarea></div>
         <button class="btn-gen" onclick="showP('p4')">Gerar Prompt para IA ↗</button>
@@ -902,6 +965,18 @@ body {
         <div class="canvas"><div class="canvas-lbl">📝 Minha Grande Ideia (máx 2 linhas)</div><textarea class="fta" id="a4-gi" placeholder="[insight] + [recomendação] + [urgência/impacto em R$]" oninput="sv('a4-gi',3)"></textarea></div>
       </div>
     </div>
+<div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:10px 12px;margin-top:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#166534;margin-bottom:6px;">🎤 Apresentação do Grupo — 6 minutos</div>
+  <p style="font-size:12px;color:#14532D;margin-bottom:8px;line-height:1.55;">O grupo faz uma apresentação executiva real: começa com a Grande Ideia e usa a estrutura narrativa para convencer o "CFO" (turma) a aprovar a ação recomendada.</p>
+  <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:4px;">Estrutura sugerida:</div>
+  <ol style="padding-left:16px;margin:0 0 8px;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">30 seg — A Grande Ideia: uma frase, impacto em R$, urgência</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Contexto e protagonista: quem é afetado e por quê importa</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — O desequilíbrio: o que os dados revelaram de inesperado</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — A jornada analítica: como chegaram a essa conclusão</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Resolução e impacto: ação específica + resultado esperado</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1,5 min — Debate: o "CFO" pode questionar qualquer premissa</li>
+  </ol>
+  <div style="font-size:11px;font-weight:700;color:#B91C1C;margin-bottom:4px;">⚠️ Pontos críticos que a turma vai questionar:</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">A Grande Ideia está completa? Tem insight + recomendação + urgência?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Os dados apresentados provam causalidade ou apenas correlação?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">A ação recomendada é viável — quem executa, com qual orçamento e em qual prazo?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">O que poderia invalidar essa análise? Qual dado a turma gostaria de ver?</li>
+  </ul>
+</div>
     <button class="complete-btn" id="c3" onclick="done(3)">✓ Marcar como Concluído (opcional)</button>
   </div>
 </div>
@@ -969,6 +1044,12 @@ body {
       <div class="act-head"><span class="act-badge">REFLEXÃO + IA</span><h3>O Arquiteto de IA</h3><p>Selecione a arquitetura de ML mais adequada para o seu problema</p></div>
       <div class="act-body">
         <div class="obj">🎯 Identificar paradigma, algoritmo, métrica e risco ético para um problema real de ML.</div>
+        <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 12px;margin-bottom:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1D4ED8;margin-bottom:5px;">📚 Objetivos de Aprendizagem</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Selecionar o paradigma e algoritmo de ML mais adequados a um problema real</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Avaliar o trade-off entre precisão e interpretabilidade no contexto específico</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Identificar riscos éticos e a métrica de avaliação correta para o caso</li>
+  </ul>
+</div>
         <div class="fg"><label class="fl">Problema de negócio a resolver com ML</label><textarea class="fta" id="a5-prob" placeholder="Ex.: banco quer aprovar/recusar crédito com obrigação de explicar a recusa ao cliente e ao Banco Central" oninput="sv('a5-prob',4)"></textarea></div>
         <div class="fg"><label class="fl">Necessidade de explicabilidade</label>
           <select class="fse" id="a5-exp" onchange="sv('a5-exp',4)"><option value="">Selecione...</option><option>Sim — obrigatória (regulatório)</option><option>Não — apenas precisão importa</option><option>Desejável mas não obrigatório</option></select></div>
@@ -977,6 +1058,18 @@ body {
         <div class="canvas"><div class="canvas-lbl">📝 Algoritmo escolhido e justificativa</div><textarea class="fta" id="a5-esc" placeholder="Qual algoritmo escolheria? Por que interpretabilidade importa nesse contexto?" oninput="sv('a5-esc',4)"></textarea></div>
       </div>
     </div>
+<div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:10px 12px;margin-top:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#166534;margin-bottom:6px;">🎤 Apresentação do Grupo — 6 minutos</div>
+  <p style="font-size:12px;color:#14532D;margin-bottom:8px;line-height:1.55;">O grupo defende a arquitetura de IA escolhida como se apresentasse para um comitê técnico e de negócios simultaneamente — precisa convencer os dois lados.</p>
+  <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:4px;">Estrutura sugerida:</div>
+  <ol style="padding-left:16px;margin:0 0 8px;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — O problema de negócio: o que queremos resolver e qual o custo atual</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — A escolha: paradigma + algoritmo e por que é o mais adequado</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — O trade-off: o que se ganha e o que se perde com essa escolha</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Métricas: como saberemos que o modelo está funcionando (em termos de negócio)</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Riscos éticos e passo imediato</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Perguntas e debate</li>
+  </ol>
+  <div style="font-size:11px;font-weight:700;color:#B91C1C;margin-bottom:4px;">⚠️ Pontos críticos que a turma vai questionar:</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Por que esse algoritmo e não o mais preciso disponível?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Como vocês garantem que o modelo não vai perpetuar vieses históricos?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">O que acontece quando o modelo errar? Qual é o protocolo?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Existe um baseline simples que vocês testaram antes de partir para ML?</li>
+  </ul>
+</div>
     <button class="complete-btn" id="c4" onclick="done(4)">✓ Marcar como Concluído (opcional)</button>
   </div>
 </div>
@@ -1047,6 +1140,12 @@ body {
       <div class="act-head"><span class="act-badge">SÍNTESE DO CURSO</span><h3>O Integrador — Plano de 90 Dias</h3><p>Conecte os 3 temas em um plano concreto para a sua organização</p></div>
       <div class="act-body">
         <div class="obj">🎯 Construir um plano data-driven de 90 dias — referência para o Instrumento Avaliativo 2.</div>
+        <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 12px;margin-bottom:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1D4ED8;margin-bottom:5px;">📚 Objetivos de Aprendizagem</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Integrar os conceitos dos 6 encontros em um plano data-driven coeso</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Formular problema de negócio preciso no formato SMART</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Definir estratégia de comunicação executiva orientada a evidências</li><li style="font-size:12px;color:#1E3A5F;line-height:1.65;margin-bottom:3px;">Identificar e propor superação do principal obstáculo não-técnico</li>
+  </ul>
+</div>
         <div class="fg"><label class="fl">Empresa — setor, porte, como decide hoje, nível atual de dados</label><textarea class="fta" id="a6-emp" placeholder="Ex.: distribuidora de medicamentos, 500 funcionários, Excel + Power BI básico, TI terceirizada" oninput="sv('a6-emp',5)"></textarea></div>
         <div class="fg"><label class="fl">Principal desafio que dados poderiam resolver</label><input class="fi" id="a6-des" placeholder="Ex.: prever demanda por SKU para reduzir ruptura e excesso de estoque" oninput="sv('a6-des',5)"></div>
         <div class="fg"><label class="fl">Maior obstáculo não-técnico</label><input class="fi" id="a6-obs" placeholder="Ex.: CEO decide por intuição e não valoriza análises que contradizem sua experiência" oninput="sv('a6-obs',5)"></div>
@@ -1061,6 +1160,18 @@ body {
       <h4 style="justify-content:center;font-size:16px;margin-bottom:8px">Parabéns pelo Curso!</h4>
       <p>Data Driven Business · MBA LIVE · Ibmec · 2026<br>Prof. Dr. Thiago Lima</p>
     </div>
+<div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:10px 12px;margin-top:10px;">
+  <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#166534;margin-bottom:6px;">🎤 Apresentação do Grupo — 8 minutos</div>
+  <p style="font-size:12px;color:#14532D;margin-bottom:8px;line-height:1.55;">Apresentação final do curso: o grupo defende o Plano Data-Driven de 90 Dias como se fosse uma proposta real para aprovação do board. Esta apresentação é a base do Instrumento Avaliativo 2.</p>
+  <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:4px;">Estrutura sugerida:</div>
+  <ol style="padding-left:16px;margin:0 0 8px;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Empresa e diagnóstico: estágio de maturidade e principal desafio</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — O problema SMART: pergunta precisa, KPI, meta e prazo</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Semanas 1–6: diagnóstico e Quick Win inicial</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Semanas 7–12: primeiro modelo e critério de escolha</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Comunicação executiva: a Grande Ideia para o comitê</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">1 min — Como superar o principal obstáculo não-técnico</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">2 min — Perguntas e debate com a turma como banca</li>
+  </ol>
+  <div style="font-size:11px;font-weight:700;color:#B91C1C;margin-bottom:4px;">⚠️ Pontos críticos que a turma vai questionar:</div>
+  <ul style="padding-left:16px;margin:0;">
+    <li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">O problema SMART está realmente mensurável — ou ainda é vago?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">O Quick Win escolhido gera resultado visível para a liderança em 6 semanas?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Como vocês vão medir se o plano está funcionando — qual o indicador de processo?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">O obstáculo não-técnico foi realmente endereçado ou apenas mencionado?</li><li style="font-size:12px;color:#1A2540;line-height:1.6;margin-bottom:3px;">Se o CEO vetar o plano na semana 1 — qual é o plano B?</li>
+  </ul>
+</div>
     <button class="complete-btn" id="c5" onclick="done(5)">✓ Marcar Curso como Concluído (opcional)</button>
   </div>
 </div>
@@ -1188,12 +1299,12 @@ function calcForecast() {
 function v(id) { return (document.getElementById(id) ? document.getElementById(id).value : '') || '[não preenchido]'; }
 
 var PROMPTS = {
-  pt1: function() { return 'Você é consultor sênior em estratégia de dados. Analise a empresa e gere um diagnóstico objetivo.\n\nEmpresa: '+v('a1-emp')+'\nComo decide hoje: '+v('a1-dec')+'\nPilar mais fraco (autoavaliação): '+v('a1-pil')+'\n\nCom base nos 6 Pilares (Alinhamento, Arquitetura, Infraestrutura, Capital Humano, Integração Decisória, Monitoramento):\n1. Confirme ou corrija a autoavaliação — justifique brevemente\n2. Qual seria o Quick Win mais impactante nos próximos 90 dias?\n3. Em qual estágio de maturidade analítica (1 a 5) esta empresa está?\n4. Qual o risco de NÃO ter estratégia de dados neste setor?\n\nSeja direto e prático. Português brasileiro.'; },
-  pt2: function() { return 'Você é consultor sênior de transformação digital em Ciência de Dados.\n\nEmpresa: '+v('a2-emp')+'\nObjetivo estratégico: '+v('a2-obj')+'\n\nElabore um ROADMAP em 4 fases:\nFASE 1 (0-3m): 3 atividades, 1 entregável, risco principal\nFASE 2 (3-9m): 3 atividades, 1 entregável, risco principal\nFASE 3 (9-18m): 3 atividades, 1 entregável, risco principal\nFASE 4 (18-36m): 3 atividades, 1 entregável, risco principal\n\nAdicione: 3 condições críticas de sucesso específicas para essa empresa.\nPortuguês brasileiro.'; },
-  pt3: function() { return 'Você é especialista em psicologia das decisões e comportamento organizacional.\n\nDecisão: '+v('a3-dec')+'\nDados considerados/ignorados: '+v('a3-dados')+'\n\nIdentifique pelo menos 3 vieses cognitivos. Para cada um:\n1. Nome e definição breve\n2. Como se manifesta especificamente NESSA decisão\n3. Que dado específico teria corrigido esse viés\n4. Ritual organizacional concreto que poderia ter mitigado\n\nSeja específico ao contexto — não genérico. Português brasileiro.'; },
-  pt4: function() { return 'Você é especialista em formulação de problemas de dados e comunicação executiva.\n\nPergunta vaga: '+v('a4-perg')+'\nInsight a comunicar: '+v('a4-ins')+'\n\nPARTE 1 — REFORMULAÇÃO SMART:\n- O que está vago na pergunta original?\n- Reescreva incluindo: KPI + segmento + horizonte + critério de sucesso\n- Versão para cada perspectiva BSC\n\nPARTE 2 — GRANDE IDEIA E NARRATIVA:\n- A GRANDE IDEIA (máx 2 linhas): [insight] + [recomendação] + [urgência/impacto]\n- Estrutura de 5 minutos: Contexto | Protagonista | Desequilíbrio | Jornada | Resolução | Impacto\n- Os 2 gráficos principais: tipo, dados, título como mensagem\n- Chamada para ação: quem faz o quê, até quando\n\nPortuguês brasileiro. Tom executivo e direto.'; },
-  pt5: function() { return 'Você é Machine Learning Engineer com forte orientação a negócios.\n\nProblema: '+v('a5-prob')+'\nExplicabilidade: '+v('a5-exp')+'\n\nResponda:\n1. PARADIGMA: supervisionado, não supervisionado ou por reforço? Por quê?\n2. ALGORITMO RECOMENDADO: vantagem e limitação no contexto específico\n3. ALGORITMO ALTERNATIVO: para mais dados e tempo\n4. MÉTRICA PRIMÁRIA: por que acurácia simples pode enganar aqui?\n5. RISCO ÉTICO: que viés histórico pode estar nos dados?\n6. PASSO IMEDIATO: o que precisa acontecer antes de qualquer desenvolvimento?\n\nPortuguês brasileiro. Direto e orientado a decisão.'; },
-  pt6: function() { return 'Você é consultor sênior de transformação data-driven.\n\nEmpresa: '+v('a6-emp')+'\nDesafio: '+v('a6-des')+'\nObstáculo não-técnico: '+v('a6-obs')+'\n\nPlano Data-Driven de 90 Dias:\n\nSEM 1-2: Problema SMART + vieses atuais + estágio de maturidade (1-5)\nSEM 3-6: Quick Win analítico de maior valor com dados existentes\nSEM 7-10: Tipo de análise/modelo e trade-off interpretabilidade × precisão\nSEM 11-12: Como apresentar ao comitê executivo (Grande Ideia + estrutura)\n\nComo superar o obstáculo não-técnico listado?\nPortuguês brasileiro. Específico e acionável.'; }
+  pt1: function() { return 'Você é consultor sênior em estratégia de dados. Analise a empresa e gere um diagnóstico objetivo.\n\nEmpresa: '+v('a1-emp')+'\nComo decide hoje: '+v('a1-dec')+'\nPilar mais fraco (autoavaliação): '+v('a1-pil')+'\n\nCom base nos 6 Pilares (Alinhamento, Arquitetura, Infraestrutura, Capital Humano, Integração Decisória, Monitoramento):\n1. Confirme ou corrija a autoavaliação — justifique brevemente\n2. Qual seria o Quick Win mais impactante nos próximos 90 dias?\n3. Em qual estágio de maturidade analítica (1 a 5) esta empresa está?\n4. Qual o risco de NÃO ter estratégia de dados neste setor?\n\nSeja direto e prático.'; },
+  pt2: function() { return 'Você é consultor sênior de transformação digital em Ciência de Dados.\n\nEmpresa: '+v('a2-emp')+'\nObjetivo estratégico: '+v('a2-obj')+'\n\nElabore um ROADMAP em 4 fases:\nFASE 1 (0-3m): 3 atividades, 1 entregável, risco principal\nFASE 2 (3-9m): 3 atividades, 1 entregável, risco principal\nFASE 3 (9-18m): 3 atividades, 1 entregável, risco principal\nFASE 4 (18-36m): 3 atividades, 1 entregável, risco principal\n\nAdicione: 3 condições críticas de sucesso específicas para essa empresa.'; },
+  pt3: function() { return 'Você é especialista em psicologia das decisões e comportamento organizacional.\n\nDecisão: '+v('a3-dec')+'\nDados considerados/ignorados: '+v('a3-dados')+'\n\nIdentifique pelo menos 3 vieses cognitivos. Para cada um:\n1. Nome e definição breve\n2. Como se manifesta especificamente NESSA decisão\n3. Que dado específico teria corrigido esse viés\n4. Ritual organizacional concreto que poderia ter mitigado\n\nSeja específico ao contexto — não genérico.'; },
+  pt4: function() { return 'Você é especialista em formulação de problemas de dados e comunicação executiva.\n\nPergunta vaga: '+v('a4-perg')+'\nInsight a comunicar: '+v('a4-ins')+'\n\nPARTE 1 — REFORMULAÇÃO SMART:\n- O que está vago na pergunta original?\n- Reescreva incluindo: KPI + segmento + horizonte + critério de sucesso\n- Versão para cada perspectiva BSC\n\nPARTE 2 — GRANDE IDEIA E NARRATIVA:\n- A GRANDE IDEIA (máx 2 linhas): [insight] + [recomendação] + [urgência/impacto]\n- Estrutura de 5 minutos: Contexto | Protagonista | Desequilíbrio | Jornada | Resolução | Impacto\n- Os 2 gráficos principais: tipo, dados, título como mensagem\n- Chamada para ação: quem faz o quê, até quando\n\nTom executivo e direto.'; },
+  pt5: function() { return 'Você é Machine Learning Engineer com forte orientação a negócios.\n\nProblema: '+v('a5-prob')+'\nExplicabilidade: '+v('a5-exp')+'\n\nResponda:\n1. PARADIGMA: supervisionado, não supervisionado ou por reforço? Por quê?\n2. ALGORITMO RECOMENDADO: vantagem e limitação no contexto específico\n3. ALGORITMO ALTERNATIVO: para mais dados e tempo\n4. MÉTRICA PRIMÁRIA: por que acurácia simples pode enganar aqui?\n5. RISCO ÉTICO: que viés histórico pode estar nos dados?\n6. PASSO IMEDIATO: o que precisa acontecer antes de qualquer desenvolvimento?\n\nDireto e orientado a decisão.'; },
+  pt6: function() { return 'Você é consultor sênior de transformação data-driven.\n\nEmpresa: '+v('a6-emp')+'\nDesafio: '+v('a6-des')+'\nObstáculo não-técnico: '+v('a6-obs')+'\n\nPlano Data-Driven de 90 Dias:\n\nSEM 1-2: Problema SMART + vieses atuais + estágio de maturidade (1-5)\nSEM 3-6: Quick Win analítico de maior valor com dados existentes\nSEM 7-10: Tipo de análise/modelo e trade-off interpretabilidade × precisão\nSEM 11-12: Como apresentar ao comitê executivo (Grande Ideia + estrutura)\n\nComo superar o obstáculo não-técnico listado?\nEspecífico e acionável.'; }
 };
 
 function showP(pid) {
@@ -1343,5 +1454,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<footer style="background:#1A375E;color:rgba(255,255,255,0.55);text-align:center;padding:20px 16px;font-size:12px;line-height:1.7;margin-top:8px;">
+  <strong style="color:#F0A500">Prof. Dr. Thiago Lima</strong><br>
+  Criado para fins pedagógicos · Data Driven Business · MBA LIVE · Ibmec · 2026
+</footer>
 </body>
 </html>
